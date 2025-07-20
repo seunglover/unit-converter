@@ -319,6 +319,11 @@ class UnitConverterApp {
         // 입력 필드 초기화
         this.fromValueInput.value = '';
         this.toValueInput.value = '';
+        
+        // 언어 업데이트 (변환기 설명 업데이트)
+        if (typeof updateUILanguage === 'function') {
+            updateUILanguage();
+        }
     }
 
     // 단위 선택 옵션 채우기

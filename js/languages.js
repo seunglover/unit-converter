@@ -30,6 +30,14 @@ const languages = {
         swapLabel: "단위 교체",
         converterDescription: "일상생활에서 자주 사용하는 길이 단위를 변환해보세요",
         
+        // 카테고리별 변환기 설명
+        lengthConverterDesc: "일상생활에서 자주 사용하는 길이 단위를 변환해보세요",
+        weightConverterDesc: "일상생활에서 자주 사용하는 무게 단위를 변환해보세요",
+        volumeConverterDesc: "일상생활에서 자주 사용하는 부피 단위를 변환해보세요",
+        temperatureConverterDesc: "일상생활에서 자주 사용하는 온도 단위를 변환해보세요",
+        areaConverterDesc: "일상생활에서 자주 사용하는 면적 단위를 변환해보세요",
+        speedConverterDesc: "일상생활에서 자주 사용하는 속도 단위를 변환해보세요",
+        
         // 기타
         logoText: "단위 변환기",
         
@@ -86,6 +94,14 @@ const languages = {
         backToMain: "Back to Main",
         swapLabel: "Swap Units",
         converterDescription: "Convert length units commonly used in daily life",
+        
+        // Category-specific converter descriptions
+        lengthConverterDesc: "Convert length units commonly used in daily life",
+        weightConverterDesc: "Convert weight units commonly used in daily life",
+        volumeConverterDesc: "Convert volume units commonly used in daily life",
+        temperatureConverterDesc: "Convert temperature units commonly used in daily life",
+        areaConverterDesc: "Convert area units commonly used in daily life",
+        speedConverterDesc: "Convert speed units commonly used in daily life",
         
         // Others
         logoText: "Unit Converter",
@@ -144,6 +160,14 @@ const languages = {
         swapLabel: "単位交換",
         converterDescription: "日常生活でよく使う長さの単位を変換してみましょう",
         
+        // カテゴリ別コンバーター説明
+        lengthConverterDesc: "日常生活でよく使う長さの単位を変換してみましょう",
+        weightConverterDesc: "日常生活でよく使う重さの単位を変換してみましょう",
+        volumeConverterDesc: "日常生活でよく使う体積の単位を変換してみましょう",
+        temperatureConverterDesc: "日常生活でよく使う温度の単位を変換してみましょう",
+        areaConverterDesc: "日常生活でよく使う面積の単位を変換してみましょう",
+        speedConverterDesc: "日常生活でよく使う速度の単位を変換してみましょう",
+        
         // その他
         logoText: "単位変換機",
         
@@ -200,6 +224,14 @@ const languages = {
         backToMain: "返回主页",
         swapLabel: "交换单位",
         converterDescription: "转换日常生活中常用的长度单位",
+        
+        // 分类别转换器描述
+        lengthConverterDesc: "转换日常生活中常用的长度单位",
+        weightConverterDesc: "转换日常生活中常用的重量单位",
+        volumeConverterDesc: "转换日常生活中常用的体积单位",
+        temperatureConverterDesc: "转换日常生活中常用的温度单位",
+        areaConverterDesc: "转换日常生活中常用的面积单位",
+        speedConverterDesc: "转换日常生活中常用的速度单位",
         
         // 其他
         logoText: "单位转换器",
@@ -287,9 +319,23 @@ function updateUILanguage() {
         if (backText) backText.textContent = lang.backToMain;
     }
     
-    // 변환기 설명
+    // 변환기 설명 (현재 카테고리에 맞게 업데이트)
     const converterDesc = document.querySelector('.converter-description');
-    if (converterDesc) converterDesc.textContent = lang.converterDescription;
+    if (converterDesc) {
+        // 현재 활성화된 카테고리 확인
+        const activeNavLink = document.querySelector('.nav-link.active');
+        if (activeNavLink) {
+            const currentCategory = activeNavLink.dataset.category;
+            const categoryDescKey = currentCategory + 'ConverterDesc';
+            if (lang[categoryDescKey]) {
+                converterDesc.textContent = lang[categoryDescKey];
+            } else {
+                converterDesc.textContent = lang.converterDescription;
+            }
+        } else {
+            converterDesc.textContent = lang.converterDescription;
+        }
+    }
     
     // FAQ 페이지
     const faqTitle = document.querySelector('.faq-header h1');
