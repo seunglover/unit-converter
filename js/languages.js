@@ -31,7 +31,30 @@ const languages = {
         converterDescription: "일상생활에서 자주 사용하는 길이 단위를 변환해보세요",
         
         // 기타
-        logoText: "단위 변환기"
+        logoText: "단위 변환기",
+        
+        // FAQ 페이지
+        faqTitle: "자주 묻는 질문 (FAQ)",
+        faqDescription: "단위 변환기 사용법과 궁금한 점들을 확인해보세요",
+        
+        // FAQ 카테고리
+        faqUsage: "📖 사용법 가이드",
+        faqAccuracy: "🎯 정확도 및 팁",
+        faqLifestyle: "💡 실생활 활용 팁",
+        faqTechnical: "🔧 기술적 질문",
+        faqTroubleshooting: "⚠️ 문제 해결",
+        
+        // Tips 페이지
+        tipsTitle: "실용적인 변환 팁",
+        tipsDescription: "일상생활에서 바로 활용할 수 있는 단위 변환 팁들을 모았습니다",
+        
+        // Tips 카테고리
+        tipsCooking: "🍳 요리할 때 유용한 변환 팁",
+        tipsShopping: "🛒 해외직구할 때 유용한 변환 팁",
+        tipsExercise: "💪 운동할 때 유용한 변환 팁",
+        tipsTravel: "✈️ 여행할 때 유용한 변환 팁",
+        tipsRealEstate: "🏠 부동산할 때 유용한 변환 팁",
+        tipsMemory: "🧠 기억하기 쉬운 변환 팁"
     },
     
     en: {
@@ -65,7 +88,30 @@ const languages = {
         converterDescription: "Convert length units commonly used in daily life",
         
         // Others
-        logoText: "Unit Converter"
+        logoText: "Unit Converter",
+        
+        // FAQ page
+        faqTitle: "Frequently Asked Questions (FAQ)",
+        faqDescription: "Check out how to use the unit converter and common questions",
+        
+        // FAQ categories
+        faqUsage: "📖 Usage Guide",
+        faqAccuracy: "🎯 Accuracy & Tips",
+        faqLifestyle: "💡 Lifestyle Tips",
+        faqTechnical: "🔧 Technical Questions",
+        faqTroubleshooting: "⚠️ Troubleshooting",
+        
+        // Tips page
+        tipsTitle: "Practical Conversion Tips",
+        tipsDescription: "Unit conversion tips you can use right away in daily life",
+        
+        // Tips categories
+        tipsCooking: "🍳 Useful Conversion Tips for Cooking",
+        tipsShopping: "🛒 Useful Conversion Tips for Overseas Shopping",
+        tipsExercise: "💪 Useful Conversion Tips for Exercise",
+        tipsTravel: "✈️ Useful Conversion Tips for Travel",
+        tipsRealEstate: "🏠 Useful Conversion Tips for Real Estate",
+        tipsMemory: "🧠 Easy-to-Remember Conversion Tips"
     },
     
     ja: {
@@ -99,7 +145,30 @@ const languages = {
         converterDescription: "日常生活でよく使う長さの単位を変換してみましょう",
         
         // その他
-        logoText: "単位変換機"
+        logoText: "単位変換機",
+        
+        // FAQページ
+        faqTitle: "よくある質問 (FAQ)",
+        faqDescription: "単位変換機の使い方とよくある質問を確認してください",
+        
+        // FAQカテゴリ
+        faqUsage: "📖 使い方ガイド",
+        faqAccuracy: "🎯 精度とコツ",
+        faqLifestyle: "💡 日常生活での活用",
+        faqTechnical: "🔧 技術的な質問",
+        faqTroubleshooting: "⚠️ トラブルシューティング",
+        
+        // Tipsページ
+        tipsTitle: "実用的な変換コツ",
+        tipsDescription: "日常生活ですぐに活用できる単位変換のコツを集めました",
+        
+        // Tipsカテゴリ
+        tipsCooking: "🍳 料理に役立つ変換コツ",
+        tipsShopping: "🛒 海外通販に役立つ変換コツ",
+        tipsExercise: "💪 運動に役立つ変換コツ",
+        tipsTravel: "✈️ 旅行に役立つ変換コツ",
+        tipsRealEstate: "🏠 不動産に役立つ変換コツ",
+        tipsMemory: "🧠 覚えやすい変換コツ"
     },
     
     zh: {
@@ -133,7 +202,30 @@ const languages = {
         converterDescription: "转换日常生活中常用的长度单位",
         
         // 其他
-        logoText: "单位转换器"
+        logoText: "单位转换器",
+        
+        // FAQ页面
+        faqTitle: "常见问题 (FAQ)",
+        faqDescription: "查看单位转换器的使用方法和常见问题",
+        
+        // FAQ分类
+        faqUsage: "📖 使用指南",
+        faqAccuracy: "🎯 精度和技巧",
+        faqLifestyle: "💡 生活应用",
+        faqTechnical: "🔧 技术问题",
+        faqTroubleshooting: "⚠️ 故障排除",
+        
+        // Tips页面
+        tipsTitle: "实用转换技巧",
+        tipsDescription: "收集了日常生活中可以立即使用的单位转换技巧",
+        
+        // Tips分类
+        tipsCooking: "🍳 烹饪时有用的转换技巧",
+        tipsShopping: "🛒 海外购物时有用的转换技巧",
+        tipsExercise: "💪 运动时有用的转换技巧",
+        tipsTravel: "✈️ 旅行时有用的转换技巧",
+        tipsRealEstate: "🏠 房地产时有用的转换技巧",
+        tipsMemory: "🧠 容易记住的转换技巧"
     }
 };
 
@@ -198,6 +290,38 @@ function updateUILanguage() {
     // 변환기 설명
     const converterDesc = document.querySelector('.converter-description');
     if (converterDesc) converterDesc.textContent = lang.converterDescription;
+    
+    // FAQ 페이지
+    const faqTitle = document.querySelector('.faq-header h1');
+    if (faqTitle) faqTitle.textContent = lang.faqTitle;
+    
+    const faqDescription = document.querySelector('.faq-header p');
+    if (faqDescription) faqDescription.textContent = lang.faqDescription;
+    
+    // FAQ 카테고리
+    const faqCategories = document.querySelectorAll('.faq-category h2');
+    faqCategories.forEach((category, index) => {
+        const categories = ['faqUsage', 'faqAccuracy', 'faqLifestyle', 'faqTechnical', 'faqTroubleshooting'];
+        if (categories[index]) {
+            category.textContent = lang[categories[index]];
+        }
+    });
+    
+    // Tips 페이지
+    const tipsTitle = document.querySelector('.tips-header h1');
+    if (tipsTitle) tipsTitle.textContent = lang.tipsTitle;
+    
+    const tipsDescription = document.querySelector('.tips-header p');
+    if (tipsDescription) tipsDescription.textContent = lang.tipsDescription;
+    
+    // Tips 카테고리
+    const tipsCategories = document.querySelectorAll('.tips-category h2');
+    tipsCategories.forEach((category, index) => {
+        const categories = ['tipsCooking', 'tipsShopping', 'tipsExercise', 'tipsTravel', 'tipsRealEstate', 'tipsMemory'];
+        if (categories[index]) {
+            category.textContent = lang[categories[index]];
+        }
+    });
 }
 
 // 페이지 로드 시 저장된 언어 설정 불러오기
