@@ -39,7 +39,7 @@ const languages = {
         speedConverterDesc: "일상생활에서 자주 사용하는 속도 단위를 변환해보세요",
         
         // 변환 텍스트
-        convertText: "변환"
+        convertText: "변환",
         
         // 기타
         logoText: "단위 변환기",
@@ -115,7 +115,7 @@ const languages = {
         speedConverterDesc: "Convert speed units commonly used in daily life",
         
         // Convert text
-        convertText: "Conversion"
+        convertText: "Conversion",
         
         // Others
         logoText: "Unit Converter",
@@ -191,7 +191,7 @@ const languages = {
         speedConverterDesc: "日常生活でよく使う速度の単位を変換してみましょう",
         
         // 変換テキスト
-        convertText: "変換"
+        convertText: "変換",
         
         // その他
         logoText: "単位変換機",
@@ -267,7 +267,7 @@ const languages = {
         speedConverterDesc: "转换日常生活中常用的速度单位",
         
         // 转换文本
-        convertText: "转换"
+        convertText: "转换",
         
         // 其他
         logoText: "单位转换器",
@@ -444,5 +444,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (savedLanguage && languages[savedLanguage]) {
         currentLanguage = savedLanguage;
     }
-    updateUILanguage();
+    if (typeof updateUILanguage === 'function') {
+        updateUILanguage();
+    }
 }); 

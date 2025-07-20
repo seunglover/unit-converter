@@ -123,8 +123,17 @@ class UnitConverterApp {
         if (languageSelect) {
             languageSelect.addEventListener('change', (e) => {
                 const selectedLanguage = e.target.value;
-                changeLanguage(selectedLanguage);
+                if (typeof changeLanguage === 'function') {
+                    changeLanguage(selectedLanguage);
+                }
                 this.updateLanguageSelector(selectedLanguage);
+                
+                // 언어 변경 후 UI 업데이트
+                setTimeout(() => {
+                    if (typeof updateUILanguage === 'function') {
+                        updateUILanguage();
+                    }
+                }, 100);
             });
         }
         
