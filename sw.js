@@ -1,8 +1,8 @@
-const CACHE_NAME = 'unit-converter-v2';
+const CACHE_NAME = 'unit-converter-v3';
 const urlsToCache = [
   '/',
-  '/faq.html',
-  '/tips.html',
+  '/faq',
+  '/tips',
   '/css/style.css',
   '/css/responsive.css',
   '/js/data.js',
@@ -30,6 +30,17 @@ self.addEventListener('fetch', event => {
         // Return cached version or fetch from network
         if (response) {
           return response;
+        }
+        
+        // Handle .html extension redirects
+        const url = new URL(event.request.url);
+        if (url.pathname.endsWith('.html')) {
+          const pathWithoutHtml = url.pathname.replace('.html', '');
+          return caches.match(pathWithoutHtml).then(cachedResponse => {
+            if (cachedResponse) {
+              return cachedResponse;
+            }
+          });
         }
         
         // For network requests, handle redirects properly
