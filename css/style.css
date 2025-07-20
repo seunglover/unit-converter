@@ -1161,14 +1161,47 @@ textarea:focus {
 }
 
 .footer-bottom {
-    text-align: center;
     padding-top: var(--spacing-8);
     border-top: 1px solid var(--border-light);
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-4);
 }
 
 .footer-bottom p {
     color: var(--text-muted);
     font-size: var(--font-size-sm);
+}
+
+/* Footer Language Selector - 푸터 언어 선택기 */
+.footer-bottom .language-selector {
+    margin-left: 0;
+}
+
+.footer-bottom .language-select {
+    padding: var(--spacing-1) var(--spacing-2);
+    border: 1px solid var(--border-medium);
+    border-radius: var(--radius-sm);
+    background: var(--bg-input);
+    color: var(--text-primary);
+    font-size: var(--font-size-xs);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.footer-bottom .language-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(90, 212, 212, 0.1);
+}
+
+.footer-bottom .language-select:hover {
+    border-color: var(--primary-color);
 }
 
 /* FAQ Section - 깔끔한 FAQ 섹션 */
