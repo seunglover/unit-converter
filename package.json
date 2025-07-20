@@ -26,12 +26,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_USERNAME/unit-converter.git"
+    "url": "https://github.com/seunglover/unit-converter.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_USERNAME/unit-converter/issues"
+    "url": "https://github.com/seunglover/unit-converter/issues"
   },
-  "homepage": "https://YOUR_USERNAME.github.io/unit-converter",
+  "homepage": "https://seunglover.github.io/unit-converter",
   "devDependencies": {
     "serve": "^14.2.0"
   },

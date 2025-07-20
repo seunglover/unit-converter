@@ -34,7 +34,7 @@
 ### 로컬 실행
 ```bash
 # 저장소 클론
-git clone https://github.com/your-username/unit-converter.git
+git clone https://github.com/seunglover/unit-converter.git
 cd unit-converter
 
 # Python HTTP 서버 실행
@@ -45,7 +45,7 @@ open http://localhost:8000
 ```
 
 ### 온라인 데모
-🌐 [단위 변환 도우미 바로가기](https://your-domain.com)
+🌐 [단위 변환 도우미 바로가기](https://seunglover.github.io/unit-converter)
 
 ## 🛠️ 기술 스택
 
@@ -155,9 +155,9 @@ git push origin gh-pages
 
 ## 📞 문의
 
-- **이슈 리포트**: [GitHub Issues](https://github.com/your-username/unit-converter/issues)
-- **기능 제안**: [GitHub Discussions](https://github.com/your-username/unit-converter/discussions)
-- **이메일**: your-email@example.com
+- **이슈 리포트**: [GitHub Issues](https://github.com/seunglover/unit-converter/issues)
+- **기능 제안**: [GitHub Discussions](https://github.com/seunglover/unit-converter/discussions)
+- **이메일**: seunglover@github.com
 
 ## 🙏 감사의 말
 
