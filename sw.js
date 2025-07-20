@@ -28,7 +28,21 @@ self.addEventListener('fetch', event => {
     caches.match(event.request)
       .then(response => {
         // Return cached version or fetch from network
-        return response || fetch(event.request);
+        if (response) {
+          return response;
+        }
+        
+        // For network requests, handle redirects properly
+        return fetch(event.request, {
+          redirect: 'follow'
+        }).catch(error => {
+          console.log('Fetch failed:', error);
+          // Return a fallback response for navigation requests
+          if (event.request.mode === 'navigate') {
+            return caches.match('/');
+          }
+          return new Response('Network error', { status: 503 });
+        });
       })
   );
 });
