@@ -413,3 +413,32 @@
         }
     }
 } 
+
+/* 변환팁 버튼 반응형 */
+@media (max-width: 768px) {
+    .tips-button-container {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+    }
+    
+    .tips-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+    
+    .tips-icon {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tips-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        gap: 0.4rem;
+    }
+    
+    .tips-icon {
+        font-size: 0.9rem;
+    }
+} 

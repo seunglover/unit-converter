@@ -324,6 +324,9 @@ const languages = {
         convertText: "변환",
         clearMessage: "초기화되었습니다.",
         
+        // 변환팁 버튼
+        tipsButtonText: "변환 팁 보기",
+        
         // 토스트 메시지
         toastMessages: {
             invalidNumber: "올바른 숫자를 입력해주세요.",
@@ -366,7 +369,58 @@ const languages = {
         volumeExamples: ["L ↔ gal", "ml ↔ cup", "tbsp ↔ ml"],
         temperatureExamples: ["°C ↔ °F", "°C ↔ K", "°F ↔ K"],
         areaExamples: ["m² ↔ cm²", "acre ↔ ha", "km² ↔ m²"],
-        speedExamples: ["km/h ↔ mph", "m/s ↔ km/h", "knot ↔ km/h"]
+        speedExamples: ["km/h ↔ mph", "m/s ↔ km/h", "knot ↔ km/h"],
+        
+        // 변환팁 버튼 텍스트
+        tipsButtonText: "查看转换技巧",
+        
+        // Tips 페이지
+        tipsTitle: "实用转换技巧",
+        tipsDescription: "收集了日常生活中可以使用的单位转换技巧",
+        
+        // Tips 카테고리
+        tipsCooking: "🍳 烹饪时实用的转换技巧",
+        tipsShopping: "🛒 海外购物时实用的转换技巧",
+        tipsExercise: "💪 运动时实用的转换技巧",
+        tipsTravel: "✈️ 旅行时实用的转换技巧",
+        tipsRealEstate: "🏠 房地产时实用的转换技巧",
+        tipsMemory: "🧠 容易记住的转换技巧",
+        
+        // Tips 내용
+        cookingUnitTitle: "烹饪单位转换",
+        flourTitle: "面粉转换",
+        clothingTitle: "服装尺寸转换",
+        shoesTitle: "鞋码转换",
+        weightTitle: "重量转换（运动）",
+        distanceTitle: "距离转换（跑步）",
+        temperatureTitle: "温度转换（旅行）",
+        speedTitle: "速度转换（驾驶）",
+        areaTitle: "面积转换（房地产）",
+        areaComparisonTitle: "实用面积比较",
+        quickCalculationTitle: "快速计算方法",
+        
+        // Tips 팁 내용
+        cookingTip: "💡 技巧: 烹饪时体积单位比重量单位更方便。",
+        flourTip: "💡 技巧: 不同材料即使体积相同重量也可能不同！",
+        clothingTip: "💡 技巧: 不同品牌的尺寸可能不同，请确认准确尺寸。",
+        shoesTip: "💡 技巧: 不同品牌的鞋码不同，购买前一定要实际测量。",
+        weightTip: "💡 技巧: 健身房通常使用lb（磅）作为重量单位。",
+        distanceTip: "💡 技巧: 在跑步应用中设置距离单位为英里有助于参加海外跑步活动。",
+        temperatureTip: "💡 技巧: 将摄氏度转换为华氏度时使用公式（摄氏度 × 9/5）+ 32。",
+        speedTip: "💡 技巧: 海外驾驶时速度限制可能以mph显示。",
+        areaTip: "💡 技巧: 房地产广告经常混合使用坪和平方米。",
+        areaComparisonTip: "💡 技巧: 将面积与日常生活比较可以更直观地理解。",
+        quickCalculationTip: "💡 技巧: 需要准确计算时请使用上面的转换器！",
+        
+        // 빠른 계산법 내용
+        tempConversion: "温度转换: 摄氏度转华氏度: 摄氏度 × 2 + 30（近似值）",
+        weightConversion: "重量转换: kg转lb: kg × 2 + kg × 0.2",
+        distanceConversion: "距离转换: km转mile: km × 0.6",
+        areaConversion: "面积转换: m²转坪: m² ÷ 3.3",
+        
+        // 테이블 라벨
+        koreaSize: "韩国尺寸",
+        usSize: "美国尺寸"
     },
     
     en: {
@@ -649,6 +703,9 @@ const languages = {
         // Convert text
         convertText: "Conversion",
         clearMessage: "Cleared.",
+        
+        // Tips button
+        tipsButtonText: "View Conversion Tips",
         
         // Toast messages
         toastMessages: {
@@ -1019,6 +1076,9 @@ const languages = {
         convertText: "変換",
         clearMessage: "クリアされました。",
         
+        // 変換コツボタン
+        tipsButtonText: "変換コツを見る",
+        
         // トーストメッセージ
         toastMessages: {
             invalidNumber: "正しい数字を入力してください。",
@@ -1048,12 +1108,12 @@ const languages = {
         tipsDescription: "日常生活ですぐに活用できる単位変換のコツを集めました",
         
         // Tipsカテゴリ
-        tipsCooking: "🍳 料理に役立つ変換コツ",
-        tipsShopping: "🛒 海外通販に役立つ変換コツ",
-        tipsExercise: "💪 運動に役立つ変換コツ",
-        tipsTravel: "✈️ 旅行に役立つ変換コツ",
-        tipsRealEstate: "🏠 不動産に役立つ変換コツ",
-        tipsMemory: "🧠 覚えやすい変換コツ",
+        tipsCooking: "🍳 料理に役立つ変換のコツ",
+        tipsShopping: "🛒 海外通販に役立つ変換のコツ",
+        tipsExercise: "💪 運動に役立つ変換のコツ",
+        tipsTravel: "✈️ 旅行に役立つ変換のコツ",
+        tipsRealEstate: "🏠 不動産に役立つ変換のコツ",
+        tipsMemory: "🧠 覚えやすい変換のコツ",
         
         // カテゴリカード例タグ
         lengthExamples: ["m ↔ cm", "km ↔ mile", "inch ↔ cm"],
@@ -1388,6 +1448,9 @@ const languages = {
         convertText: "转换",
         clearMessage: "已清除。",
         
+        // 转换技巧按钮
+        tipsButtonText: "查看转换技巧",
+        
         // 提示消息
         toastMessages: {
             invalidNumber: "请输入有效数字。",
@@ -1414,7 +1477,7 @@ const languages = {
         
         // Tips页面
         tipsTitle: "实用转换技巧",
-        tipsDescription: "收集了日常生活中可以立即使用的单位转换技巧",
+        tipsDescription: "收集了日常生活中可以使用的单位转换技巧",
         
         // Tips分类
         tipsCooking: "🍳 烹饪时有用的转换技巧",
@@ -1581,6 +1644,9 @@ function updateUILanguage() {
         }
     });
     
+    // Tips 카드 내용 업데이트
+    updateTipsContent(lang);
+    
     // 단위 선택 드롭다운 업데이트
     const fromUnitSelect = document.getElementById('from-unit');
     const toUnitSelect = document.getElementById('to-unit');
@@ -1591,6 +1657,117 @@ function updateUILanguage() {
         window.unitConverterApp.updateExamples();
         window.unitConverterApp.updateRelatedUnits();
     }
+    
+    // 변환팁 버튼 텍스트 업데이트
+    const tipsButton = document.querySelector('.tips-text');
+    if (tipsButton) {
+        tipsButton.textContent = lang.tipsButtonText || '변환 팁 보기';
+    }
+}
+
+// Tips 페이지 내용 업데이트 함수
+function updateTipsContent(lang) {
+    // 요리 단위 변환 카드
+    const cookingUnitTitle = document.querySelector('.tip-card h3');
+    if (cookingUnitTitle && cookingUnitTitle.textContent.includes('요리 단위 변환')) {
+        cookingUnitTitle.textContent = lang.cookingUnitTitle;
+    }
+    
+    // 밀가루 변환 카드
+    const flourTitle = document.querySelectorAll('.tip-card h3')[1];
+    if (flourTitle && flourTitle.textContent.includes('밀가루 변환')) {
+        flourTitle.textContent = lang.flourTitle;
+    }
+    
+    // 의류 사이즈 변환 카드
+    const clothingTitle = document.querySelectorAll('.tip-card h3')[2];
+    if (clothingTitle && clothingTitle.textContent.includes('의류 사이즈 변환')) {
+        clothingTitle.textContent = lang.clothingTitle;
+    }
+    
+    // 신발 사이즈 변환 카드
+    const shoesTitle = document.querySelectorAll('.tip-card h3')[3];
+    if (shoesTitle && shoesTitle.textContent.includes('신발 사이즈 변환')) {
+        shoesTitle.textContent = lang.shoesTitle;
+    }
+    
+    // 무게 변환 카드
+    const weightTitle = document.querySelectorAll('.tip-card h3')[4];
+    if (weightTitle && weightTitle.textContent.includes('무게 변환')) {
+        weightTitle.textContent = lang.weightTitle;
+    }
+    
+    // 거리 변환 카드
+    const distanceTitle = document.querySelectorAll('.tip-card h3')[5];
+    if (distanceTitle && distanceTitle.textContent.includes('거리 변환')) {
+        distanceTitle.textContent = lang.distanceTitle;
+    }
+    
+    // 온도 변환 카드
+    const temperatureTitle = document.querySelectorAll('.tip-card h3')[6];
+    if (temperatureTitle && temperatureTitle.textContent.includes('온도 변환')) {
+        temperatureTitle.textContent = lang.temperatureTitle;
+    }
+    
+    // 속도 변환 카드
+    const speedTitle = document.querySelectorAll('.tip-card h3')[7];
+    if (speedTitle && speedTitle.textContent.includes('속도 변환')) {
+        speedTitle.textContent = lang.speedTitle;
+    }
+    
+    // 면적 변환 카드
+    const areaTitle = document.querySelectorAll('.tip-card h3')[8];
+    if (areaTitle && areaTitle.textContent.includes('면적 변환')) {
+        areaTitle.textContent = lang.areaTitle;
+    }
+    
+    // 실용적인 면적 비교 카드
+    const areaComparisonTitle = document.querySelectorAll('.tip-card h3')[9];
+    if (areaComparisonTitle && areaComparisonTitle.textContent.includes('실용적인 면적 비교')) {
+        areaComparisonTitle.textContent = lang.areaComparisonTitle;
+    }
+    
+    // 빠른 계산법 카드
+    const quickCalculationTitle = document.querySelectorAll('.tip-card h3')[10];
+    if (quickCalculationTitle && quickCalculationTitle.textContent.includes('빠른 계산법')) {
+        quickCalculationTitle.textContent = lang.quickCalculationTitle;
+    }
+    
+    // 팁 내용 업데이트
+    const tipNotes = document.querySelectorAll('.tip-note');
+    tipNotes.forEach((note, index) => {
+        const tips = [
+            'cookingTip', 'flourTip', 'clothingTip', 'shoesTip', 
+            'weightTip', 'distanceTip', 'temperatureTip', 'speedTip', 
+            'areaTip', 'areaComparisonTip', 'quickCalculationTip'
+        ];
+        if (tips[index]) {
+            note.textContent = lang[tips[index]];
+        }
+    });
+    
+    // 빠른 계산법 내용 업데이트
+    const tipItems = document.querySelectorAll('.tip-item');
+    tipItems.forEach((item, index) => {
+        const calculations = ['tempConversion', 'weightConversion', 'distanceConversion', 'areaConversion'];
+        if (calculations[index]) {
+            const strong = item.querySelector('strong');
+            if (strong) {
+                const label = strong.textContent.replace(':', '');
+                item.innerHTML = `<strong>${label}:</strong> ${lang[calculations[index]]}`;
+            }
+        }
+    });
+    
+    // 테이블 라벨 업데이트
+    const tipLabels = document.querySelectorAll('.tip-label');
+    tipLabels.forEach(label => {
+        if (label.textContent.includes('한국 사이즈')) {
+            label.textContent = lang.koreaSize;
+        } else if (label.textContent.includes('미국 사이즈')) {
+            label.textContent = lang.usSize;
+        }
+    });
 }
 
 // 페이지 로드 시 저장된 언어 설정 불러오기
