@@ -464,7 +464,7 @@ class UnitConverterApp {
     clearConverter() {
         this.fromValueInput.value = '';
         this.toValueInput.value = '';
-        this.showToast('초기화되었습니다.', 'info');
+        this.showToast(languages[currentLanguage]?.clearMessage || '초기화되었습니다.', 'info');
     }
 
     // 변환 기록 업데이트

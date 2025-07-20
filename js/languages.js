@@ -27,7 +27,11 @@ const languages = {
         
         // 변환기
         backToMain: "메인으로",
+        backToMainAria: "메인으로 돌아가기",
         swapLabel: "단위 교체",
+        swapLabelAria: "단위 교체",
+        convertButton: "변환하기",
+        clearButton: "초기화",
         converterDescription: "일상생활에서 자주 사용하는 길이 단위를 변환해보세요",
         
         // 카테고리별 변환기 설명
@@ -40,6 +44,7 @@ const languages = {
         
         // 변환 텍스트
         convertText: "변환",
+        clearMessage: "초기화되었습니다.",
         
         // 기타
         logoText: "단위 변환기",
@@ -103,7 +108,11 @@ const languages = {
         
         // Converter
         backToMain: "Back to Main",
+        backToMainAria: "Back to Main",
         swapLabel: "Swap Units",
+        swapLabelAria: "Swap Units",
+        convertButton: "Convert",
+        clearButton: "Clear",
         converterDescription: "Convert length units commonly used in daily life",
         
         // Category-specific converter descriptions
@@ -116,6 +125,7 @@ const languages = {
         
         // Convert text
         convertText: "Conversion",
+        clearMessage: "Cleared.",
         
         // Others
         logoText: "Unit Converter",
@@ -179,7 +189,11 @@ const languages = {
         
         // コンバーター
         backToMain: "メインに戻る",
+        backToMainAria: "メインに戻る",
         swapLabel: "単位交換",
+        swapLabelAria: "単位交換",
+        convertButton: "変換",
+        clearButton: "クリア",
         converterDescription: "日常生活でよく使う長さの単位を変換してみましょう",
         
         // カテゴリ別コンバーター説明
@@ -192,6 +206,7 @@ const languages = {
         
         // 変換テキスト
         convertText: "変換",
+        clearMessage: "クリアされました。",
         
         // その他
         logoText: "単位変換機",
@@ -255,7 +270,11 @@ const languages = {
         
         // 转换器
         backToMain: "返回主页",
+        backToMainAria: "返回主页",
         swapLabel: "交换单位",
+        swapLabelAria: "交换单位",
+        convertButton: "转换",
+        clearButton: "清除",
         converterDescription: "转换日常生活中常用的长度单位",
         
         // 分类别转换器描述
@@ -268,6 +287,7 @@ const languages = {
         
         // 转换文本
         convertText: "转换",
+        clearMessage: "已清除。",
         
         // 其他
         logoText: "单位转换器",
@@ -371,9 +391,24 @@ function updateUILanguage() {
     // 뒤로가기 버튼
     const backBtn = document.getElementById('back-to-main');
     if (backBtn) {
-        const backText = backBtn.querySelector('span:not(.back-icon)');
+        const backText = backBtn.querySelector('.back-text');
         if (backText) backText.textContent = lang.backToMain;
+        backBtn.setAttribute('aria-label', lang.backToMainAria);
     }
+    
+    // 단위 교체 버튼
+    const swapBtn = document.getElementById('swap-btn');
+    if (swapBtn) {
+        swapBtn.setAttribute('aria-label', lang.swapLabelAria);
+    }
+    
+    // 변환하기 버튼
+    const convertBtn = document.getElementById('convert-btn');
+    if (convertBtn) convertBtn.textContent = lang.convertButton;
+    
+    // 초기화 버튼
+    const clearBtn = document.getElementById('clear-btn');
+    if (clearBtn) clearBtn.textContent = lang.clearButton;
     
     // 변환기 설명 (현재 카테고리에 맞게 업데이트)
     const converterDesc = document.querySelector('.converter-description');
