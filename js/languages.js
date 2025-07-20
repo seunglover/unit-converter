@@ -369,58 +369,7 @@ const languages = {
         volumeExamples: ["L ↔ gal", "ml ↔ cup", "tbsp ↔ ml"],
         temperatureExamples: ["°C ↔ °F", "°C ↔ K", "°F ↔ K"],
         areaExamples: ["m² ↔ cm²", "acre ↔ ha", "km² ↔ m²"],
-        speedExamples: ["km/h ↔ mph", "m/s ↔ km/h", "knot ↔ km/h"],
-        
-        // 변환팁 버튼 텍스트
-        tipsButtonText: "查看转换技巧",
-        
-        // Tips 페이지
-        tipsTitle: "实用转换技巧",
-        tipsDescription: "收集了日常生活中可以使用的单位转换技巧",
-        
-        // Tips 카테고리
-        tipsCooking: "🍳 烹饪时实用的转换技巧",
-        tipsShopping: "🛒 海外购物时实用的转换技巧",
-        tipsExercise: "💪 运动时实用的转换技巧",
-        tipsTravel: "✈️ 旅行时实用的转换技巧",
-        tipsRealEstate: "🏠 房地产时实用的转换技巧",
-        tipsMemory: "🧠 容易记住的转换技巧",
-        
-        // Tips 내용
-        cookingUnitTitle: "烹饪单位转换",
-        flourTitle: "面粉转换",
-        clothingTitle: "服装尺寸转换",
-        shoesTitle: "鞋码转换",
-        weightTitle: "重量转换（运动）",
-        distanceTitle: "距离转换（跑步）",
-        temperatureTitle: "温度转换（旅行）",
-        speedTitle: "速度转换（驾驶）",
-        areaTitle: "面积转换（房地产）",
-        areaComparisonTitle: "实用面积比较",
-        quickCalculationTitle: "快速计算方法",
-        
-        // Tips 팁 내용
-        cookingTip: "💡 技巧: 烹饪时体积单位比重量单位更方便。",
-        flourTip: "💡 技巧: 不同材料即使体积相同重量也可能不同！",
-        clothingTip: "💡 技巧: 不同品牌的尺寸可能不同，请确认准确尺寸。",
-        shoesTip: "💡 技巧: 不同品牌的鞋码不同，购买前一定要实际测量。",
-        weightTip: "💡 技巧: 健身房通常使用lb（磅）作为重量单位。",
-        distanceTip: "💡 技巧: 在跑步应用中设置距离单位为英里有助于参加海外跑步活动。",
-        temperatureTip: "💡 技巧: 将摄氏度转换为华氏度时使用公式（摄氏度 × 9/5）+ 32。",
-        speedTip: "💡 技巧: 海外驾驶时速度限制可能以mph显示。",
-        areaTip: "💡 技巧: 房地产广告经常混合使用坪和平方米。",
-        areaComparisonTip: "💡 技巧: 将面积与日常生活比较可以更直观地理解。",
-        quickCalculationTip: "💡 技巧: 需要准确计算时请使用上面的转换器！",
-        
-        // 빠른 계산법 내용
-        tempConversion: "温度转换: 摄氏度转华氏度: 摄氏度 × 2 + 30（近似值）",
-        weightConversion: "重量转换: kg转lb: kg × 2 + kg × 0.2",
-        distanceConversion: "距离转换: km转mile: km × 0.6",
-        areaConversion: "面积转换: m²转坪: m² ÷ 3.3",
-        
-        // 테이블 라벨
-        koreaSize: "韩国尺寸",
-        usSize: "美国尺寸"
+        speedExamples: ["km/h ↔ mph", "m/s ↔ km/h", "knot ↔ km/h"]
     },
     
     en: {
@@ -1659,10 +1608,12 @@ function updateUILanguage() {
     }
     
     // 변환팁 버튼 텍스트 업데이트
-    const tipsButton = document.querySelector('.tips-text');
-    if (tipsButton) {
-        tipsButton.textContent = lang.tipsButtonText || '변환 팁 보기';
-    }
+    const tipsButtons = document.querySelectorAll('.tips-text');
+    tipsButtons.forEach(tipsButton => {
+        if (tipsButton) {
+            tipsButton.textContent = lang.tipsButtonText || '변환 팁 보기';
+        }
+    });
 }
 
 // Tips 페이지 내용 업데이트 함수
