@@ -8,7 +8,8 @@
     "serve": "npx serve .",
     "dev": "python -m http.server 8000",
     "build": "echo 'Static site - no build required'",
-    "test": "echo 'No tests specified'"
+    "test": "echo 'No tests specified'",
+    "deploy": "echo 'Deploy to Cloudflare Pages'"
   },
   "keywords": [
     "unit-converter",
@@ -31,7 +32,7 @@
   "bugs": {
     "url": "https://github.com/seunglover/unit-converter/issues"
   },
-  "homepage": "https://seunglover.github.io/unit-converter",
+  "homepage": "https://unit-converter.pages.dev",
   "devDependencies": {
     "serve": "^14.2.0"
   },
