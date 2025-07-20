@@ -122,10 +122,16 @@ body {
     transition: all 0.3s ease;
 }
 
-.logo h1 {
+.logo a {
     text-decoration: none;
-    margin: 0;
-    padding: 0;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+.logo-text {
+    font-weight: var(--font-weight-bold);
 }
 
 .logo:hover {
