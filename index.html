@@ -43,6 +43,7 @@
     
     <!-- Preload critical resources -->
     <link rel="preload" href="js/data.js" as="script">
+    <link rel="preload" href="js/languages.js" as="script">
     
     <!-- Theme Color -->
     <meta name="theme-color" content="#5AD4D4">
@@ -65,6 +66,16 @@
                     <span class="logo-icon">📏</span>
                     <span class="logo-text">단위 변환기</span>
                 </a>
+            </div>
+            
+            <!-- 언어 선택 드롭다운 -->
+            <div class="language-selector">
+                <select id="language-select" class="language-select">
+                    <option value="ko">🇰🇷 한국어</option>
+                    <option value="en">🇺🇸 English</option>
+                    <option value="ja">🇯🇵 日本語</option>
+                    <option value="zh">🇨🇳 中文</option>
+                </select>
             </div>
             
             <!-- 통합 검색창 추가 -->
@@ -284,6 +295,7 @@
     </footer>
 
     <!-- JavaScript -->
+    <script src="js/languages.js"></script>
     <script src="js/data.js"></script>
     <script src="js/converter.js"></script>
     <script src="js/app.js"></script>

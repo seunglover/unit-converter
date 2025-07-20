@@ -143,6 +143,32 @@ body {
     font-size: var(--font-size-3xl);
 }
 
+/* Language Selector - 언어 선택기 */
+.language-selector {
+    margin-left: var(--spacing-4);
+}
+
+.language-select {
+    padding: var(--spacing-2) var(--spacing-3);
+    border: 2px solid var(--border-accent);
+    border-radius: var(--radius-md);
+    background: var(--bg-input);
+    color: var(--text-primary);
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.language-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(90, 212, 212, 0.1);
+}
+
+.language-select:hover {
+    border-color: var(--primary-color);
+}
+
 /* Search Container - 검색 컨테이너 */
 .search-container {
     position: relative;

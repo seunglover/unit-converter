@@ -118,6 +118,16 @@ class UnitConverterApp {
             });
         });
         
+        // 언어 선택 이벤트
+        const languageSelect = document.getElementById('language-select');
+        if (languageSelect) {
+            languageSelect.addEventListener('change', (e) => {
+                const selectedLanguage = e.target.value;
+                changeLanguage(selectedLanguage);
+                this.updateLanguageSelector(selectedLanguage);
+            });
+        }
+        
         // 키보드 단축키
         document.addEventListener('keydown', (e) => this.handleKeyboardShortcuts(e));
         
@@ -138,6 +148,7 @@ class UnitConverterApp {
         this.showMainPage();
         this.updateHistory();
         this.registerServiceWorker();
+        this.initializeLanguageSelector();
     }
 
     // 메인 페이지 표시
@@ -607,6 +618,23 @@ class UnitConverterApp {
                 .catch(error => {
                     console.log('Service Worker registration failed:', error);
                 });
+        }
+    }
+    
+    // 언어 선택기 초기화
+    initializeLanguageSelector() {
+        const languageSelect = document.getElementById('language-select');
+        if (languageSelect) {
+            const savedLanguage = localStorage.getItem('preferredLanguage') || 'ko';
+            languageSelect.value = savedLanguage;
+        }
+    }
+    
+    // 언어 선택기 업데이트
+    updateLanguageSelector(language) {
+        const languageSelect = document.getElementById('language-select');
+        if (languageSelect) {
+            languageSelect.value = language;
         }
     }
 }
