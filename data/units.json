@@ -1,0 +1,726 @@
+{
+  "metadata": {
+    "title": "단위 변환기 - 길이, 무게, 부피, 온도 변환 도구",
+    "description": "일상생활에서 자주 사용하는 길이, 무게, 부피, 온도 등의 단위를 쉽고 빠르게 변환해주는 도구입니다.",
+    "keywords": ["단위변환", "길이변환", "무게변환", "부피변환", "온도변환", "면적변환", "속도변환"],
+    "author": "단위 변환기",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-01"
+  },
+  "categories": {
+    "length": {
+      "name": "길이",
+      "description": "일상생활에서 자주 사용하는 길이 단위를 변환해보세요",
+      "seoDescription": "미터, 센티미터, 킬로미터, 인치, 피트, 마일 등 다양한 길이 단위를 쉽게 변환할 수 있습니다. 건축, 공학, 일상생활에서 유용한 길이 변환 도구입니다.",
+      "keywords": ["길이변환", "미터", "센티미터", "킬로미터", "인치", "피트", "마일", "야드"],
+      "units": {
+        "mm": {
+          "name": "밀리미터",
+          "symbol": "mm",
+          "description": "1미터의 1/1000. 매우 작은 길이를 측정할 때 사용합니다.",
+          "formula": "1mm = 0.001m",
+          "examples": [
+            {"text": "종이 두께", "value": "0.1mm"},
+            {"text": "연필심 지름", "value": "0.5mm"},
+            {"text": "동전 두께", "value": "1.8mm"}
+          ],
+          "conversions": {
+            "cm": 0.1,
+            "m": 0.001,
+            "km": 0.000001,
+            "inch": 0.0393701,
+            "ft": 0.00328084,
+            "yard": 0.00109361,
+            "mile": 0.000000621371
+          }
+        },
+        "cm": {
+          "name": "센티미터",
+          "symbol": "cm",
+          "description": "1미터의 1/100. 일상생활에서 가장 많이 사용하는 길이 단위입니다.",
+          "formula": "1cm = 0.01m",
+          "examples": [
+            {"text": "성인 손가락 길이", "value": "7cm"},
+            {"text": "신용카드 길이", "value": "8.5cm"},
+            {"text": "A4용지 너비", "value": "21cm"}
+          ],
+          "conversions": {
+            "mm": 10,
+            "m": 0.01,
+            "km": 0.00001,
+            "inch": 0.393701,
+            "ft": 0.0328084,
+            "yard": 0.0109361,
+            "mile": 0.00000621371
+          }
+        },
+        "m": {
+          "name": "미터",
+          "symbol": "m",
+          "description": "국제단위계(SI)의 기본 길이 단위입니다.",
+          "formula": "1m = 100cm = 1000mm",
+          "examples": [
+            {"text": "성인 평균 키", "value": "1.7m"},
+            {"text": "문 높이", "value": "2.1m"},
+            {"text": "자동차 길이", "value": "4.5m"}
+          ],
+          "conversions": {
+            "mm": 1000,
+            "cm": 100,
+            "km": 0.001,
+            "inch": 39.3701,
+            "ft": 3.28084,
+            "yard": 1.09361,
+            "mile": 0.000621371
+          }
+        },
+        "km": {
+          "name": "킬로미터",
+          "symbol": "km",
+          "description": "1미터의 1000배. 거리 측정에 사용됩니다.",
+          "formula": "1km = 1000m",
+          "examples": [
+            {"text": "마라톤 거리", "value": "42.195km"},
+            {"text": "서울-부산 거리", "value": "325km"},
+            {"text": "지구 둘레", "value": "40,075km"}
+          ],
+          "conversions": {
+            "mm": 1000000,
+            "cm": 100000,
+            "m": 1000,
+            "inch": 39370.1,
+            "ft": 3280.84,
+            "yard": 1093.61,
+            "mile": 0.621371
+          }
+        },
+        "inch": {
+          "name": "인치",
+          "symbol": "inch",
+          "description": "영미권에서 사용하는 길이 단위입니다.",
+          "formula": "1inch = 2.54cm",
+          "examples": [
+            {"text": "스마트폰 화면", "value": "6.1inch"},
+            {"text": "노트북 화면", "value": "13.3inch"},
+            {"text": "TV 화면", "value": "55inch"}
+          ],
+          "conversions": {
+            "mm": 25.4,
+            "cm": 2.54,
+            "m": 0.0254,
+            "km": 0.0000254,
+            "ft": 0.0833333,
+            "yard": 0.0277778,
+            "mile": 0.0000157828
+          }
+        },
+        "ft": {
+          "name": "피트",
+          "symbol": "ft",
+          "description": "영미권에서 사용하는 길이 단위입니다.",
+          "formula": "1ft = 12inch = 30.48cm",
+          "examples": [
+            {"text": "성인 평균 키", "value": "5.6ft"},
+            {"text": "문 높이", "value": "6.9ft"},
+            {"text": "농구 골대 높이", "value": "10ft"}
+          ],
+          "conversions": {
+            "mm": 304.8,
+            "cm": 30.48,
+            "m": 0.3048,
+            "km": 0.0003048,
+            "inch": 12,
+            "yard": 0.333333,
+            "mile": 0.000189394
+          }
+        },
+        "yard": {
+          "name": "야드",
+          "symbol": "yard",
+          "description": "영미권에서 사용하는 길이 단위입니다.",
+          "formula": "1yard = 3ft = 91.44cm",
+          "examples": [
+            {"text": "미식축구 필드", "value": "100yard"},
+            {"text": "골프 홀 거리", "value": "150yard"},
+            {"text": "수영장 길이", "value": "25yard"}
+          ],
+          "conversions": {
+            "mm": 914.4,
+            "cm": 91.44,
+            "m": 0.9144,
+            "km": 0.0009144,
+            "inch": 36,
+            "ft": 3,
+            "mile": 0.000568182
+          }
+        },
+        "mile": {
+          "name": "마일",
+          "symbol": "mile",
+          "description": "영미권에서 사용하는 거리 단위입니다.",
+          "formula": "1mile = 1.609km",
+          "examples": [
+            {"text": "서울-인천 거리", "value": "28mile"},
+            {"text": "런던-파리 거리", "value": "214mile"},
+            {"text": "지구-달 거리", "value": "238,900mile"}
+          ],
+          "conversions": {
+            "mm": 1609344,
+            "cm": 160934.4,
+            "m": 1609.344,
+            "km": 1.609344,
+            "inch": 63360,
+            "ft": 5280,
+            "yard": 1760
+          }
+        }
+      }
+    },
+    "weight": {
+      "name": "무게",
+      "description": "일상생활에서 자주 사용하는 무게 단위를 변환해보세요",
+      "seoDescription": "킬로그램, 그램, 파운드, 온스 등 다양한 무게 단위를 쉽게 변환할 수 있습니다. 요리, 건강관리, 상업에서 유용한 무게 변환 도구입니다.",
+      "keywords": ["무게변환", "킬로그램", "그램", "파운드", "온스", "톤", "밀리그램"],
+      "units": {
+        "mg": {
+          "name": "밀리그램",
+          "symbol": "mg",
+          "description": "1그램의 1/1000. 매우 작은 무게를 측정할 때 사용합니다.",
+          "formula": "1mg = 0.001g",
+          "examples": [
+            {"text": "아스피린 정량", "value": "325mg"},
+            {"text": "비타민C 정량", "value": "1000mg"},
+            {"text": "소금 한 톨", "value": "5mg"}
+          ],
+          "conversions": {
+            "g": 0.001,
+            "kg": 0.000001,
+            "ton": 0.000000001,
+            "lb": 0.00000220462,
+            "oz": 0.000035274
+          }
+        },
+        "g": {
+          "name": "그램",
+          "symbol": "g",
+          "description": "일상생활에서 가장 많이 사용하는 무게 단위입니다.",
+          "formula": "1g = 1000mg",
+          "examples": [
+            {"text": "설탕 한 스푼", "value": "12g"},
+            {"text": "우유 한 컵", "value": "240g"},
+            {"text": "사과 한 개", "value": "150g"}
+          ],
+          "conversions": {
+            "mg": 1000,
+            "kg": 0.001,
+            "ton": 0.000001,
+            "lb": 0.00220462,
+            "oz": 0.035274
+          }
+        },
+        "kg": {
+          "name": "킬로그램",
+          "symbol": "kg",
+          "description": "국제단위계(SI)의 기본 무게 단위입니다.",
+          "formula": "1kg = 1000g",
+          "examples": [
+            {"text": "성인 평균 체중", "value": "70kg"},
+            {"text": "쌀 한 포대", "value": "20kg"},
+            {"text": "가스통", "value": "15kg"}
+          ],
+          "conversions": {
+            "mg": 1000000,
+            "g": 1000,
+            "ton": 0.001,
+            "lb": 2.20462,
+            "oz": 35.274
+          }
+        },
+        "ton": {
+          "name": "톤",
+          "symbol": "ton",
+          "description": "1킬로그램의 1000배. 대량의 무게를 측정할 때 사용합니다.",
+          "formula": "1ton = 1000kg",
+          "examples": [
+            {"text": "자동차 무게", "value": "1.5ton"},
+            {"text": "컨테이너 무게", "value": "20ton"},
+            {"text": "기차 한 칸", "value": "50ton"}
+          ],
+          "conversions": {
+            "mg": 1000000000,
+            "g": 1000000,
+            "kg": 1000,
+            "lb": 2204.62,
+            "oz": 35274
+          }
+        },
+        "lb": {
+          "name": "파운드",
+          "symbol": "lb",
+          "description": "영미권에서 사용하는 무게 단위입니다.",
+          "formula": "1lb = 0.453592kg",
+          "examples": [
+            {"text": "성인 평균 체중", "value": "154lb"},
+            {"text": "아기 체중", "value": "7lb"},
+            {"text": "고기 한 근", "value": "1.3lb"}
+          ],
+          "conversions": {
+            "mg": 453592,
+            "g": 453.592,
+            "kg": 0.453592,
+            "ton": 0.000453592,
+            "oz": 16
+          }
+        },
+        "oz": {
+          "name": "온스",
+          "symbol": "oz",
+          "description": "영미권에서 사용하는 무게 단위입니다.",
+          "formula": "1oz = 28.3495g",
+          "examples": [
+            {"text": "초콜릿 한 조각", "value": "1oz"},
+            {"text": "치즈 한 조각", "value": "2oz"},
+            {"text": "견과류 한 줌", "value": "0.5oz"}
+          ],
+          "conversions": {
+            "mg": 28349.5,
+            "g": 28.3495,
+            "kg": 0.0283495,
+            "ton": 0.0000283495,
+            "lb": 0.0625
+          }
+        }
+      }
+    },
+    "volume": {
+      "name": "부피",
+      "description": "일상생활에서 자주 사용하는 부피 단위를 변환해보세요",
+      "seoDescription": "리터, 밀리리터, 갤런, 컵, 스푼 등 다양한 부피 단위를 쉽게 변환할 수 있습니다. 요리, 음료, 화학에서 유용한 부피 변환 도구입니다.",
+      "keywords": ["부피변환", "리터", "밀리리터", "갤런", "컵", "스푼", "세제곱미터"],
+      "units": {
+        "ml": {
+          "name": "밀리리터",
+          "symbol": "ml",
+          "description": "1리터의 1/1000. 작은 부피를 측정할 때 사용합니다.",
+          "formula": "1ml = 0.001L",
+          "examples": [
+            {"text": "물 한 모금", "value": "15ml"},
+            {"text": "약 한 스푼", "value": "5ml"},
+            {"text": "향수 한 방울", "value": "0.05ml"}
+          ],
+          "conversions": {
+            "l": 0.001,
+            "m3": 0.000001,
+            "cup": 0.00422675,
+            "tbsp": 0.067628,
+            "tsp": 0.202884,
+            "gal": 0.000264172
+          }
+        },
+        "l": {
+          "name": "리터",
+          "symbol": "L",
+          "description": "일상생활에서 가장 많이 사용하는 부피 단위입니다.",
+          "formula": "1L = 1000ml",
+          "examples": [
+            {"text": "우유 한 팩", "value": "1L"},
+            {"text": "물 한 병", "value": "500ml"},
+            {"text": "기름 한 통", "value": "18L"}
+          ],
+          "conversions": {
+            "ml": 1000,
+            "m3": 0.001,
+            "cup": 4.22675,
+            "tbsp": 67.628,
+            "tsp": 202.884,
+            "gal": 0.264172
+          }
+        },
+        "m3": {
+          "name": "세제곱미터",
+          "symbol": "m³",
+          "description": "큰 부피를 측정할 때 사용합니다.",
+          "formula": "1m³ = 1000L",
+          "examples": [
+            {"text": "수영장 한 칸", "value": "25m³"},
+            {"text": "트럭 화물칸", "value": "30m³"},
+            {"text": "방 한 칸", "value": "40m³"}
+          ],
+          "conversions": {
+            "ml": 1000000,
+            "l": 1000,
+            "cup": 4226.75,
+            "tbsp": 67628,
+            "tsp": 202884,
+            "gal": 264.172
+          }
+        },
+        "cup": {
+          "name": "컵",
+          "symbol": "cup",
+          "description": "요리에서 자주 사용하는 부피 단위입니다.",
+          "formula": "1cup = 236.588ml",
+          "examples": [
+            {"text": "밀가루 한 컵", "value": "1cup"},
+            {"text": "우유 한 컵", "value": "1cup"},
+            {"text": "물 한 컵", "value": "1cup"}
+          ],
+          "conversions": {
+            "ml": 236.588,
+            "l": 0.236588,
+            "m3": 0.000236588,
+            "tbsp": 16,
+            "tsp": 48,
+            "gal": 0.0625
+          }
+        },
+        "tbsp": {
+          "name": "큰 스푼",
+          "symbol": "tbsp",
+          "description": "요리에서 사용하는 부피 단위입니다.",
+          "formula": "1tbsp = 14.7868ml",
+          "examples": [
+            {"text": "올리브오일", "value": "1tbsp"},
+            {"text": "설탕 한 스푼", "value": "1tbsp"},
+            {"text": "소금 한 스푼", "value": "1tbsp"}
+          ],
+          "conversions": {
+            "ml": 14.7868,
+            "l": 0.0147868,
+            "m3": 0.0000147868,
+            "cup": 0.0625,
+            "tsp": 3,
+            "gal": 0.00390625
+          }
+        },
+        "tsp": {
+          "name": "작은 스푼",
+          "symbol": "tsp",
+          "description": "요리에서 사용하는 부피 단위입니다.",
+          "formula": "1tsp = 4.92892ml",
+          "examples": [
+            {"text": "베이킹소다", "value": "1tsp"},
+            {"text": "바닐라 추출물", "value": "1tsp"},
+            {"text": "소금 한 톨", "value": "1tsp"}
+          ],
+          "conversions": {
+            "ml": 4.92892,
+            "l": 0.00492892,
+            "m3": 0.00000492892,
+            "cup": 0.0208333,
+            "tbsp": 0.333333,
+            "gal": 0.00130208
+          }
+        },
+        "gal": {
+          "name": "갤런",
+          "symbol": "gal",
+          "description": "영미권에서 사용하는 부피 단위입니다.",
+          "formula": "1gal = 3.78541L",
+          "examples": [
+            {"text": "휘발유 한 갤런", "value": "1gal"},
+            {"text": "우유 한 갤런", "value": "1gal"},
+            {"text": "페인트 한 갤런", "value": "1gal"}
+          ],
+          "conversions": {
+            "ml": 3785.41,
+            "l": 3.78541,
+            "m3": 0.00378541,
+            "cup": 16,
+            "tbsp": 256,
+            "tsp": 768
+          }
+        }
+      }
+    },
+    "temperature": {
+      "name": "온도",
+      "description": "일상생활에서 자주 사용하는 온도 단위를 변환해보세요",
+      "seoDescription": "섭씨, 화씨, 켈빈 등 다양한 온도 단위를 쉽게 변환할 수 있습니다. 날씨, 체온, 과학 실험에서 유용한 온도 변환 도구입니다.",
+      "keywords": ["온도변환", "섭씨", "화씨", "켈빈", "체온", "날씨"],
+      "units": {
+        "celsius": {
+          "name": "섭씨",
+          "symbol": "°C",
+          "description": "한국에서 사용하는 온도 단위입니다.",
+          "formula": "물의 어는점: 0°C, 끓는점: 100°C",
+          "examples": [
+            {"text": "실내 적정 온도", "value": "22°C"},
+            {"text": "체온", "value": "36.5°C"},
+            {"text": "냉장고 온도", "value": "4°C"}
+          ],
+          "conversions": {
+            "fahrenheit": "celsius_to_fahrenheit",
+            "kelvin": "celsius_to_kelvin"
+          }
+        },
+        "fahrenheit": {
+          "name": "화씨",
+          "symbol": "°F",
+          "description": "미국에서 사용하는 온도 단위입니다.",
+          "formula": "물의 어는점: 32°F, 끓는점: 212°F",
+          "examples": [
+            {"text": "실내 적정 온도", "value": "72°F"},
+            {"text": "체온", "value": "98.6°F"},
+            {"text": "냉장고 온도", "value": "40°F"}
+          ],
+          "conversions": {
+            "celsius": "fahrenheit_to_celsius",
+            "kelvin": "fahrenheit_to_kelvin"
+          }
+        },
+        "kelvin": {
+          "name": "켈빈",
+          "symbol": "K",
+          "description": "과학에서 사용하는 절대 온도 단위입니다.",
+          "formula": "절대영도: 0K, 물의 어는점: 273.15K",
+          "examples": [
+            {"text": "실내 적정 온도", "value": "295K"},
+            {"text": "체온", "value": "310K"},
+            {"text": "태양 표면", "value": "5778K"}
+          ],
+          "conversions": {
+            "celsius": "kelvin_to_celsius",
+            "fahrenheit": "kelvin_to_fahrenheit"
+          }
+        }
+      }
+    },
+    "area": {
+      "name": "면적",
+      "description": "일상생활에서 자주 사용하는 면적 단위를 변환해보세요",
+      "seoDescription": "제곱미터, 제곱센티미터, 에이커, 헥타르 등 다양한 면적 단위를 쉽게 변환할 수 있습니다. 부동산, 농업, 건축에서 유용한 면적 변환 도구입니다.",
+      "keywords": ["면적변환", "제곱미터", "제곱센티미터", "에이커", "헥타르", "평"],
+      "units": {
+        "mm2": {
+          "name": "제곱밀리미터",
+          "symbol": "mm²",
+          "description": "매우 작은 면적을 측정할 때 사용합니다.",
+          "formula": "1mm² = 0.01cm²",
+          "examples": [
+            {"text": "종이 한 점", "value": "1mm²"},
+            {"text": "모눈종이 한 칸", "value": "25mm²"},
+            {"text": "우표 면적", "value": "100mm²"}
+          ],
+          "conversions": {
+            "cm2": 0.01,
+            "m2": 0.000001,
+            "km2": 0.000000000001,
+            "acre": 0.000000000247105,
+            "ha": 0.0000000001
+          }
+        },
+        "cm2": {
+          "name": "제곱센티미터",
+          "symbol": "cm²",
+          "description": "일상생활에서 자주 사용하는 면적 단위입니다.",
+          "formula": "1cm² = 100mm²",
+          "examples": [
+            {"text": "우표 면적", "value": "4cm²"},
+            {"text": "명함 면적", "value": "54cm²"},
+            {"text": "A4용지 면적", "value": "623.7cm²"}
+          ],
+          "conversions": {
+            "mm2": 100,
+            "m2": 0.0001,
+            "km2": 0.0000000001,
+            "acre": 0.0000000247105,
+            "ha": 0.00000001
+          }
+        },
+        "m2": {
+          "name": "제곱미터",
+          "symbol": "m²",
+          "description": "부동산에서 자주 사용하는 면적 단위입니다.",
+          "formula": "1m² = 10000cm²",
+          "examples": [
+            {"text": "방 한 칸", "value": "12m²"},
+            {"text": "주차 공간", "value": "15m²"},
+            {"text": "테니스 코트", "value": "260m²"}
+          ],
+          "conversions": {
+            "mm2": 1000000,
+            "cm2": 10000,
+            "km2": 0.000001,
+            "acre": 0.000247105,
+            "ha": 0.0001
+          }
+        },
+        "km2": {
+          "name": "제곱킬로미터",
+          "symbol": "km²",
+          "description": "큰 지역의 면적을 측정할 때 사용합니다.",
+          "formula": "1km² = 1000000m²",
+          "examples": [
+            {"text": "서울 면적", "value": "605km²"},
+            {"text": "제주도 면적", "value": "1849km²"},
+            {"text": "한국 면적", "value": "100,363km²"}
+          ],
+          "conversions": {
+            "mm2": 1000000000000,
+            "cm2": 10000000000,
+            "m2": 1000000,
+            "acre": 247.105,
+            "ha": 100
+          }
+        },
+        "acre": {
+          "name": "에이커",
+          "symbol": "acre",
+          "description": "농지나 토지 면적을 측정할 때 사용합니다.",
+          "formula": "1acre = 4046.86m²",
+          "examples": [
+            {"text": "축구장 면적", "value": "1.32acre"},
+            {"text": "농장 면적", "value": "100acre"},
+            {"text": "공원 면적", "value": "50acre"}
+          ],
+          "conversions": {
+            "mm2": 4046856422.4,
+            "cm2": 40468564.224,
+            "m2": 4046.8564224,
+            "km2": 0.0040468564224,
+            "ha": 0.40468564224
+          }
+        },
+        "ha": {
+          "name": "헥타르",
+          "symbol": "ha",
+          "description": "농지 면적을 측정할 때 사용합니다.",
+          "formula": "1ha = 10000m²",
+          "examples": [
+            {"text": "축구장 면적", "value": "0.7ha"},
+            {"text": "농장 면적", "value": "5ha"},
+            {"text": "공원 면적", "value": "10ha"}
+          ],
+          "conversions": {
+            "mm2": 10000000000,
+            "cm2": 100000000,
+            "m2": 10000,
+            "km2": 0.01,
+            "acre": 2.47105
+          }
+        }
+      }
+    },
+    "speed": {
+      "name": "속도",
+      "description": "일상생활에서 자주 사용하는 속도 단위를 변환해보세요",
+      "seoDescription": "킬로미터/시간, 미터/초, 마일/시간, 노트 등 다양한 속도 단위를 쉽게 변환할 수 있습니다. 교통, 스포츠, 해상에서 유용한 속도 변환 도구입니다.",
+      "keywords": ["속도변환", "킬로미터시간", "미터초", "마일시간", "노트", "kmh", "mph"],
+      "units": {
+        "mps": {
+          "name": "미터/초",
+          "symbol": "m/s",
+          "description": "과학에서 사용하는 속도 단위입니다.",
+          "formula": "1m/s = 3.6km/h",
+          "examples": [
+            {"text": "사람 걷기", "value": "1.4m/s"},
+            {"text": "자전거", "value": "5m/s"},
+            {"text": "소리 속도", "value": "343m/s"}
+          ],
+          "conversions": {
+            "kmh": 3.6,
+            "mph": 2.23694,
+            "knot": 1.94384
+          }
+        },
+        "kmh": {
+          "name": "킬로미터/시간",
+          "symbol": "km/h",
+          "description": "일상생활에서 가장 많이 사용하는 속도 단위입니다.",
+          "formula": "1km/h = 0.277778m/s",
+          "examples": [
+            {"text": "도시 속도 제한", "value": "50km/h"},
+            {"text": "고속도로 속도", "value": "110km/h"},
+            {"text": "비행기 속도", "value": "800km/h"}
+          ],
+          "conversions": {
+            "mps": 0.277778,
+            "mph": 0.621371,
+            "knot": 0.539957
+          }
+        },
+        "mph": {
+          "name": "마일/시간",
+          "symbol": "mph",
+          "description": "영미권에서 사용하는 속도 단위입니다.",
+          "formula": "1mph = 1.60934km/h",
+          "examples": [
+            {"text": "도시 속도 제한", "value": "30mph"},
+            {"text": "고속도로 속도", "value": "70mph"},
+            {"text": "비행기 속도", "value": "500mph"}
+          ],
+          "conversions": {
+            "mps": 0.44704,
+            "kmh": 1.60934,
+            "knot": 0.868976
+          }
+        },
+        "knot": {
+          "name": "노트",
+          "symbol": "knot",
+          "description": "해상에서 사용하는 속도 단위입니다.",
+          "formula": "1knot = 1.852km/h",
+          "examples": [
+            {"text": "요트 속도", "value": "10knot"},
+            {"text": "화물선 속도", "value": "20knot"},
+            {"text": "순양함 속도", "value": "30knot"}
+          ],
+          "conversions": {
+            "mps": 0.514444,
+            "kmh": 1.852,
+            "mph": 1.15078
+          }
+        }
+      }
+    }
+  },
+  "conversionFormulas": {
+    "temperature": {
+      "celsius_to_fahrenheit": "(c * 9/5) + 32",
+      "celsius_to_kelvin": "c + 273.15",
+      "fahrenheit_to_celsius": "(f - 32) * 5/9",
+      "fahrenheit_to_kelvin": "(f - 32) * 5/9 + 273.15",
+      "kelvin_to_celsius": "k - 273.15",
+      "kelvin_to_fahrenheit": "(k - 273.15) * 9/5 + 32"
+    }
+  },
+  "defaultUnits": {
+    "length": {"from": "m", "to": "cm"},
+    "weight": {"from": "kg", "to": "g"},
+    "volume": {"from": "l", "to": "ml"},
+    "temperature": {"from": "celsius", "to": "fahrenheit"},
+    "area": {"from": "m2", "to": "cm2"},
+    "speed": {"from": "kmh", "to": "mps"}
+  },
+  "popularConversions": [
+    {
+      "category": "length",
+      "from": "m",
+      "to": "cm",
+      "value": 1,
+      "description": "1미터를 센티미터로 변환"
+    },
+    {
+      "category": "weight",
+      "from": "kg",
+      "to": "lb",
+      "value": 1,
+      "description": "1킬로그램을 파운드로 변환"
+    },
+    {
+      "category": "temperature",
+      "from": "celsius",
+      "to": "fahrenheit",
+      "value": 25,
+      "description": "25도 섭씨를 화씨로 변환"
+    },
+    {
+      "category": "volume",
+      "from": "l",
+      "to": "gal",
+      "value": 1,
+      "description": "1리터를 갤런으로 변환"
+    }
+  ]
+} 

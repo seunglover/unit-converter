@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단위 변환 도우미 - 정확하고 빠른 단위 변환 | 그램 온스, 섭씨 화씨, cm inch</title>
+    <meta name="description" content="일상생활에서 필요한 모든 단위를 정확하고 빠르게 변환해주는 도구입니다. 그램 온스, 섭씨 화씨, cm inch, 요리 단위, 해외직구 단위 변환을 지원합니다.">
+    <meta name="keywords" content="단위 변환, 그램 온스, 섭씨 화씨, cm inch, 요리 단위, 해외직구, 길이 변환, 무게 변환, 부피 변환, 온도 변환, 면적 변환, 속도 변환">
+    <meta name="author" content="단위 변환 도우미">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="ko">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Font Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com/">
+    <meta property="og:title" content="단위 변환기 - 일상생활 단위 변환 도구">
+    <meta property="og:description" content="길이, 무게, 부피, 온도 등을 쉽고 빠르게 변환해주는 도구입니다.">
+    <meta property="og:image" content="https://your-domain.com/assets/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-domain.com/">
+    <meta property="twitter:title" content="단위 변환기 - 일상생활 단위 변환 도구">
+    <meta property="twitter:description" content="길이, 무게, 부피, 온도 등을 쉽고 빠르게 변환해주는 도구입니다.">
+    <meta property="twitter:image" content="https://your-domain.com/assets/og-image.png">
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"> -->
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="js/converter.js" as="script">
+    <link rel="preload" href="js/data.js" as="script">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#5AD4D4">
+    <meta name="msapplication-TileColor" content="#5AD4D4">
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Apple Touch Icons -->
+    <!-- <link rel="apple-touch-icon" href="/assets/icons/icon-152x152.png"> -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="단위 변환기">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <span class="logo-icon">📏</span>
+                단위 변환기
+            </h1>
+            
+            <!-- 통합 검색창 추가 -->
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="search-input" class="search-input" placeholder="단위명 또는 카테고리 검색 (예: oz, 길이, 온도)">
+                    <button type="button" id="search-btn" class="search-btn" aria-label="검색">
+                        <span class="search-icon">🔍</span>
+                    </button>
+                </div>
+                <div id="search-results" class="search-results"></div>
+            </div>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#length" class="nav-link active" data-category="length">길이</a></li>
+                    <li><a href="#weight" class="nav-link" data-category="weight">무게</a></li>
+                    <li><a href="#volume" class="nav-link" data-category="volume">부피</a></li>
+                    <li><a href="#temperature" class="nav-link" data-category="temperature">온도</a></li>
+                    <li><a href="#area" class="nav-link" data-category="area">면적</a></li>
+                    <li><a href="#speed" class="nav-link" data-category="speed">속도</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- 메인 페이지: 카테고리 카드 섹션 -->
+            <section id="main-page" class="main-page">
+                <div class="hero-section">
+                    <h2 class="hero-title">일상생활의 모든 단위 변환</h2>
+                    <p class="hero-description">길이, 무게, 부피, 온도 등 다양한 단위를 쉽고 빠르게 변환해보세요</p>
+                </div>
+                
+                <div class="category-grid">
+                    <div class="category-card" data-category="length">
+                        <div class="category-icon">📏</div>
+                        <h3 class="category-title">길이</h3>
+                        <p class="category-description">미터, 센티미터, 인치, 피트 등</p>
+                        <div class="category-examples">
+                            <span class="example-tag">m ↔ cm</span>
+                            <span class="example-tag">km ↔ mile</span>
+                            <span class="example-tag">inch ↔ cm</span>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card" data-category="weight">
+                        <div class="category-icon">⚖️</div>
+                        <h3 class="category-title">무게</h3>
+                        <p class="category-description">킬로그램, 그램, 파운드, 온스 등</p>
+                        <div class="category-examples">
+                            <span class="example-tag">kg ↔ lb</span>
+                            <span class="example-tag">g ↔ oz</span>
+                            <span class="example-tag">mg ↔ g</span>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card" data-category="volume">
+                        <div class="category-icon">🧪</div>
+                        <h3 class="category-title">부피</h3>
+                        <p class="category-description">리터, 밀리리터, 갤런, 컵 등</p>
+                        <div class="category-examples">
+                            <span class="example-tag">L ↔ gal</span>
+                            <span class="example-tag">ml ↔ cup</span>
+                            <span class="example-tag">tbsp ↔ ml</span>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card" data-category="temperature">
+                        <div class="category-icon">🌡️</div>
+                        <h3 class="category-title">온도</h3>
+                        <p class="category-description">섭씨, 화씨, 켈빈 등</p>
+                        <div class="category-examples">
+                            <span class="example-tag">°C ↔ °F</span>
+                            <span class="example-tag">°C ↔ K</span>
+                            <span class="example-tag">°F ↔ K</span>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card" data-category="area">
+                        <div class="category-icon">📐</div>
+                        <h3 class="category-title">면적</h3>
+                        <p class="category-description">제곱미터, 에이커, 헥타르 등</p>
+                        <div class="category-examples">
+                            <span class="example-tag">m² ↔ cm²</span>
+                            <span class="example-tag">acre ↔ ha</span>
+                            <span class="example-tag">km² ↔ m²</span>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card" data-category="speed">
+                        <div class="category-icon">🚗</div>
+                        <h3 class="category-title">속도</h3>
+                        <p class="category-description">킬로미터/시간, 마일/시간, 노트 등</p>
+                        <div class="category-examples">
+                            <span class="example-tag">km/h ↔ mph</span>
+                            <span class="example-tag">m/s ↔ km/h</span>
+                            <span class="example-tag">knot ↔ km/h</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 변환기 섹션 (기본적으로 숨김) -->
+            <section id="converter-page" class="converter-section hidden">
+                <div class="converter-card">
+                    <div class="converter-header">
+                        <button type="button" id="back-to-main" class="back-btn" aria-label="메인으로 돌아가기">
+                            <span class="back-icon">←</span> 메인으로
+                        </button>
+                        <h2 id="current-category">길이 변환</h2>
+                        <p class="converter-description">일상생활에서 자주 사용하는 길이 단위를 변환해보세요</p>
+                    </div>
+                    
+                    <div class="converter-form">
+                        <div class="input-group">
+                            <div class="input-wrapper">
+                                <input type="number" id="from-value" class="converter-input" placeholder="0" step="any">
+                                <select id="from-unit" class="unit-select">
+                                    <!-- 단위 옵션들이 JS로 동적 생성됨 -->
+                                </select>
+                            </div>
+                            
+                            <button type="button" id="swap-btn" class="swap-btn" aria-label="단위 교체">
+                                <span class="swap-icon">⇄</span>
+                            </button>
+                            
+                            <div class="input-wrapper">
+                                <input type="number" id="to-value" class="converter-input" placeholder="0" readonly>
+                                <select id="to-unit" class="unit-select">
+                                    <!-- 단위 옵션들이 JS로 동적 생성됨 -->
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="converter-actions">
+                            <button type="button" id="convert-btn" class="convert-btn">변환하기</button>
+                            <button type="button" id="clear-btn" class="clear-btn">초기화</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 단위 정보 섹션 -->
+            <section id="info-section" class="info-section hidden">
+                <div class="info-card">
+                    <h3 id="unit-info-title">길이 단위 정보</h3>
+                    <div id="unit-info-content" class="unit-info">
+                        <!-- 단위 정보가 JS로 동적 생성됨 -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- 실생활 예시 섹션 -->
+            <section id="examples-section" class="examples-section hidden">
+                <div class="examples-card">
+                    <h3>실생활 예시</h3>
+                    <div id="examples-content" class="examples-grid">
+                        <!-- 예시들이 JS로 동적 생성됨 -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- 관련 단위 추천 섹션 -->
+            <section id="related-section" class="related-section hidden">
+                <div class="related-card">
+                    <h3>관련 단위 변환</h3>
+                    <div id="related-content" class="related-grid">
+                        <!-- 관련 단위가 JS로 동적 생성됨 -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- 최근 변환 기록 -->
+            <section id="history-section" class="history-section hidden">
+                <div class="history-card">
+                    <h3>최근 변환 기록</h3>
+                    <div id="conversion-history" class="history-list">
+                        <!-- 변환 기록이 JS로 동적 생성됨 -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>단위 변환 도우미</h4>
+                    <p>정확하고 빠른 단위 변환을 도와드립니다.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>유용한 링크</h4>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="tips.html">변환 팁</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>지원하는 단위</h4>
+                    <ul class="footer-links">
+                        <li><a href="#length">길이</a></li>
+                        <li><a href="#weight">무게</a></li>
+                        <li><a href="#volume">부피</a></li>
+                        <li><a href="#temperature">온도</a></li>
+                        <li><a href="#area">면적</a></li>
+                        <li><a href="#speed">속도</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 단위 변환 도우미. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/converter.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html> 
