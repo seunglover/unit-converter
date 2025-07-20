@@ -95,8 +95,10 @@ class UnitConverterApp {
         // 검색 결과 클릭 이벤트
         this.searchResults.addEventListener('click', (e) => {
             const resultItem = e.target.closest('.search-result-item');
+            console.log('검색 결과 클릭:', resultItem);
             if (resultItem && resultItem.dataset.category) {
                 const category = resultItem.dataset.category;
+                console.log('선택된 카테고리:', category);
                 this.switchToConverter(category);
                 this.hideSearchResults();
                 this.searchInput.value = '';
@@ -253,6 +255,8 @@ class UnitConverterApp {
     displaySearchResults(results) {
         this.searchResultsArray = results;
         this.selectedSearchIndex = -1;
+        
+        console.log('검색 결과:', results);
         
         if (results.length === 0) {
             this.searchResults.innerHTML = '<div class="search-result-item"><p>검색 결과가 없습니다.</p></div>';
