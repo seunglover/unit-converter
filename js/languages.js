@@ -38,6 +38,9 @@ const languages = {
         areaConverterDesc: "일상생활에서 자주 사용하는 면적 단위를 변환해보세요",
         speedConverterDesc: "일상생활에서 자주 사용하는 속도 단위를 변환해보세요",
         
+        // 변환 텍스트
+        convertText: "변환"
+        
         // 기타
         logoText: "단위 변환기",
         
@@ -62,7 +65,15 @@ const languages = {
         tipsExercise: "💪 운동할 때 유용한 변환 팁",
         tipsTravel: "✈️ 여행할 때 유용한 변환 팁",
         tipsRealEstate: "🏠 부동산할 때 유용한 변환 팁",
-        tipsMemory: "🧠 기억하기 쉬운 변환 팁"
+        tipsMemory: "🧠 기억하기 쉬운 변환 팁",
+        
+        // 카테고리 카드 예시 태그
+        lengthExamples: ["m ↔ cm", "km ↔ mile", "inch ↔ cm"],
+        weightExamples: ["kg ↔ lb", "g ↔ oz", "mg ↔ g"],
+        volumeExamples: ["L ↔ gal", "ml ↔ cup", "tbsp ↔ ml"],
+        temperatureExamples: ["°C ↔ °F", "°C ↔ K", "°F ↔ K"],
+        areaExamples: ["m² ↔ cm²", "acre ↔ ha", "km² ↔ m²"],
+        speedExamples: ["km/h ↔ mph", "m/s ↔ km/h", "knot ↔ km/h"]
     },
     
     en: {
@@ -103,6 +114,9 @@ const languages = {
         areaConverterDesc: "Convert area units commonly used in daily life",
         speedConverterDesc: "Convert speed units commonly used in daily life",
         
+        // Convert text
+        convertText: "Conversion"
+        
         // Others
         logoText: "Unit Converter",
         
@@ -127,7 +141,15 @@ const languages = {
         tipsExercise: "💪 Useful Conversion Tips for Exercise",
         tipsTravel: "✈️ Useful Conversion Tips for Travel",
         tipsRealEstate: "🏠 Useful Conversion Tips for Real Estate",
-        tipsMemory: "🧠 Easy-to-Remember Conversion Tips"
+        tipsMemory: "🧠 Easy-to-Remember Conversion Tips",
+        
+        // Category card example tags
+        lengthExamples: ["m ↔ cm", "km ↔ mile", "inch ↔ cm"],
+        weightExamples: ["kg ↔ lb", "g ↔ oz", "mg ↔ g"],
+        volumeExamples: ["L ↔ gal", "ml ↔ cup", "tbsp ↔ ml"],
+        temperatureExamples: ["°C ↔ °F", "°C ↔ K", "°F ↔ K"],
+        areaExamples: ["m² ↔ cm²", "acre ↔ ha", "km² ↔ m²"],
+        speedExamples: ["km/h ↔ mph", "m/s ↔ km/h", "knot ↔ km/h"]
     },
     
     ja: {
@@ -168,6 +190,9 @@ const languages = {
         areaConverterDesc: "日常生活でよく使う面積の単位を変換してみましょう",
         speedConverterDesc: "日常生活でよく使う速度の単位を変換してみましょう",
         
+        // 変換テキスト
+        convertText: "変換"
+        
         // その他
         logoText: "単位変換機",
         
@@ -192,7 +217,15 @@ const languages = {
         tipsExercise: "💪 運動に役立つ変換コツ",
         tipsTravel: "✈️ 旅行に役立つ変換コツ",
         tipsRealEstate: "🏠 不動産に役立つ変換コツ",
-        tipsMemory: "🧠 覚えやすい変換コツ"
+        tipsMemory: "🧠 覚えやすい変換コツ",
+        
+        // カテゴリカード例タグ
+        lengthExamples: ["m ↔ cm", "km ↔ mile", "inch ↔ cm"],
+        weightExamples: ["kg ↔ lb", "g ↔ oz", "mg ↔ g"],
+        volumeExamples: ["L ↔ gal", "ml ↔ cup", "tbsp ↔ ml"],
+        temperatureExamples: ["°C ↔ °F", "°C ↔ K", "°F ↔ K"],
+        areaExamples: ["m² ↔ cm²", "acre ↔ ha", "km² ↔ m²"],
+        speedExamples: ["km/h ↔ mph", "m/s ↔ km/h", "knot ↔ km/h"]
     },
     
     zh: {
@@ -233,6 +266,9 @@ const languages = {
         areaConverterDesc: "转换日常生活中常用的面积单位",
         speedConverterDesc: "转换日常生活中常用的速度单位",
         
+        // 转换文本
+        convertText: "转换"
+        
         // 其他
         logoText: "单位转换器",
         
@@ -257,7 +293,15 @@ const languages = {
         tipsExercise: "💪 运动时有用的转换技巧",
         tipsTravel: "✈️ 旅行时有用的转换技巧",
         tipsRealEstate: "🏠 房地产时有用的转换技巧",
-        tipsMemory: "🧠 容易记住的转换技巧"
+        tipsMemory: "🧠 容易记住的转换技巧",
+        
+        // 分类卡片示例标签
+        lengthExamples: ["m ↔ cm", "km ↔ mile", "inch ↔ cm"],
+        weightExamples: ["kg ↔ lb", "g ↔ oz", "mg ↔ g"],
+        volumeExamples: ["L ↔ gal", "ml ↔ cup", "tbsp ↔ ml"],
+        temperatureExamples: ["°C ↔ °F", "°C ↔ K", "°F ↔ K"],
+        areaExamples: ["m² ↔ cm²", "acre ↔ ha", "km² ↔ m²"],
+        speedExamples: ["km/h ↔ mph", "m/s ↔ km/h", "knot ↔ km/h"]
     }
 };
 
@@ -307,8 +351,20 @@ function updateUILanguage() {
         if (category) {
             const title = card.querySelector('.category-title');
             const desc = card.querySelector('.category-description');
+            const examples = card.querySelector('.category-examples');
+            
             if (title) title.textContent = lang[category];
             if (desc) desc.textContent = lang[category + 'Desc'];
+            
+            // 예시 태그 업데이트
+            if (examples) {
+                const examplesKey = category + 'Examples';
+                if (lang[examplesKey]) {
+                    examples.innerHTML = lang[examplesKey].map(example => 
+                        `<span class="example-tag">${example}</span>`
+                    ).join('');
+                }
+            }
         }
     });
     
@@ -334,6 +390,18 @@ function updateUILanguage() {
             }
         } else {
             converterDesc.textContent = lang.converterDescription;
+        }
+    }
+    
+    // 변환기 카테고리 제목 업데이트
+    const currentCategoryElement = document.getElementById('current-category');
+    if (currentCategoryElement) {
+        const activeNavLink = document.querySelector('.nav-link.active');
+        if (activeNavLink) {
+            const currentCategory = activeNavLink.dataset.category;
+            if (lang[currentCategory]) {
+                currentCategoryElement.textContent = lang[currentCategory] + ' ' + lang.convertText;
+            }
         }
     }
     
