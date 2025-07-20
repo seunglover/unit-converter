@@ -1,0 +1,41 @@
+{
+  "name": "unit-converter",
+  "version": "1.0.0",
+  "description": "일상생활 단위 변환 도우미 - 길이, 무게, 부피, 온도 등",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx serve .",
+    "dev": "python -m http.server 8000",
+    "build": "echo 'Static site - no build required'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "unit-converter",
+    "converter",
+    "length",
+    "weight",
+    "volume",
+    "temperature",
+    "area",
+    "speed",
+    "web-app",
+    "pwa"
+  ],
+  "author": "단위 변환 도우미",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/unit-converter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/unit-converter/issues"
+  },
+  "homepage": "https://YOUR_USERNAME.github.io/unit-converter",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 
