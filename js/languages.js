@@ -21,6 +21,150 @@ const languages = {
         areaDesc: "제곱미터, 에이커, 헥타르 등",
         speedDesc: "킬로미터/시간, 마일/시간, 노트 등",
         
+        // 단위 이름들
+        units: {
+            // 길이 단위
+            mm: "밀리미터",
+            cm: "센티미터",
+            m: "미터",
+            km: "킬로미터",
+            inch: "인치",
+            ft: "피트",
+            yard: "야드",
+            mile: "마일",
+            
+            // 무게 단위
+            mg: "밀리그램",
+            g: "그램",
+            kg: "킬로그램",
+            ton: "톤",
+            lb: "파운드",
+            oz: "온스",
+            
+            // 부피 단위
+            ml: "밀리리터",
+            l: "리터",
+            gal: "갤런",
+            cup: "컵",
+            tbsp: "큰술",
+            tsp: "작은술",
+            
+            // 온도 단위
+            celsius: "섭씨",
+            fahrenheit: "화씨",
+            kelvin: "켈빈",
+            
+            // 온도 단위 (기호 매칭)
+            "°C": "섭씨",
+            "°F": "화씨",
+            "K": "켈빈",
+            
+            // 면적 단위
+            m2: "제곱미터",
+            cm2: "제곱센티미터",
+            km2: "제곱킬로미터",
+            acre: "에이커",
+            ha: "헥타르",
+            
+            // 면적 단위 (기호 매칭)
+            "mm²": "제곱밀리미터",
+            "cm²": "제곱센티미터",
+            "m²": "제곱미터",
+            "km²": "제곱킬로미터",
+            
+            // 속도 단위
+            kmh: "킬로미터/시간",
+            mph: "마일/시간",
+            ms: "미터/초",
+            knot: "노트"
+        },
+        
+        // 단위 설명들
+        unitDescriptions: {
+            // 길이 단위 설명
+            mm: "1미터의 1/1000. 매우 작은 길이를 측정할 때 사용합니다.",
+            cm: "1미터의 1/100. 일상생활에서 가장 많이 사용하는 길이 단위입니다.",
+            m: "국제단위계(SI)의 기본 길이 단위입니다.",
+            km: "1미터의 1000배. 거리 측정에 사용됩니다.",
+            inch: "영미권에서 사용하는 길이 단위입니다.",
+            ft: "영미권에서 사용하는 길이 단위입니다.",
+            yard: "영미권에서 사용하는 길이 단위입니다.",
+            mile: "영미권에서 사용하는 거리 단위입니다.",
+            
+            // 무게 단위 설명
+            mg: "1그램의 1/1000. 매우 작은 무게를 측정할 때 사용합니다.",
+            g: "일상생활에서 가장 많이 사용하는 무게 단위입니다.",
+            kg: "국제단위계(SI)의 기본 무게 단위입니다.",
+            ton: "1킬로그램의 1000배. 큰 무게를 측정할 때 사용합니다.",
+            lb: "영미권에서 사용하는 무게 단위입니다.",
+            oz: "영미권에서 사용하는 무게 단위입니다.",
+            
+            // 부피 단위 설명
+            ml: "1리터의 1/1000. 작은 부피를 측정할 때 사용합니다.",
+            l: "일상생활에서 가장 많이 사용하는 부피 단위입니다.",
+            gal: "영미권에서 사용하는 부피 단위입니다.",
+            cup: "요리에서 자주 사용하는 부피 단위입니다.",
+            tbsp: "요리에서 사용하는 부피 단위입니다.",
+            tsp: "요리에서 사용하는 부피 단위입니다.",
+            
+            // 온도 단위 설명
+            "°C": "일반적으로 사용하는 온도 단위입니다.",
+            "°F": "영미권에서 주로 사용하는 온도 단위입니다.",
+            "K": "과학에서 사용하는 절대 온도 단위입니다.",
+            
+            // 면적 단위 설명
+            "mm²": "매우 작은 면적을 측정할 때 사용합니다.",
+            "cm²": "작은 면적을 측정할 때 사용합니다.",
+            "m²": "일상생활에서 가장 많이 사용하는 면적 단위입니다.",
+            "km²": "큰 면적을 측정할 때 사용합니다.",
+            ha: "농지나 토지 면적을 측정할 때 사용합니다.",
+            acre: "영미권에서 사용하는 면적 단위입니다.",
+            "평": "한국에서 주택 면적을 측정할 때 사용합니다."
+        },
+        
+        // 단위 공식들
+        unitFormulas: {
+            // 길이 단위 공식
+            mm: "1mm = 0.001m",
+            cm: "1cm = 0.01m",
+            m: "1m = 100cm = 1000mm",
+            km: "1km = 1000m",
+            inch: "1inch = 2.54cm",
+            ft: "1ft = 12inch = 30.48cm",
+            yard: "1yard = 3ft = 91.44cm",
+            mile: "1mile = 1.609km",
+            
+            // 무게 단위 공식
+            mg: "1mg = 0.001g",
+            g: "1g = 1000mg",
+            kg: "1kg = 1000g",
+            ton: "1ton = 1000kg",
+            lb: "1lb = 0.4536kg",
+            oz: "1oz = 28.35g",
+            
+            // 부피 단위 공식
+            ml: "1ml = 0.001L",
+            l: "1L = 1000ml",
+            gal: "1gal = 3.785L",
+            cup: "1cup = 236.6ml",
+            tbsp: "1tbsp = 14.79ml",
+            tsp: "1tsp = 4.93ml",
+            
+            // 온도 단위 공식
+            "°C": "Celsius = (Fahrenheit - 32) × 5/9",
+            "°F": "Fahrenheit = Celsius × 9/5 + 32",
+            "K": "Kelvin = Celsius + 273.15",
+            
+            // 면적 단위 공식
+            "mm²": "1mm² = 0.000001m²",
+            "cm²": "1cm² = 0.0001m²",
+            "m²": "1m² = 10000cm²",
+            "km²": "1km² = 1000000m²",
+            ha: "1ha = 10000m²",
+            acre: "1acre = 4046.86m²",
+            "pyeong": "1pyeong = 3.3058m²"
+        },
+        
         // 검색
         searchPlaceholder: "단위명 또는 카테고리 검색 (예: oz, 길이, 온도)",
         searchLabel: "검색",
@@ -42,9 +186,153 @@ const languages = {
         areaConverterDesc: "일상생활에서 자주 사용하는 면적 단위를 변환해보세요",
         speedConverterDesc: "일상생활에서 자주 사용하는 속도 단위를 변환해보세요",
         
+        // 카테고리 정보
+        categories: {
+            length: {
+                name: "길이",
+                description: "일상생활에서 자주 사용하는 길이 단위를 변환해보세요"
+            },
+            weight: {
+                name: "무게",
+                description: "일상생활에서 자주 사용하는 무게 단위를 변환해보세요"
+            },
+            volume: {
+                name: "부피",
+                description: "일상생활에서 자주 사용하는 부피 단위를 변환해보세요"
+            },
+            temperature: {
+                name: "온도",
+                description: "일상생활에서 자주 사용하는 온도 단위를 변환해보세요"
+            },
+            area: {
+                name: "면적",
+                description: "일상생활에서 자주 사용하는 면적 단위를 변환해보세요"
+            },
+            speed: {
+                name: "속도",
+                description: "일상생활에서 자주 사용하는 속도 단위를 변환해보세요"
+            }
+        },
+        
+        // 예시 데이터
+        examples: {
+            length: [
+                {
+                    title: "일상생활 예시",
+                    description: "우리가 일상에서 자주 마주치는 길이들",
+                    value: "성인 키: 1.7m, 스마트폰: 6.1inch, A4용지: 21cm"
+                },
+                {
+                    title: "운동 관련",
+                    description: "운동과 관련된 길이 측정",
+                    value: "마라톤: 42.195km, 농구 코트: 28m, 수영장: 25m"
+                },
+                {
+                    title: "건축 관련",
+                    description: "건축과 관련된 길이 측정",
+                    value: "문 높이: 2.1m, 방 크기: 3m×4m, 건물 높이: 100m"
+                }
+            ],
+            weight: [
+                {
+                    title: "일상생활 예시",
+                    description: "우리가 일상에서 자주 마주치는 무게들",
+                    value: "사과: 200g, 우유: 1kg, 자동차: 1.5ton"
+                },
+                {
+                    title: "요리 관련",
+                    description: "요리와 관련된 무게 측정",
+                    value: "밀가루: 500g, 설탕: 1kg, 소금: 10g"
+                },
+                {
+                    title: "운동 관련",
+                    description: "운동과 관련된 무게 측정",
+                    value: "덤벨: 5kg, 바벨: 20kg, 체중: 70kg"
+                }
+            ],
+            volume: [
+                {
+                    title: "일상생활 예시",
+                    description: "우리가 일상에서 자주 마주치는 부피들",
+                    value: "물병: 500ml, 우유팩: 1L, 주유: 50L"
+                },
+                {
+                    title: "요리 관련",
+                    description: "요리와 관련된 부피 측정",
+                    value: "물: 2L, 식용유: 100ml, 소스: 30ml"
+                },
+                {
+                    title: "음료 관련",
+                    description: "음료와 관련된 부피 측정",
+                    value: "커피: 350ml, 맥주: 500ml, 와인: 750ml"
+                }
+            ],
+            temperature: [
+                {
+                    title: "일상생활 예시",
+                    description: "우리가 일상에서 자주 마주치는 온도들",
+                    value: "실내 온도: 22°C, 체온: 36.5°C, 냉장고: 4°C"
+                },
+                {
+                    title: "날씨 관련",
+                    description: "날씨와 관련된 온도 측정",
+                    value: "여름 낮: 30°C, 겨울 밤: -5°C, 봄/가을: 15°C"
+                },
+                {
+                    title: "요리 관련",
+                    description: "요리와 관련된 온도 측정",
+                    value: "물 끓는점: 100°C, 오븐: 180°C, 냉동실: -18°C"
+                }
+            ],
+            area: [
+                {
+                    title: "일상생활 예시",
+                    description: "우리가 일상에서 자주 마주치는 면적들",
+                    value: "아파트 1평: 3.3m², 축구장: 7140m², 서울시: 605km²"
+                },
+                {
+                    title: "부동산 관련",
+                    description: "부동산과 관련된 면적 측정",
+                    value: "아파트: 84m², 주택: 150m², 토지: 1000m²"
+                },
+                {
+                    title: "농업 관련",
+                    description: "농업과 관련된 면적 측정",
+                    value: "논: 1ha, 밭: 0.5ha, 과수원: 2ha"
+                }
+            ],
+            speed: [
+                {
+                    title: "일상생활 예시",
+                    description: "우리가 일상에서 자주 마주치는 속도들",
+                    value: "도보: 5km/h, 자전거: 20km/h, 자동차: 60km/h"
+                },
+                {
+                    title: "교통 관련",
+                    description: "교통과 관련된 속도 측정",
+                    value: "고속도로: 100km/h, 시내도로: 50km/h, 지하철: 80km/h"
+                },
+                {
+                    title: "운동 관련",
+                    description: "운동과 관련된 속도 측정",
+                    value: "달리기: 12km/h, 수영: 2km/h, 등산: 3km/h"
+                }
+            ]
+        },
+        
         // 변환 텍스트
         convertText: "변환",
         clearMessage: "초기화되었습니다.",
+        
+        // 토스트 메시지
+        toastMessages: {
+            invalidNumber: "올바른 숫자를 입력해주세요.",
+            selectUnit: "단위를 선택해주세요.",
+            zeroMessage: "0은 모든 단위에서 0입니다.",
+            conversionComplete: "변환이 완료되었습니다!",
+            invalidCombination: "변환할 수 없는 단위 조합입니다.",
+            cleared: "초기화되었습니다."
+        },
         
         // 기타
         logoText: "단위 변환기",
@@ -102,6 +390,107 @@ const languages = {
         areaDesc: "Square meters, acres, hectares, etc.",
         speedDesc: "Kilometers/hour, miles/hour, knots, etc.",
         
+        // Unit names
+        units: {
+            // Length units
+            mm: "Millimeter",
+            cm: "Centimeter",
+            m: "Meter",
+            km: "Kilometer",
+            inch: "Inch",
+            ft: "Foot",
+            yard: "Yard",
+            mile: "Mile",
+            
+            // Weight units
+            mg: "Milligram",
+            g: "Gram",
+            kg: "Kilogram",
+            ton: "Ton",
+            lb: "Pound",
+            oz: "Ounce",
+            
+            // Volume units
+            ml: "Milliliter",
+            l: "Liter",
+            gal: "Gallon",
+            cup: "Cup",
+            tbsp: "Tablespoon",
+            tsp: "Teaspoon",
+            
+            // Temperature units
+            celsius: "Celsius",
+            fahrenheit: "Fahrenheit",
+            kelvin: "Kelvin",
+            
+            // Temperature units (symbol matching)
+            "°C": "Celsius",
+            "°F": "Fahrenheit",
+            "K": "Kelvin",
+            
+            // Area units
+            m2: "Square Meter",
+            cm2: "Square Centimeter",
+            km2: "Square Kilometer",
+            acre: "Acre",
+            ha: "Hectare",
+            
+            // Area units (symbol matching)
+            "mm²": "Square Millimeter",
+            "cm²": "Square Centimeter",
+            "m²": "Square Meter",
+            "km²": "Square Kilometer",
+            
+            // Speed units
+            kmh: "Kilometer/Hour",
+            mph: "Mile/Hour",
+            ms: "Meter/Second",
+            knot: "Knot"
+        },
+        
+        // Unit descriptions
+        unitDescriptions: {
+            // Length unit descriptions
+            mm: "1 meter is 1000 times smaller. It's used to measure very small lengths.",
+            cm: "1 meter is 100 times smaller. It's the most commonly used length unit in daily life.",
+            m: "It's the basic length unit of the International System of Units (SI).",
+            km: "1 meter is 1000 times larger. It's used for distance measurement.",
+            inch: "It's a length unit used in English-speaking countries.",
+            ft: "It's a length unit used in English-speaking countries.",
+            yard: "It's a length unit used in English-speaking countries.",
+            mile: "It's a distance unit used in English-speaking countries.",
+            
+            // Weight unit descriptions
+            mg: "1 gram is 1000 times smaller. It's used to measure very small weights.",
+            g: "It's the most commonly used weight unit in daily life.",
+            kg: "It's the basic weight unit of the International System of Units (SI).",
+            ton: "1 kilogram is 1000 times larger. It's used to measure large weights.",
+            lb: "It's a weight unit used in English-speaking countries.",
+            oz: "It's a weight unit used in English-speaking countries.",
+            
+            // Volume unit descriptions
+            ml: "1 liter is 1000 times smaller. It's used to measure small volumes.",
+            l: "It's the most commonly used volume unit in daily life.",
+            gal: "It's a volume unit used in English-speaking countries.",
+            cup: "It's a volume unit commonly used in cooking.",
+            tbsp: "It's a volume unit commonly used in cooking.",
+            tsp: "It's a volume unit commonly used in cooking.",
+            
+            // Temperature unit descriptions
+            "°C": "It's a commonly used temperature unit.",
+            "°F": "It's a temperature unit commonly used in English-speaking countries.",
+            "K": "It's an absolute temperature unit used in science.",
+            
+            // Area unit descriptions
+            "mm²": "It's used to measure very small areas.",
+            "cm²": "It's used to measure small areas.",
+            "m²": "It's the most commonly used area unit in daily life.",
+            "km²": "It's used to measure large areas.",
+            ha: "It's used to measure land or land area.",
+            acre: "It's a land area unit used in English-speaking countries.",
+            "pyeong": "It's used to measure residential area in Korea."
+        },
+        
         // Search
         searchPlaceholder: "Search unit name or category (e.g., oz, length, temperature)",
         searchLabel: "Search",
@@ -123,9 +512,153 @@ const languages = {
         areaConverterDesc: "Convert area units commonly used in daily life",
         speedConverterDesc: "Convert speed units commonly used in daily life",
         
+        // Category information
+        categories: {
+            length: {
+                name: "Length",
+                description: "Convert length units commonly used in daily life"
+            },
+            weight: {
+                name: "Weight",
+                description: "Convert weight units commonly used in daily life"
+            },
+            volume: {
+                name: "Volume",
+                description: "Convert volume units commonly used in daily life"
+            },
+            temperature: {
+                name: "Temperature",
+                description: "Convert temperature units commonly used in daily life"
+            },
+            area: {
+                name: "Area",
+                description: "Convert area units commonly used in daily life"
+            },
+            speed: {
+                name: "Speed",
+                description: "Convert speed units commonly used in daily life"
+            }
+        },
+        
+        // Example data
+        examples: {
+            length: [
+                {
+                    title: "Daily Life Examples",
+                    description: "Lengths we encounter in daily life",
+                    value: "Adult height: 1.7m, Smartphone: 6.1inch, A4 paper: 21cm"
+                },
+                {
+                    title: "Sports Related",
+                    description: "Length measurements related to sports",
+                    value: "Marathon: 42.195km, Basketball court: 28m, Swimming pool: 25m"
+                },
+                {
+                    title: "Construction Related",
+                    description: "Length measurements related to construction",
+                    value: "Door height: 2.1m, Room size: 3m×4m, Building height: 100m"
+                }
+            ],
+            weight: [
+                {
+                    title: "Daily Life Examples",
+                    description: "Weights we encounter in daily life",
+                    value: "Apple: 200g, Milk: 1kg, Car: 1.5ton"
+                },
+                {
+                    title: "Cooking Related",
+                    description: "Weight measurements related to cooking",
+                    value: "Flour: 500g, Sugar: 1kg, Salt: 10g"
+                },
+                {
+                    title: "Exercise Related",
+                    description: "Weight measurements related to exercise",
+                    value: "Dumbbell: 5kg, Barbell: 20kg, Body weight: 70kg"
+                }
+            ],
+            volume: [
+                {
+                    title: "Daily Life Examples",
+                    description: "Volumes we encounter in daily life",
+                    value: "Water bottle: 500ml, Milk carton: 1L, Gas refill: 50L"
+                },
+                {
+                    title: "Cooking Related",
+                    description: "Volume measurements related to cooking",
+                    value: "Water: 2L, Cooking oil: 100ml, Sauce: 30ml"
+                },
+                {
+                    title: "Beverage Related",
+                    description: "Volume measurements related to beverages",
+                    value: "Coffee: 350ml, Beer: 500ml, Wine: 750ml"
+                }
+            ],
+            temperature: [
+                {
+                    title: "Daily Life Examples",
+                    description: "Temperatures we encounter in daily life",
+                    value: "Room temperature: 22°C, Body temperature: 36.5°C, Refrigerator: 4°C"
+                },
+                {
+                    title: "Weather Related",
+                    description: "Temperature measurements related to weather",
+                    value: "Summer day: 30°C, Winter night: -5°C, Spring/Fall: 15°C"
+                },
+                {
+                    title: "Cooking Related",
+                    description: "Temperature measurements related to cooking",
+                    value: "Water boiling point: 100°C, Oven: 180°C, Freezer: -18°C"
+                }
+            ],
+            area: [
+                {
+                    title: "Daily Life Examples",
+                    description: "Areas we encounter in daily life",
+                    value: "Apartment 1 pyeong: 3.3m², Soccer field: 7140m², Seoul: 605km²"
+                },
+                {
+                    title: "Real Estate Related",
+                    description: "Area measurements related to real estate",
+                    value: "Apartment: 84m², House: 150m², Land: 1000m²"
+                },
+                {
+                    title: "Agriculture Related",
+                    description: "Area measurements related to agriculture",
+                    value: "Rice field: 1ha, Field: 0.5ha, Orchard: 2ha"
+                }
+            ],
+            speed: [
+                {
+                    title: "Daily Life Examples",
+                    description: "Speeds we encounter in daily life",
+                    value: "Walking: 5km/h, Bicycle: 20km/h, Car: 60km/h"
+                },
+                {
+                    title: "Transportation Related",
+                    description: "Speed measurements related to transportation",
+                    value: "Highway: 100km/h, City road: 50km/h, Subway: 80km/h"
+                },
+                {
+                    title: "Exercise Related",
+                    description: "Speed measurements related to exercise",
+                    value: "Running: 12km/h, Swimming: 2km/h, Hiking: 3km/h"
+                }
+            ]
+        },
+        
         // Convert text
         convertText: "Conversion",
         clearMessage: "Cleared.",
+        
+        // Toast messages
+        toastMessages: {
+            invalidNumber: "Please enter a valid number.",
+            selectUnit: "Please select units.",
+            zeroMessage: "0 is 0 in all units.",
+            conversionComplete: "Conversion completed!",
+            invalidCombination: "Invalid unit combination for conversion.",
+            cleared: "Cleared."
+        },
         
         // Others
         logoText: "Unit Converter",
@@ -183,6 +716,150 @@ const languages = {
         areaDesc: "平方メートル、エーカー、ヘクタールなど",
         speedDesc: "キロメートル/時、マイル/時、ノットなど",
         
+        // 単位名
+        units: {
+            // 長さ単位
+            mm: "ミリメートル",
+            cm: "センチメートル",
+            m: "メートル",
+            km: "キロメートル",
+            inch: "インチ",
+            ft: "フィート",
+            yard: "ヤード",
+            mile: "マイル",
+            
+            // 重さ単位
+            mg: "ミリグラム",
+            g: "グラム",
+            kg: "キログラム",
+            ton: "トン",
+            lb: "ポンド",
+            oz: "オンス",
+            
+            // 体積単位
+            ml: "ミリリットル",
+            l: "リットル",
+            gal: "ガロン",
+            cup: "カップ",
+            tbsp: "大さじ",
+            tsp: "小さじ",
+            
+            // 温度単位
+            celsius: "摂氏",
+            fahrenheit: "華氏",
+            kelvin: "ケルビン",
+            
+            // 温度単位 (記号マッチング)
+            "°C": "摂氏",
+            "°F": "華氏",
+            "K": "ケルビン",
+            
+            // 面積単位
+            m2: "平方メートル",
+            cm2: "平方センチメートル",
+            km2: "平方キロメートル",
+            acre: "エーカー",
+            ha: "ヘクタール",
+            
+            // 面積単位 (記号マッチング)
+            "mm²": "平方ミリメートル",
+            "cm²": "平方センチメートル",
+            "m²": "平方メートル",
+            "km²": "平方キロメートル",
+            
+            // 速度単位
+            kmh: "キロメートル/時",
+            mph: "マイル/時",
+            ms: "メートル/秒",
+            knot: "ノット"
+        },
+        
+        // 単位説明
+        unitDescriptions: {
+            // 長さ単位説明
+            mm: "1メートルは1000分の1です。非常に小さい長さを測定するときに使用します。",
+            cm: "1メートルは100分の1です。日常生活で最もよく使用される長さ単位です。",
+            m: "国際単位系（SI）の基本長さ単位です。",
+            km: "1メートルは1000倍です。距離を測定するときに使用します。",
+            inch: "英語圏で使用される長さ単位です。",
+            ft: "英語圏で使用される長さ単位です。",
+            yard: "英語圏で使用される長さ単位です。",
+            mile: "英語圏で使用される距離単位です。",
+            
+            // 重さ単位説明
+            mg: "1グラムは1000分の1です。非常に小さい重さを測定するときに使用します。",
+            g: "日常生活で最もよく使用される重さ単位です。",
+            kg: "国際単位系（SI）の基本重さ単位です。",
+            ton: "1キログラムは1000倍です。大きな重さを測定するときに使用します。",
+            lb: "英語圏で使用される重さ単位です。",
+            oz: "英語圏で使用される重さ単位です。",
+            
+            // 体積単位説明
+            ml: "1リットルは1000分の1です。小さな体積を測定するときに使用します。",
+            l: "日常生活で最もよく使用される体積単位です。",
+            gal: "英語圏で使用される体積単位です。",
+            cup: "料理でよく使用される体積単位です。",
+            tbsp: "料理で使用される体積単位です。",
+            tsp: "料理で使用される体積単位です。",
+            
+            // 温度単位説明
+            "°C": "一般的に使用される温度単位です。",
+            "°F": "英語圏で主に使用される温度単位です。",
+            "K": "科学で使用される絶対温度単位です。",
+            
+            // 面積単位説明
+            "mm²": "非常に小さな面積を測定するときに使用します。",
+            "cm²": "小さな面積を測定するときに使用します。",
+            "m²": "日常生活で最もよく使用される面積単位です。",
+            "km²": "大きな面積を測定するときに使用します。",
+            ha: "土地や土地面積を測定するときに使用します。",
+            acre: "英語圏で使用される面積単位です。",
+            "pyeong": "韓国で住宅面積を測定するときに使用します。"
+        },
+        
+        // 単位公式
+        unitFormulas: {
+            // 長さ単位公式
+            mm: "1mm = 0.001m",
+            cm: "1cm = 0.01m",
+            m: "1m = 100cm = 1000mm",
+            km: "1km = 1000m",
+            inch: "1inch = 2.54cm",
+            ft: "1ft = 12inch = 30.48cm",
+            yard: "1yard = 3ft = 91.44cm",
+            mile: "1mile = 1.609km",
+            
+            // 重さ単位公式
+            mg: "1mg = 0.001g",
+            g: "1g = 1000mg",
+            kg: "1kg = 1000g",
+            ton: "1ton = 1000kg",
+            lb: "1lb = 0.4536kg",
+            oz: "1oz = 28.35g",
+            
+            // 体積単位公式
+            ml: "1ml = 0.001L",
+            l: "1L = 1000ml",
+            gal: "1gal = 3.785L",
+            cup: "1cup = 236.6ml",
+            tbsp: "1tbsp = 14.79ml",
+            tsp: "1tsp = 4.93ml",
+            
+            // 温度単位公式
+            "°C": "摂氏 = (華氏 - 32) × 5/9",
+            "°F": "華氏 = 摂氏 × 9/5 + 32",
+            "K": "ケルビン = 摂氏 + 273.15",
+            
+            // 面積単位公式
+            "mm²": "1mm² = 0.000001m²",
+            "cm²": "1cm² = 0.0001m²",
+            "m²": "1m² = 10000cm²",
+            "km²": "1km² = 1000000m²",
+            ha: "1ha = 10000m²",
+            acre: "1acre = 4046.86m²",
+            "pyeong": "1pyeong = 3.3058m²"
+        },
+        
         // 検索
         searchPlaceholder: "単位名またはカテゴリを検索 (例: oz, 長さ, 温度)",
         searchLabel: "検索",
@@ -204,9 +881,153 @@ const languages = {
         areaConverterDesc: "日常生活でよく使う面積の単位を変換してみましょう",
         speedConverterDesc: "日常生活でよく使う速度の単位を変換してみましょう",
         
+        // カテゴリ情報
+        categories: {
+            length: {
+                name: "長さ",
+                description: "日常生活でよく使う長さの単位を変換してみましょう"
+            },
+            weight: {
+                name: "重さ",
+                description: "日常生活でよく使う重さの単位を変換してみましょう"
+            },
+            volume: {
+                name: "体積",
+                description: "日常生活でよく使う体積の単位を変換してみましょう"
+            },
+            temperature: {
+                name: "温度",
+                description: "日常生活でよく使う温度の単位を変換してみましょう"
+            },
+            area: {
+                name: "面積",
+                description: "日常生活でよく使う面積の単位を変換してみましょう"
+            },
+            speed: {
+                name: "速度",
+                description: "日常生活でよく使う速度の単位を変換してみましょう"
+            }
+        },
+        
+        // 例データ
+        examples: {
+            length: [
+                {
+                    title: "日常生活の例",
+                    description: "日常生活でよく出会う長さ",
+                    value: "成人の身長: 1.7m, スマートフォン: 6.1inch, A4用紙: 21cm"
+                },
+                {
+                    title: "スポーツ関連",
+                    description: "スポーツに関連する長さの測定",
+                    value: "マラソン: 42.195km, バスケットコート: 28m, プール: 25m"
+                },
+                {
+                    title: "建築関連",
+                    description: "建築に関連する長さの測定",
+                    value: "ドアの高さ: 2.1m, 部屋のサイズ: 3m×4m, 建物の高さ: 100m"
+                }
+            ],
+            weight: [
+                {
+                    title: "日常生活の例",
+                    description: "日常生活でよく出会う重さ",
+                    value: "りんご: 200g, 牛乳: 1kg, 車: 1.5ton"
+                },
+                {
+                    title: "料理関連",
+                    description: "料理に関連する重さの測定",
+                    value: "小麦粉: 500g, 砂糖: 1kg, 塩: 10g"
+                },
+                {
+                    title: "運動関連",
+                    description: "運動に関連する重さの測定",
+                    value: "ダンベル: 5kg, バーベル: 20kg, 体重: 70kg"
+                }
+            ],
+            volume: [
+                {
+                    title: "日常生活の例",
+                    description: "日常生活でよく出会う体積",
+                    value: "水筒: 500ml, 牛乳パック: 1L, 給油: 50L"
+                },
+                {
+                    title: "料理関連",
+                    description: "料理に関連する体積の測定",
+                    value: "水: 2L, 食用油: 100ml, ソース: 30ml"
+                },
+                {
+                    title: "飲料関連",
+                    description: "飲料に関連する体積の測定",
+                    value: "コーヒー: 350ml, ビール: 500ml, ワイン: 750ml"
+                }
+            ],
+            temperature: [
+                {
+                    title: "日常生活の例",
+                    description: "日常生活でよく出会う温度",
+                    value: "室内温度: 22°C, 体温: 36.5°C, 冷蔵庫: 4°C"
+                },
+                {
+                    title: "天気関連",
+                    description: "天気に関連する温度の測定",
+                    value: "夏の昼: 30°C, 冬の夜: -5°C, 春/秋: 15°C"
+                },
+                {
+                    title: "料理関連",
+                    description: "料理に関連する温度の測定",
+                    value: "水の沸点: 100°C, オーブン: 180°C, 冷凍庫: -18°C"
+                }
+            ],
+            area: [
+                {
+                    title: "日常生活の例",
+                    description: "日常生活でよく出会う面積",
+                    value: "アパート1坪: 3.3m², サッカー場: 7140m², ソウル市: 605km²"
+                },
+                {
+                    title: "不動産関連",
+                    description: "不動産に関連する面積の測定",
+                    value: "アパート: 84m², 住宅: 150m², 土地: 1000m²"
+                },
+                {
+                    title: "農業関連",
+                    description: "農業に関連する面積の測定",
+                    value: "田んぼ: 1ha, 畑: 0.5ha, 果樹園: 2ha"
+                }
+            ],
+            speed: [
+                {
+                    title: "日常生活の例",
+                    description: "日常生活でよく出会う速度",
+                    value: "徒歩: 5km/h, 自転車: 20km/h, 車: 60km/h"
+                },
+                {
+                    title: "交通関連",
+                    description: "交通に関連する速度の測定",
+                    value: "高速道路: 100km/h, 市内道路: 50km/h, 地下鉄: 80km/h"
+                },
+                {
+                    title: "運動関連",
+                    description: "運動に関連する速度の測定",
+                    value: "ランニング: 12km/h, 水泳: 2km/h, ハイキング: 3km/h"
+                }
+            ]
+        },
+        
         // 変換テキスト
         convertText: "変換",
         clearMessage: "クリアされました。",
+        
+        // トーストメッセージ
+        toastMessages: {
+            invalidNumber: "正しい数字を入力してください。",
+            selectUnit: "単位を選択してください。",
+            zeroMessage: "0はすべての単位で0です。",
+            conversionComplete: "変換が完了しました！",
+            invalidCombination: "変換できない単位の組み合わせです。",
+            cleared: "クリアされました。"
+        },
         
         // その他
         logoText: "単位変換機",
@@ -264,6 +1085,150 @@ const languages = {
         areaDesc: "平方米、英亩、公顷等",
         speedDesc: "公里/小时、英里/小时、节等",
         
+        // 单位名称
+        units: {
+            // 长度单位
+            mm: "毫米",
+            cm: "厘米",
+            m: "米",
+            km: "公里",
+            inch: "英寸",
+            ft: "英尺",
+            yard: "码",
+            mile: "英里",
+            
+            // 重量单位
+            mg: "毫克",
+            g: "克",
+            kg: "千克",
+            ton: "吨",
+            lb: "磅",
+            oz: "盎司",
+            
+            // 体积单位
+            ml: "毫升",
+            l: "升",
+            gal: "加仑",
+            cup: "杯",
+            tbsp: "大匙",
+            tsp: "小匙",
+            
+            // 温度单位
+            celsius: "摄氏度",
+            fahrenheit: "华氏度",
+            kelvin: "开尔文",
+            
+            // 温度单位 (符号匹配)
+            "°C": "摄氏度",
+            "°F": "华氏度",
+            "K": "开尔文",
+            
+            // 面积单位
+            m2: "平方米",
+            cm2: "平方厘米",
+            km2: "平方公里",
+            acre: "英亩",
+            ha: "公顷",
+            
+            // 面积单位 (符号匹配)
+            "mm²": "平方毫米",
+            "cm²": "平方厘米",
+            "m²": "平方米",
+            "km²": "平方公里",
+            
+            // 速度单位
+            kmh: "公里/小时",
+            mph: "英里/小时",
+            ms: "米/秒",
+            knot: "节"
+        },
+        
+        // 单位说明
+        unitDescriptions: {
+            // 长度单位说明
+            mm: "1米是1000分之1。用于测量非常小的长度。",
+            cm: "1米是100分之1。是日常生活中最常用的长度单位。",
+            m: "它是国际单位制（SI）的基本长度单位。",
+            km: "1米是1000倍。用于测量距离。",
+            inch: "它是英语国家使用的长度单位。",
+            ft: "它是英语国家使用的长度单位。",
+            yard: "它是英语国家使用的长度单位。",
+            mile: "它是英语国家使用的距离单位。",
+            
+            // 重量单位说明
+            mg: "1克是1000分之1。用于测量非常小的重量。",
+            g: "它是日常生活中最常用的重量单位。",
+            kg: "它是国际单位制（SI）的基本重量单位。",
+            ton: "1千克是1000倍。用于测量较大的重量。",
+            lb: "它是英语国家使用的重量单位。",
+            oz: "它是英语国家使用的重量单位。",
+            
+            // 体积单位说明
+            ml: "1升是1000分之1。用于测量较小的体积。",
+            l: "它是日常生活中最常用的体积单位。",
+            gal: "它是英语国家使用的体积单位。",
+            cup: "它是烹饪中常用的体积单位。",
+            tbsp: "它是烹饪中使用的体积单位。",
+            tsp: "它是烹饪中使用的体积单位。",
+            
+            // 温度单位说明
+            "°C": "它是常用的温度单位。",
+            "°F": "它是英语国家常用的温度单位。",
+            "K": "它是科学中使用的绝对温度单位。",
+            
+            // 面积单位说明
+            "mm²": "用于测量非常小的面积。",
+            "cm²": "用于测量较小的面积。",
+            "m²": "它是日常生活中最常用的面积单位。",
+            "km²": "用于测量较大的面积。",
+            ha: "用于测量土地或土地面积。",
+            acre: "它是英语国家使用的面积单位。",
+            "pyeong": "它是韩国用于测量住宅面积的单位。"
+        },
+        
+        // 单位公式
+        unitFormulas: {
+            // 长度单位公式
+            mm: "1mm = 0.001m",
+            cm: "1cm = 0.01m",
+            m: "1m = 100cm = 1000mm",
+            km: "1km = 1000m",
+            inch: "1inch = 2.54cm",
+            ft: "1ft = 12inch = 30.48cm",
+            yard: "1yard = 3ft = 91.44cm",
+            mile: "1mile = 1.609km",
+            
+            // 重量单位公式
+            mg: "1mg = 0.001g",
+            g: "1g = 1000mg",
+            kg: "1kg = 1000g",
+            ton: "1ton = 1000kg",
+            lb: "1lb = 0.4536kg",
+            oz: "1oz = 28.35g",
+            
+            // 体积单位公式
+            ml: "1ml = 0.001L",
+            l: "1L = 1000ml",
+            gal: "1gal = 3.785L",
+            cup: "1cup = 236.6ml",
+            tbsp: "1tbsp = 14.79ml",
+            tsp: "1tsp = 4.93ml",
+            
+            // 温度单位公式
+            "°C": "摄氏度 = (华氏度 - 32) × 5/9",
+            "°F": "华氏度 = 摄氏度 × 9/5 + 32",
+            "K": "开尔文 = 摄氏度 + 273.15",
+            
+            // 面积单位公式
+            "mm²": "1mm² = 0.000001m²",
+            "cm²": "1cm² = 0.0001m²",
+            "m²": "1m² = 10000cm²",
+            "km²": "1km² = 1000000m²",
+            ha: "1ha = 10000m²",
+            acre: "1acre = 4046.86m²",
+            "pyeong": "1pyeong = 3.3058m²"
+        },
+        
         // 搜索
         searchPlaceholder: "搜索单位名称或类别 (例如: oz, 长度, 温度)",
         searchLabel: "搜索",
@@ -285,9 +1250,153 @@ const languages = {
         areaConverterDesc: "转换日常生活中常用的面积单位",
         speedConverterDesc: "转换日常生活中常用的速度单位",
         
+        // 分类信息
+        categories: {
+            length: {
+                name: "长度",
+                description: "转换日常生活中常用的长度单位"
+            },
+            weight: {
+                name: "重量",
+                description: "转换日常生活中常用的重量单位"
+            },
+            volume: {
+                name: "体积",
+                description: "转换日常生活中常用的体积单位"
+            },
+            temperature: {
+                name: "温度",
+                description: "转换日常生活中常用的温度单位"
+            },
+            area: {
+                name: "面积",
+                description: "转换日常生活中常用的面积单位"
+            },
+            speed: {
+                name: "速度",
+                description: "转换日常生活中常用的速度单位"
+            }
+        },
+        
+        // 示例数据
+        examples: {
+            length: [
+                {
+                    title: "日常生活示例",
+                    description: "我们日常生活中经常遇到的长度",
+                    value: "成人身高: 1.7m, 智能手机: 6.1inch, A4纸张: 21cm"
+                },
+                {
+                    title: "运动相关",
+                    description: "与运动相关的长度测量",
+                    value: "马拉松: 42.195km, 篮球场: 28m, 游泳池: 25m"
+                },
+                {
+                    title: "建筑相关",
+                    description: "与建筑相关的长度测量",
+                    value: "门高: 2.1m, 房间尺寸: 3m×4m, 建筑高度: 100m"
+                }
+            ],
+            weight: [
+                {
+                    title: "日常生活示例",
+                    description: "我们日常生活中经常遇到的重量",
+                    value: "苹果: 200g, 牛奶: 1kg, 汽车: 1.5ton"
+                },
+                {
+                    title: "烹饪相关",
+                    description: "与烹饪相关的重量测量",
+                    value: "面粉: 500g, 糖: 1kg, 盐: 10g"
+                },
+                {
+                    title: "运动相关",
+                    description: "与运动相关的重量测量",
+                    value: "哑铃: 5kg, 杠铃: 20kg, 体重: 70kg"
+                }
+            ],
+            volume: [
+                {
+                    title: "日常生活示例",
+                    description: "我们日常生活中经常遇到的体积",
+                    value: "水瓶: 500ml, 牛奶盒: 1L, 加油: 50L"
+                },
+                {
+                    title: "烹饪相关",
+                    description: "与烹饪相关的体积测量",
+                    value: "水: 2L, 食用油: 100ml, 酱料: 30ml"
+                },
+                {
+                    title: "饮料相关",
+                    description: "与饮料相关的体积测量",
+                    value: "咖啡: 350ml, 啤酒: 500ml, 葡萄酒: 750ml"
+                }
+            ],
+            temperature: [
+                {
+                    title: "日常生活示例",
+                    description: "我们日常生活中经常遇到的温度",
+                    value: "室内温度: 22°C, 体温: 36.5°C, 冰箱: 4°C"
+                },
+                {
+                    title: "天气相关",
+                    description: "与天气相关的温度测量",
+                    value: "夏日: 30°C, 冬夜: -5°C, 春秋: 15°C"
+                },
+                {
+                    title: "烹饪相关",
+                    description: "与烹饪相关的温度测量",
+                    value: "水沸点: 100°C, 烤箱: 180°C, 冷冻室: -18°C"
+                }
+            ],
+            area: [
+                {
+                    title: "日常生活示例",
+                    description: "我们日常生活中经常遇到的面积",
+                    value: "公寓1坪: 3.3m², 足球场: 7140m², 首尔市: 605km²"
+                },
+                {
+                    title: "房地产相关",
+                    description: "与房地产相关的面积测量",
+                    value: "公寓: 84m², 住宅: 150m², 土地: 1000m²"
+                },
+                {
+                    title: "农业相关",
+                    description: "与农业相关的面积测量",
+                    value: "稻田: 1ha, 农田: 0.5ha, 果园: 2ha"
+                }
+            ],
+            speed: [
+                {
+                    title: "日常生活示例",
+                    description: "我们日常生活中经常遇到的速度",
+                    value: "步行: 5km/h, 自行车: 20km/h, 汽车: 60km/h"
+                },
+                {
+                    title: "交通相关",
+                    description: "与交通相关的速度测量",
+                    value: "高速公路: 100km/h, 市内道路: 50km/h, 地铁: 80km/h"
+                },
+                {
+                    title: "运动相关",
+                    description: "与运动相关的速度测量",
+                    value: "跑步: 12km/h, 游泳: 2km/h, 徒步: 3km/h"
+                }
+            ]
+        },
+        
         // 转换文本
         convertText: "转换",
         clearMessage: "已清除。",
+        
+        // 提示消息
+        toastMessages: {
+            invalidNumber: "请输入有效数字。",
+            selectUnit: "请选择单位。",
+            zeroMessage: "0在所有单位中都是0。",
+            conversionComplete: "转换完成！",
+            invalidCombination: "无法转换的单位组合。",
+            cleared: "已清除。"
+        },
         
         // 其他
         logoText: "单位转换器",
@@ -471,6 +1580,17 @@ function updateUILanguage() {
             category.textContent = lang[categories[index]];
         }
     });
+    
+    // 단위 선택 드롭다운 업데이트
+    const fromUnitSelect = document.getElementById('from-unit');
+    const toUnitSelect = document.getElementById('to-unit');
+    
+    if (fromUnitSelect && toUnitSelect && window.unitConverterApp) {
+        window.unitConverterApp.populateUnitSelects();
+        window.unitConverterApp.updateCategoryInfo();
+        window.unitConverterApp.updateExamples();
+        window.unitConverterApp.updateRelatedUnits();
+    }
 }
 
 // 페이지 로드 시 저장된 언어 설정 불러오기

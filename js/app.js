@@ -120,6 +120,9 @@ class UnitConverterApp {
         
         // 언어 선택 이벤트
         const languageSelect = document.getElementById('language-select');
+        const headerLanguageSelect = document.getElementById('header-language-select');
+        
+        // 푸터 언어 선택기 이벤트
         if (languageSelect) {
             languageSelect.addEventListener('change', (e) => {
                 const selectedLanguage = e.target.value;
@@ -128,12 +131,40 @@ class UnitConverterApp {
                 }
                 this.updateLanguageSelector(selectedLanguage);
                 
-                // 언어 변경 후 UI 업데이트
-                setTimeout(() => {
+                // 헤더 언어 선택기도 동기화
+                if (headerLanguageSelect) {
+                    headerLanguageSelect.value = selectedLanguage;
+                }
+                
+                // 언어 변경 후 UI 업데이트 (깜빡임 방지)
+                requestAnimationFrame(() => {
                     if (typeof updateUILanguage === 'function') {
                         updateUILanguage();
                     }
-                }, 100);
+                });
+            });
+        }
+        
+        // 헤더 언어 선택기 이벤트
+        if (headerLanguageSelect) {
+            headerLanguageSelect.addEventListener('change', (e) => {
+                const selectedLanguage = e.target.value;
+                if (typeof changeLanguage === 'function') {
+                    changeLanguage(selectedLanguage);
+                }
+                this.updateLanguageSelector(selectedLanguage);
+                
+                // 푸터 언어 선택기도 동기화
+                if (languageSelect) {
+                    languageSelect.value = selectedLanguage;
+                }
+                
+                // 언어 변경 후 UI 업데이트 (깜빡임 방지)
+                requestAnimationFrame(() => {
+                    if (typeof updateUILanguage === 'function') {
+                        updateUILanguage();
+                    }
+                });
             });
         }
         
@@ -338,14 +369,17 @@ class UnitConverterApp {
     // 단위 선택 옵션 채우기
     populateUnitSelects() {
         const units = UNIT_DATA[this.currentCategory].units;
+        const lang = languages[currentLanguage];
         
-        this.fromUnitSelect.innerHTML = units.map(unit => 
-            `<option value="${unit.symbol}">${unit.name} (${unit.symbol})</option>`
-        ).join('');
+        this.fromUnitSelect.innerHTML = units.map(unit => {
+            const unitName = lang.units && lang.units[unit.symbol] ? lang.units[unit.symbol] : unit.name;
+            return `<option value="${unit.symbol}">${unitName} (${unit.symbol})</option>`;
+        }).join('');
         
-        this.toUnitSelect.innerHTML = units.map(unit => 
-            `<option value="${unit.symbol}">${unit.name} (${unit.symbol})</option>`
-        ).join('');
+        this.toUnitSelect.innerHTML = units.map(unit => {
+            const unitName = lang.units && lang.units[unit.symbol] ? lang.units[unit.symbol] : unit.name;
+            return `<option value="${unit.symbol}">${unitName} (${unit.symbol})</option>`;
+        }).join('');
         
         // 기본값 설정
         if (units.length >= 2) {
@@ -357,22 +391,43 @@ class UnitConverterApp {
     // 카테고리 정보 업데이트
     updateCategoryInfo() {
         const categoryInfo = UNIT_DATA[this.currentCategory];
-        this.currentCategoryElement.textContent = categoryInfo.name;
-        this.unitInfoTitle.textContent = `${categoryInfo.name} 정보`;
+        const lang = languages[currentLanguage];
         
-        this.unitInfoContent.innerHTML = categoryInfo.units.map(unit => `
-            <div class="unit-item">
-                <h4>${unit.name} (${unit.symbol})</h4>
-                <p>${unit.description}</p>
-                ${unit.formula ? `<div class="unit-formula">${unit.formula}</div>` : ''}
-            </div>
-        `).join('');
+        // 다국어 카테고리 정보 사용
+        const categoryLang = lang.categories && lang.categories[this.currentCategory];
+        const categoryName = categoryLang ? categoryLang.name : categoryInfo.name;
+        const categoryDesc = categoryLang ? categoryLang.description : categoryInfo.description;
+        
+        this.currentCategoryElement.textContent = categoryName;
+        this.unitInfoTitle.textContent = `${categoryName} 정보`;
+        
+        this.unitInfoContent.innerHTML = categoryInfo.units.map(unit => {
+            const unitName = lang.units && lang.units[unit.symbol] ? lang.units[unit.symbol] : unit.name;
+            const unitDescription = lang.unitDescriptions && lang.unitDescriptions[unit.symbol] ? 
+                lang.unitDescriptions[unit.symbol] : unit.description;
+            const unitFormula = lang.unitFormulas && lang.unitFormulas[unit.symbol] ? 
+                lang.unitFormulas[unit.symbol] : unit.formula;
+            
+            return `
+                <div class="unit-item">
+                    <h4>${unitName} (${unit.symbol})</h4>
+                    <p>${unitDescription}</p>
+                    ${unitFormula ? `<div class="unit-formula">${unitFormula}</div>` : ''}
+                </div>
+            `;
+        }).join('');
     }
 
     // 예시 업데이트
     updateExamples() {
         const categoryInfo = UNIT_DATA[this.currentCategory];
-        this.examplesContent.innerHTML = categoryInfo.examples.map(example => `
+        const lang = languages[currentLanguage];
+        
+        // 다국어 예시 데이터 사용
+        const examples = lang.examples && lang.examples[this.currentCategory] ? 
+            lang.examples[this.currentCategory] : categoryInfo.examples;
+        
+        this.examplesContent.innerHTML = examples.map(example => `
             <div class="example-item">
                 <h4>${example.title}</h4>
                 <p>${example.description}</p>
@@ -384,12 +439,20 @@ class UnitConverterApp {
     // 관련 단위 업데이트
     updateRelatedUnits() {
         const relatedCategories = this.getRelatedCategories(this.currentCategory);
+        const lang = languages[currentLanguage];
+        
         this.relatedContent.innerHTML = relatedCategories.map(category => {
             const categoryInfo = UNIT_DATA[category];
+            
+            // 다국어 카테고리 정보 사용
+            const categoryLang = lang.categories && lang.categories[category];
+            const categoryName = categoryLang ? categoryLang.name : categoryInfo.name;
+            const categoryDesc = categoryLang ? categoryLang.description : categoryInfo.description;
+            
             return `
                 <div class="related-item" data-category="${category}">
-                    <h4>${categoryInfo.name}</h4>
-                    <p>${categoryInfo.description}</p>
+                    <h4>${categoryName}</h4>
+                    <p>${categoryDesc}</p>
                 </div>
             `;
         }).join('');
@@ -414,20 +477,24 @@ class UnitConverterApp {
         const fromValue = parseFloat(this.fromValueInput.value);
         const fromUnit = this.fromUnitSelect.value;
         const toUnit = this.toUnitSelect.value;
+        const lang = languages[currentLanguage];
         
         if (isNaN(fromValue)) {
-            this.showToast('올바른 숫자를 입력해주세요.', 'error');
+            const message = lang.toastMessages ? lang.toastMessages.invalidNumber : '올바른 숫자를 입력해주세요.';
+            this.showToast(message, 'error');
             return;
         }
         
         if (!fromUnit || !toUnit) {
-            this.showToast('단위를 선택해주세요.', 'error');
+            const message = lang.toastMessages ? lang.toastMessages.selectUnit : '단위를 선택해주세요.';
+            this.showToast(message, 'error');
             return;
         }
         
         if (fromValue === 0) {
             this.toValueInput.value = '0';
-            this.showToast('0은 모든 단위에서 0입니다.', 'info');
+            const message = lang.toastMessages ? lang.toastMessages.zeroMessage : '0은 모든 단위에서 0입니다.';
+            this.showToast(message, 'info');
             return;
         }
         
@@ -441,9 +508,11 @@ class UnitConverterApp {
             this.converter.addToHistory(fromValue, fromUnit, toUnit, result, this.currentCategory);
             this.updateHistory();
             
-            this.showToast('변환이 완료되었습니다!', 'success');
+            const message = lang.toastMessages ? lang.toastMessages.conversionComplete : '변환이 완료되었습니다!';
+            this.showToast(message, 'success');
         } else {
-            this.showToast('변환할 수 없는 단위 조합입니다.', 'error');
+            const message = lang.toastMessages ? lang.toastMessages.invalidCombination : '변환할 수 없는 단위 조합입니다.';
+            this.showToast(message, 'error');
         }
     }
 
@@ -464,7 +533,10 @@ class UnitConverterApp {
     clearConverter() {
         this.fromValueInput.value = '';
         this.toValueInput.value = '';
-        this.showToast(languages[currentLanguage]?.clearMessage || '초기화되었습니다.', 'info');
+        
+        const lang = languages[currentLanguage];
+        const message = lang.toastMessages ? lang.toastMessages.cleared : '초기화되었습니다.';
+        this.showToast(message, 'info');
     }
 
     // 변환 기록 업데이트
@@ -638,17 +710,27 @@ class UnitConverterApp {
     // 언어 선택기 초기화
     initializeLanguageSelector() {
         const languageSelect = document.getElementById('language-select');
+        const headerLanguageSelect = document.getElementById('header-language-select');
+        const savedLanguage = localStorage.getItem('preferredLanguage') || 'ko';
+        
         if (languageSelect) {
-            const savedLanguage = localStorage.getItem('preferredLanguage') || 'ko';
             languageSelect.value = savedLanguage;
+        }
+        if (headerLanguageSelect) {
+            headerLanguageSelect.value = savedLanguage;
         }
     }
     
     // 언어 선택기 업데이트
     updateLanguageSelector(language) {
         const languageSelect = document.getElementById('language-select');
+        const headerLanguageSelect = document.getElementById('header-language-select');
+        
         if (languageSelect) {
             languageSelect.value = language;
+        }
+        if (headerLanguageSelect) {
+            headerLanguageSelect.value = language;
         }
     }
 }

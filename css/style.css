@@ -101,13 +101,13 @@ body {
 }
 
 .header .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-6);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: var(--spacing-6);
+    gap: var(--spacing-4);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-4);
 }
 
 .logo {
@@ -148,6 +148,18 @@ body {
     margin-left: var(--spacing-4);
 }
 
+/* 헤더 언어 선택기 */
+.header-language-selector {
+    margin-left: var(--spacing-4);
+    display: flex;
+    align-items: center;
+}
+
+.header-language-selector .language-select {
+    min-width: 120px;
+    font-size: var(--font-size-sm);
+}
+
 .language-select {
     padding: var(--spacing-2) var(--spacing-3);
     border: 2px solid var(--border-accent);
@@ -156,17 +168,30 @@ body {
     color: var(--text-primary);
     font-size: var(--font-size-sm);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
     outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+    padding-right: 32px;
 }
 
 .language-select:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(90, 212, 212, 0.1);
+    outline: none;
 }
 
 .language-select:hover {
     border-color: var(--primary-color);
+}
+
+.language-select:active {
+    transform: none;
 }
 
 /* Search Container - 검색 컨테이너 */
@@ -1474,4 +1499,18 @@ textarea:focus {
 .tip-item strong {
     color: var(--text-primary);
     font-weight: var(--font-weight-semibold);
+} 
+
+/* 언어 변경 시 부드러운 전환 */
+.logo-text,
+.hero-title,
+.hero-description,
+.nav-link,
+.category-title,
+.category-description,
+.converter-description,
+.convert-btn,
+.clear-btn,
+.back-text {
+    transition: color 0.2s ease, opacity 0.2s ease;
 } 

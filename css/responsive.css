@@ -12,16 +12,45 @@
         flex-direction: column;
         gap: var(--spacing-4);
         padding: var(--spacing-3);
+        align-items: stretch;
     }
     
     .logo {
         font-size: var(--font-size-lg);
+        text-align: center;
+    }
+    
+    /* 헤더 언어 선택기 모바일 스타일 */
+    .header-language-selector {
+        order: 3;
+        margin: var(--spacing-2) 0;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        position: relative;
+        z-index: 10;
+    }
+    
+    .header-language-selector .language-select {
+        min-width: 140px;
+        font-size: var(--font-size-base);
+        padding: var(--spacing-3) var(--spacing-4);
+        width: auto;
+        flex-shrink: 0;
+        background-color: var(--bg-card);
+        border: 2px solid var(--primary-color);
+        box-shadow: var(--shadow-md);
+    }
+    
+    .header-language-selector .language-select:focus {
+        box-shadow: 0 0 0 3px rgba(90, 212, 212, 0.2);
     }
     
     .nav-list {
         flex-wrap: wrap;
         gap: var(--spacing-2);
         justify-content: center;
+        order: 4;
     }
     
     .nav-link {
