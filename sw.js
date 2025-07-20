@@ -1,8 +1,8 @@
 const CACHE_NAME = 'unit-converter-v1';
 const urlsToCache = [
   '/',
-  '/index.html',
   '/faq.html',
+  '/tips.html',
   '/css/style.css',
   '/css/responsive.css',
   '/js/data.js',
@@ -29,8 +29,7 @@ self.addEventListener('fetch', event => {
       .then(response => {
         // Return cached version or fetch from network
         return response || fetch(event.request);
-      }
-    )
+      })
   );
 });
 
