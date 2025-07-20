@@ -1618,91 +1618,42 @@ function updateUILanguage() {
 
 // Tips 페이지 내용 업데이트 함수
 function updateTipsContent(lang) {
+    console.log('updateTipsContent called with language:', currentLanguage);
+    
     // 모든 tip-card의 h3 제목들을 찾아서 업데이트
     const tipTitles = document.querySelectorAll('.tip-card h3');
+    console.log('Found tip titles:', tipTitles.length);
     
     tipTitles.forEach((title, index) => {
-        const titleText = title.textContent.trim();
+        console.log(`Title ${index}:`, title.textContent);
         
-        // 각 제목에 맞는 번역 키 매핑
-        const titleMappings = {
-            '요리 단위 변환': 'cookingUnitTitle',
-            '밀가루 변환': 'flourTitle',
-            '의류 사이즈 변환': 'clothingTitle',
-            '신발 사이즈 변환': 'shoesTitle',
-            '무게 변환 (운동)': 'weightTitle',
-            '거리 변환 (러닝)': 'distanceTitle',
-            '온도 변환 (여행)': 'temperatureTitle',
-            '속도 변환 (운전)': 'speedTitle',
-            '면적 변환 (부동산)': 'areaTitle',
-            '실용적인 면적 비교': 'areaComparisonTitle',
-            '빠른 계산법': 'quickCalculationTitle'
-        };
+        // 인덱스 기반으로 번역 키 매핑
+        const titleKeys = [
+            'cookingUnitTitle',    // 0: 요리 단위 변환
+            'flourTitle',          // 1: 밀가루 변환
+            'clothingTitle',       // 2: 의류 사이즈 변환
+            'shoesTitle',          // 3: 신발 사이즈 변환
+            'weightTitle',         // 4: 무게 변환 (운동)
+            'distanceTitle',       // 5: 거리 변환 (러닝)
+            'temperatureTitle',    // 6: 온도 변환 (여행)
+            'speedTitle',          // 7: 속도 변환 (운전)
+            'areaTitle',           // 8: 면적 변환 (부동산)
+            'areaComparisonTitle', // 9: 실용적인 면적 비교
+            'quickCalculationTitle' // 10: 빠른 계산법
+        ];
         
-        // 영어 버전 매핑
-        const englishMappings = {
-            'Cooking Unit Conversion': 'cookingUnitTitle',
-            'Flour Conversion': 'flourTitle',
-            'Clothing Size Conversion': 'clothingTitle',
-            'Shoe Size Conversion': 'shoesTitle',
-            'Weight Conversion (Exercise)': 'weightTitle',
-            'Distance Conversion (Running)': 'distanceTitle',
-            'Temperature Conversion (Travel)': 'temperatureTitle',
-            'Speed Conversion (Driving)': 'speedTitle',
-            'Area Conversion (Real Estate)': 'areaTitle',
-            'Practical Area Comparison': 'areaComparisonTitle',
-            'Quick Calculation Methods': 'quickCalculationTitle'
-        };
-        
-        // 일본어 버전 매핑
-        const japaneseMappings = {
-            '料理単位変換': 'cookingUnitTitle',
-            '小麦粉変換': 'flourTitle',
-            '服のサイズ変換': 'clothingTitle',
-            '靴のサイズ変換': 'shoesTitle',
-            '重さ変換（運動）': 'weightTitle',
-            '距離変換（ランニング）': 'distanceTitle',
-            '温度変換（旅行）': 'temperatureTitle',
-            '速度変換（運転）': 'speedTitle',
-            '面積変換（不動産）': 'areaTitle',
-            '実用的な面積比較': 'areaComparisonTitle',
-            '早い計算方法': 'quickCalculationTitle'
-        };
-        
-        // 중국어 버전 매핑
-        const chineseMappings = {
-            '烹饪单位转换': 'cookingUnitTitle',
-            '面粉转换': 'flourTitle',
-            '服装尺寸转换': 'clothingTitle',
-            '鞋码转换': 'shoesTitle',
-            '重量转换（运动）': 'weightTitle',
-            '距离转换（跑步）': 'distanceTitle',
-            '温度转换（旅行）': 'temperatureTitle',
-            '速度转换（驾驶）': 'speedTitle',
-            '面积转换（房地产）': 'areaTitle',
-            '实用面积比较': 'areaComparisonTitle',
-            '快速计算方法': 'quickCalculationTitle'
-        };
-        
-        // 현재 언어에 맞는 매핑 선택
-        let currentMappings = titleMappings;
-        if (currentLanguage === 'en') {
-            currentMappings = englishMappings;
-        } else if (currentLanguage === 'ja') {
-            currentMappings = japaneseMappings;
-        } else if (currentLanguage === 'zh') {
-            currentMappings = chineseMappings;
-        }
-        
-        // 매핑된 번역 키가 있으면 업데이트
-        const translationKey = currentMappings[titleText];
-        if (translationKey && lang[translationKey]) {
-            title.textContent = lang[translationKey];
+        if (titleKeys[index] && lang[titleKeys[index]]) {
+            console.log(`Updating title ${index} to:`, lang[titleKeys[index]]);
+            title.textContent = lang[titleKeys[index]];
+        } else {
+            console.log(`No translation found for title ${index}:`, titleKeys[index]);
         }
     });
     
     // 팁 내용 업데이트
     const tipNotes = document.querySelectorAll('.tip-note');
+    console.log('Found tip notes:', tipNotes.length);
+    
     tipNotes.forEach((note, index) => {
         const tips = [
             'cookingTip', 'flourTip', 'clothingTip', 'shoesTip', 
@@ -1710,12 +1661,15 @@ function updateTipsContent(lang) {
             'areaTip', 'areaComparisonTip', 'quickCalculationTip'
         ];
         if (tips[index] && lang[tips[index]]) {
+            console.log(`Updating tip note ${index} to:`, lang[tips[index]]);
             note.textContent = lang[tips[index]];
         }
     });
     
     // 빠른 계산법 내용 업데이트
     const tipItems = document.querySelectorAll('.tip-item');
+    console.log('Found tip items:', tipItems.length);
+    
     tipItems.forEach((item, index) => {
         const calculations = ['tempConversion', 'weightConversion', 'distanceConversion', 'areaConversion'];
         if (calculations[index] && lang[calculations[index]]) {
