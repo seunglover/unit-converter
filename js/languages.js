@@ -456,6 +456,21 @@ const languages = {
             title: "📚 단위의 역사",
             description: "인류가 사용해온 다양한 측정 단위들의 흥미로운 역사를 알아보세요",
             
+            // 날짜 텍스트
+            dates: {
+                ancient: "고대",
+                year1793: "1793년",
+                year1795: "1795년",
+                year1701: "1701년",
+                year1742: "1742년",
+                year1848: "1848년",
+                year1875: "1875년",
+                year1960: "1960년",
+                year1964: "1964년",
+                year2019: "2019년",
+                current: "현재"
+            },
+            
             // 길이 단위 역사
             lengthHistory: {
                 title: "길이 단위의 역사",
@@ -1027,6 +1042,21 @@ const languages = {
         history: {
             title: "📚 단위의 역사",
             description: "인류가 사용해온 다양한 측정 단위들의 흥미로운 역사를 알아보세요",
+            
+            // 날짜 텍스트
+            dates: {
+                ancient: "고대",
+                year1793: "1793년",
+                year1795: "1795년",
+                year1701: "1701년",
+                year1742: "1742년",
+                year1848: "1848년",
+                year1875: "1875년",
+                year1960: "1960년",
+                year1964: "1964년",
+                year2019: "2019년",
+                current: "현재"
+            },
             
             // 길이 단위 역사
             lengthHistory: {
@@ -1643,6 +1673,21 @@ const languages = {
             title: "📚 단위의 역사",
             description: "인류가 사용해온 다양한 측정 단위들의 흥미로운 역사를 알아보세요",
             
+            // 날짜 텍스트
+            dates: {
+                ancient: "고대",
+                year1793: "1793년",
+                year1795: "1795년",
+                year1701: "1701년",
+                year1742: "1742년",
+                year1848: "1848년",
+                year1875: "1875년",
+                year1960: "1960년",
+                year1964: "1964년",
+                year2019: "2019년",
+                current: "현재"
+            },
+            
             // 길이 단위 역사
             lengthHistory: {
                 title: "길이 단위의 역사",
@@ -2257,6 +2302,21 @@ const languages = {
         history: {
             title: "📚 단위의 역사",
             description: "인류가 사용해온 다양한 측정 단위들의 흥미로운 역사를 알아보세요",
+            
+            // 날짜 텍스트
+            dates: {
+                ancient: "고대",
+                year1793: "1793년",
+                year1795: "1795년",
+                year1701: "1701년",
+                year1742: "1742년",
+                year1848: "1848년",
+                year1875: "1875년",
+                year1960: "1960년",
+                year1964: "1964년",
+                year2019: "2019년",
+                current: "현재"
+            },
             
             // 길이 단위 역사
             lengthHistory: {
@@ -2982,3 +3042,67 @@ function updateFunFacts(funFactsData) {
         }
     });
 }
+
+// 개인정보 취급방침/이용약관 다국어 텍스트 추가
+const privacyTermsTexts = {
+  ko: {
+    privacy: {
+      title: "개인정보 취급방침",
+      content: `<p>단위 변환기(이하 '사이트')는 개인정보 보호를 매우 중요하게 생각하며, 관련 법령을 준수합니다.<br>본 사이트는 개인정보를 수집하지 않으며, 쿠키 등 추적 기술을 사용하지 않습니다.<br>문의사항은 이메일로 연락해 주세요.</p>`
+    },
+    terms: {
+      title: "이용약관",
+      content: `<p>본 사이트는 누구나 자유롭게 사용할 수 있습니다.<br>상업적 목적의 무단 복제 및 배포는 금지됩니다.<br>사이트 이용 시 발생하는 문제에 대해 법적 책임을 지지 않습니다.</p>`
+    }
+  },
+  en: {
+    privacy: {
+      title: "Privacy Policy",
+      content: `<p>Unit Converter (the 'Site') values your privacy and complies with relevant laws.<br>This site does not collect any personal information and does not use cookies or tracking technologies.<br>For inquiries, please contact us via email.</p>`
+    },
+    terms: {
+      title: "Terms of Service",
+      content: `<p>This site is free for everyone to use.<br>Unauthorized commercial reproduction and distribution are prohibited.<br>The site is not legally responsible for any issues arising from its use.</p>`
+    }
+  },
+  ja: {
+    privacy: {
+      title: "個人情報保護方針",
+      content: `<p>単位変換サイト（以下「本サイト」）は、個人情報の保護を重視し、関連法令を遵守します。<br>本サイトは個人情報を収集せず、クッキー等の追跡技術も使用しません。<br>お問い合わせはメールでご連絡ください。</p>`
+    },
+    terms: {
+      title: "利用規約",
+      content: `<p>本サイトは誰でも自由に利用できます。<br>商用目的での無断複製・配布は禁止します。<br>本サイト利用による問題について法的責任を負いません。</p>`
+    }
+  },
+  zh: {
+    privacy: {
+      title: "隐私政策",
+      content: `<p>单位换算器（以下简称"本网站"）高度重视您的隐私，并遵守相关法律法规。<br>本网站不收集任何个人信息，也不使用Cookie等追踪技术。<br>如有疑问，请通过电子邮件联系我们。</p>`
+    },
+    terms: {
+      title: "服务条款",
+      content: `<p>本网站对所有人免费开放。<br>禁止未经授权的商业复制和分发。<br>因使用本网站而产生的任何问题，本网站不承担法律责任。</p>`
+    }
+  }
+};
+
+function updatePrivacyContent(lang) {
+  const data = privacyTermsTexts[lang] || privacyTermsTexts['ko'];
+  document.getElementById('privacy-title').textContent = data.privacy.title;
+  document.getElementById('privacy-content').innerHTML = data.privacy.content;
+}
+
+function updateTermsContent(lang) {
+  const data = privacyTermsTexts[lang] || privacyTermsTexts['ko'];
+  document.getElementById('terms-title').textContent = data.terms.title;
+  document.getElementById('terms-content').innerHTML = data.terms.content;
+}
+
+// 언어 변경 시 개인정보/이용약관 페이지 자동 갱신
+const originalChangeLanguage = window.changeLanguage;
+window.changeLanguage = function(lang) {
+  if (typeof originalChangeLanguage === 'function') originalChangeLanguage(lang);
+  if (document.getElementById('privacy-title')) updatePrivacyContent(lang);
+  if (document.getElementById('terms-title')) updateTermsContent(lang);
+};
