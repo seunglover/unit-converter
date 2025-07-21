@@ -599,6 +599,10 @@ const languages = {
                     title: "🚗 자동차 단위",
                     description: "주차장 면적을 '자동차' 단위로 표현합니다. 1자동차 = 약 15m²"
                 }
+            },
+            labels: {
+                fact: '재미있는 사실:',
+                formula: '현재 정의:'
             }
         }
     },
@@ -1186,6 +1190,10 @@ const languages = {
                     title: "🚗 자동차 단위",
                     description: "주차장 면적을 '자동차' 단위로 표현합니다. 1자동차 = 약 15m²"
                 }
+            },
+            labels: {
+                fact: 'Fun Fact:',
+                formula: 'Current Definition:'
             }
         }
     },
@@ -1816,6 +1824,10 @@ const languages = {
                     title: "🚗 자동차 단위",
                     description: "주차장 면적을 '자동차' 단위로 표현합니다. 1자동차 = 약 15m²"
                 }
+            },
+            labels: {
+                fact: '豆知識:',
+                formula: '現在の定義:'
             }
         }
     },
@@ -2446,6 +2458,10 @@ const languages = {
                     title: "🚗 자동차 단위",
                     description: "주차장 면적을 '자동차' 단위로 표현합니다. 1자동차 = 약 15m²"
                 }
+            },
+            labels: {
+                fact: '趣闻:',
+                formula: '当前定义:'
             }
         }
     }
@@ -2863,105 +2879,103 @@ function updateHistoryContent(lang) {
     if (descElement) descElement.textContent = history.description;
     
     // 길이 단위 역사 업데이트
-    updateHistorySection('lengthHistory', history.lengthHistory);
+    updateHistorySection('lengthHistory', history.lengthHistory, lang);
     
     // 무게 단위 역사 업데이트
-    updateHistorySection('weightHistory', history.weightHistory);
+    updateHistorySection('weightHistory', history.weightHistory, lang);
     
     // 온도 단위 역사 업데이트
-    updateHistorySection('temperatureHistory', history.temperatureHistory);
+    updateHistorySection('temperatureHistory', history.temperatureHistory, lang);
     
     // 부피 단위 역사 업데이트
-    updateHistorySection('volumeHistory', history.volumeHistory);
+    updateHistorySection('volumeHistory', history.volumeHistory, lang);
     
     // SI 단위계 역사 업데이트
-    updateHistorySection('siHistory', history.siHistory);
+    updateHistorySection('siHistory', history.siHistory, lang);
     
     // 재미있는 단위 이야기 업데이트
     updateFunFacts(history.funFacts);
 }
 
 // 역사 섹션 업데이트 헬퍼 함수
-function updateHistorySection(sectionId, sectionData) {
+function updateHistorySection(sectionId, sectionData, lang) {
     const section = document.querySelector(`[data-history-section="${sectionId}"]`);
     if (!section || !sectionData) return;
-    
+    const dates = languages[lang]?.history?.dates || languages['ko'].history.dates;
+    const labels = {
+      fact: (languages[lang]?.history?.labels?.fact) || '재미있는 사실:',
+      formula: (languages[lang]?.history?.labels?.formula) || '현재 정의:'
+    };
     // 섹션 제목 업데이트
     const titleElement = section.querySelector('h2');
     if (titleElement) titleElement.textContent = sectionData.title;
-    
     // 타임라인 아이템들 업데이트
     const timelineItems = section.querySelectorAll('.timeline-item');
     timelineItems.forEach((item, index) => {
         const dateElement = item.querySelector('.timeline-date');
         const contentElement = item.querySelector('.timeline-content');
-        
         if (!contentElement) return;
-        
         const contentTitle = contentElement.querySelector('h3');
         const contentDesc = contentElement.querySelector('p');
         const contentList = contentElement.querySelector('ul');
         const factElement = contentElement.querySelector('.history-fact');
         const formulaElement = contentElement.querySelector('.history-formula');
-        
         // 각 타임라인 아이템의 데이터 매핑
         let itemData;
         switch (index) {
-            case 0: // 고대
+            case 0:
                 itemData = sectionData.ancient;
-                if (dateElement) dateElement.textContent = '고대';
+                if (dateElement) dateElement.textContent = dates.ancient;
                 break;
-            case 1: // 중세/근대
+            case 1:
                 if (sectionData.meter1793) {
                     itemData = sectionData.meter1793;
-                    if (dateElement) dateElement.textContent = '1793년';
+                    if (dateElement) dateElement.textContent = dates.year1793;
                 } else if (sectionData.kg1795) {
                     itemData = sectionData.kg1795;
-                    if (dateElement) dateElement.textContent = '1795년';
+                    if (dateElement) dateElement.textContent = dates.year1795;
                 } else if (sectionData.fahrenheit1701) {
                     itemData = sectionData.fahrenheit1701;
-                    if (dateElement) dateElement.textContent = '1701년';
+                    if (dateElement) dateElement.textContent = dates.year1701;
                 } else if (sectionData.liter1793) {
                     itemData = sectionData.liter1793;
-                    if (dateElement) dateElement.textContent = '1793년';
+                    if (dateElement) dateElement.textContent = dates.year1793;
                 } else if (sectionData.convention1875) {
                     itemData = sectionData.convention1875;
-                    if (dateElement) dateElement.textContent = '1875년';
+                    if (dateElement) dateElement.textContent = dates.year1875;
                 }
                 break;
-            case 2: // 현대
+            case 2:
                 if (sectionData.modern1960) {
                     itemData = sectionData.modern1960;
-                    if (dateElement) dateElement.textContent = '1960년';
+                    if (dateElement) dateElement.textContent = dates.year1960;
                 } else if (sectionData.modern2019) {
                     itemData = sectionData.modern2019;
-                    if (dateElement) dateElement.textContent = '2019년';
+                    if (dateElement) dateElement.textContent = dates.year2019;
                 } else if (sectionData.celsius1742) {
                     itemData = sectionData.celsius1742;
-                    if (dateElement) dateElement.textContent = '1742년';
+                    if (dateElement) dateElement.textContent = dates.year1742;
                 } else if (sectionData.kelvin1848) {
                     itemData = sectionData.kelvin1848;
-                    if (dateElement) dateElement.textContent = '1848년';
+                    if (dateElement) dateElement.textContent = dates.year1848;
                 } else if (sectionData.modern1964) {
                     itemData = sectionData.modern1964;
-                    if (dateElement) dateElement.textContent = '1964년';
+                    if (dateElement) dateElement.textContent = dates.year1964;
                 } else if (sectionData.si1960) {
                     itemData = sectionData.si1960;
-                    if (dateElement) dateElement.textContent = '1960년';
+                    if (dateElement) dateElement.textContent = dates.year1960;
                 }
                 break;
-            case 3: // 현재
+            case 3:
                 if (sectionData.current) {
                     itemData = sectionData.current;
-                    if (dateElement) dateElement.textContent = '현재';
+                    if (dateElement) dateElement.textContent = dates.current;
                 }
                 break;
         }
-        
         if (itemData) {
             if (contentTitle) contentTitle.textContent = itemData.title;
             if (contentDesc) contentDesc.textContent = itemData.description;
-            
             // 리스트 업데이트
             if (contentList && itemData.foot) {
                 contentList.innerHTML = `
@@ -2993,15 +3007,12 @@ function updateHistorySection(sectionId, sectionData) {
                     <li><strong>${itemData.supplementary}</strong></li>
                 `;
             }
-            
-            // 재미있는 사실 업데이트
+            // 재미있는 사실/공식 다국어 지원
             if (factElement && itemData.fact) {
-                factElement.innerHTML = `<strong>재미있는 사실:</strong> ${itemData.fact}`;
+                factElement.innerHTML = `<strong>${labels.fact}</strong> ${itemData.fact}`;
             }
-            
-            // 공식 업데이트
             if (formulaElement && itemData.formula) {
-                formulaElement.innerHTML = `<strong>현재 정의:</strong> ${itemData.formula}`;
+                formulaElement.innerHTML = `<strong>${labels.formula}</strong> ${itemData.formula}`;
             }
         }
     });
