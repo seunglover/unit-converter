@@ -715,9 +715,21 @@ class UnitConverterApp {
         
         if (languageSelect) {
             languageSelect.value = savedLanguage;
+            languageSelect.addEventListener('change', (e) => {
+                changeLanguage(e.target.value);
+            });
         }
         if (headerLanguageSelect) {
             headerLanguageSelect.value = savedLanguage;
+            headerLanguageSelect.addEventListener('change', (e) => {
+                changeLanguage(e.target.value);
+            });
+        }
+        
+        // 저장된 언어로 UI 업데이트
+        if (savedLanguage) {
+            currentLanguage = savedLanguage;
+            updateUILanguage();
         }
     }
     

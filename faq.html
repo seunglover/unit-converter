@@ -318,6 +318,40 @@
                     }
                 });
             });
+            
+            // 언어 설정 확인 및 적용
+            console.log('FAQ page loaded');
+            const savedLanguage = localStorage.getItem('preferredLanguage');
+            if (savedLanguage) {
+                console.log('Saved language:', savedLanguage);
+                currentLanguage = savedLanguage;
+                
+                // 모든 언어 선택기 업데이트
+                const languageSelects = document.querySelectorAll('#language-select');
+                languageSelects.forEach(select => {
+                    select.value = savedLanguage;
+                    select.addEventListener('change', (e) => {
+                        changeLanguage(e.target.value);
+                    });
+                });
+                
+                // UI 언어 업데이트
+                updateUILanguage();
+            } else {
+                console.log('No saved language, using default (Korean)');
+                // 기본 언어로 설정
+                currentLanguage = 'ko';
+                
+                // 언어 선택기에 이벤트 리스너 추가
+                const languageSelects = document.querySelectorAll('#language-select');
+                languageSelects.forEach(select => {
+                    select.addEventListener('change', (e) => {
+                        changeLanguage(e.target.value);
+                    });
+                });
+                
+                updateUILanguage();
+            }
         });
     </script>
 </body>

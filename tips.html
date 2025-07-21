@@ -435,10 +435,19 @@
             if (savedLanguage) {
                 console.log('Saved language:', savedLanguage);
                 currentLanguage = savedLanguage;
-                const languageSelect = document.getElementById('language-select');
-                if (languageSelect) {
-                    languageSelect.value = savedLanguage;
-                }
+                
+                // 모든 언어 선택기 업데이트
+                const languageSelects = document.querySelectorAll('#language-select');
+                languageSelects.forEach(select => {
+                    select.value = savedLanguage;
+                });
+                
+                // UI 언어 업데이트
+                updateUILanguage();
+            } else {
+                console.log('No saved language, using default (Korean)');
+                // 기본 언어로 설정
+                currentLanguage = 'ko';
                 updateUILanguage();
             }
         });
