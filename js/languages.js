@@ -326,6 +326,8 @@ const languages = {
         
         // 변환팁 버튼
         tipsButtonText: "변환 팁 보기",
+        // 단위 역사 버튼
+        historyButtonText: "단위의 역사 알아보기",
         
         // 토스트 메시지
         toastMessages: {
@@ -869,6 +871,7 @@ const languages = {
         
         // Tips button
         tipsButtonText: "View Conversion Tips",
+        historyButtonText: "Learn Unit History",
         
         // Toast messages
         toastMessages: {
@@ -1483,6 +1486,7 @@ const languages = {
         
         // 変換コツボタン
         tipsButtonText: "変換コツを見る",
+        historyButtonText: "単位の歴史を学ぶ",
         
         // トーストメッセージ
         toastMessages: {
@@ -2097,6 +2101,7 @@ const languages = {
         
         // 转换技巧按钮
         tipsButtonText: "查看转换技巧",
+        historyButtonText: "了解单位历史",
         
         // 提示消息
         toastMessages: {
@@ -2563,6 +2568,14 @@ function updateUILanguage() {
     tipsButtons.forEach(tipsButton => {
         if (tipsButton) {
             tipsButton.textContent = lang.tipsButtonText || '변환 팁 보기';
+        }
+    });
+    
+    // 单위历史按钮文本更新
+    const historyButtons = document.querySelectorAll('.history-text');
+    historyButtons.forEach(historyButton => {
+        if (historyButton) {
+            historyButton.textContent = lang.historyButtonText || '단위의 역사 알아보기';
         }
     });
 }
