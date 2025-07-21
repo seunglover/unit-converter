@@ -369,6 +369,58 @@ const languages = {
         volumeExamples: ["L ↔ gal", "ml ↔ cup", "tbsp ↔ ml"],
         temperatureExamples: ["°C ↔ °F", "°C ↔ K", "°F ↔ K"],
         areaExamples: ["m² ↔ cm²", "acre ↔ ha", "km² ↔ m²"],
+        speedExamples: ["km/h ↔ mph", "m/s ↔ km/h", "knot ↔ km/h"],
+        
+        // Tipsカテゴリ
+        tipsCooking: "🍳 料理に役立つ変換のコツ",
+        tipsShopping: "🛒 海外通販に役立つ変換のコツ",
+        tipsExercise: "💪 運動に役立つ変換のコツ",
+        tipsTravel: "✈️ 旅行に役立つ変換のコツ",
+        tipsRealEstate: "🏠 不動産に役立つ変換のコツ",
+        tipsMemory: "🧠 覚えやすい変換のコツ",
+        
+        // Tips内容
+        cookingUnitTitle: "料理単位変換",
+        flourTitle: "小麦粉変換",
+        clothingTitle: "服のサイズ変換",
+        shoesTitle: "靴のサイズ変換",
+        weightTitle: "重さ変換（運動）",
+        distanceTitle: "距離変換（ランニング）",
+        temperatureTitle: "温度変換（旅行）",
+        speedTitle: "速度変換（運転）",
+        areaTitle: "面積変換（不動産）",
+        areaComparisonTitle: "実用的な面積比較",
+        quickCalculationTitle: "早い計算方法",
+        
+        // Tipsコツ内容
+        cookingTip: "💡 コツ: 料理では正確な重さよりも体積単位の方が便利です。",
+        flourTip: "💡 コツ: 材料によって同じ体積でも重さが違うことがあります！",
+        clothingTip: "💡 コツ: ブランドによってサイズが違うので正確なサイズを確認してください。",
+        shoesTip: "💡 コツ: 靴はブランドによってサイズが違うので必ず実測してから購入してください。",
+        weightTip: "💡 コツ: ジムで使用する重さの単位は通常lb（ポンド）です。",
+        distanceTip: "💡 コツ: ランニングアプリで距離単位をマイルに設定すると海外ランニングイベント参加に役立ちます。",
+        temperatureTip: "💡 コツ: 摂氏から華氏に変換する時は（摂氏 × 9/5）+ 32の公式を使用してください。",
+        speedTip: "💡 コツ: 海外運転時は速度制限表示がmphになっていることがあります。",
+        areaTip: "💡 コツ: 不動産広告では坪と平方メートルを混用して使用することが多いです。",
+        areaComparisonTip: "💡 コツ: 面積を日常生活と比較するとより直感的に理解できます。",
+        quickCalculationTip: "💡 コツ: 正確な計算が必要な時は上の変換機を使用してください！",
+        
+        // 早い計算方法内容
+        tempConversion: "温度変換: 摂氏から華氏: 摂氏 × 2 + 30（近似値）",
+        weightConversion: "重さ変換: kgからlb: kg × 2 + kg × 0.2",
+        distanceConversion: "距離変換: kmからmile: km × 0.6",
+        areaConversion: "面積変換: m²から坪: m² ÷ 3.3",
+        
+        // テーブルラベル
+        koreaSize: "韓国サイズ",
+        usSize: "米国サイズ",
+        
+        // カテゴリカード例タグ
+        lengthExamples: ["m ↔ cm", "km ↔ mile", "inch ↔ cm"],
+        weightExamples: ["kg ↔ lb", "g ↔ oz", "mg ↔ g"],
+        volumeExamples: ["L ↔ gal", "ml ↔ cup", "tbsp ↔ ml"],
+        temperatureExamples: ["°C ↔ °F", "°C ↔ K", "°F ↔ K"],
+        areaExamples: ["m² ↔ cm²", "acre ↔ ha", "km² ↔ m²"],
         speedExamples: ["km/h ↔ mph", "m/s ↔ km/h", "knot ↔ km/h"]
     },
     
@@ -1064,6 +1116,42 @@ const languages = {
         tipsRealEstate: "🏠 不動産に役立つ変換のコツ",
         tipsMemory: "🧠 覚えやすい変換のコツ",
         
+        // Tips内容
+        cookingUnitTitle: "料理単位変換",
+        flourTitle: "小麦粉変換",
+        clothingTitle: "服のサイズ変換",
+        shoesTitle: "靴のサイズ変換",
+        weightTitle: "重さ変換（運動）",
+        distanceTitle: "距離変換（ランニング）",
+        temperatureTitle: "温度変換（旅行）",
+        speedTitle: "速度変換（運転）",
+        areaTitle: "面積変換（不動産）",
+        areaComparisonTitle: "実用的な面積比較",
+        quickCalculationTitle: "早い計算方法",
+        
+        // Tipsコツ内容
+        cookingTip: "💡 コツ: 料理では正確な重さよりも体積単位の方が便利です。",
+        flourTip: "💡 コツ: 材料によって同じ体積でも重さが違うことがあります！",
+        clothingTip: "💡 コツ: ブランドによってサイズが違うので正確なサイズを確認してください。",
+        shoesTip: "💡 コツ: 靴はブランドによってサイズが違うので必ず実測してから購入してください。",
+        weightTip: "💡 コツ: ジムで使用する重さの単位は通常lb（ポンド）です。",
+        distanceTip: "💡 コツ: ランニングアプリで距離単位をマイルに設定すると海外ランニングイベント参加に役立ちます。",
+        temperatureTip: "💡 コツ: 摂氏から華氏に変換する時は（摂氏 × 9/5）+ 32の公式を使用してください。",
+        speedTip: "💡 コツ: 海外運転時は速度制限表示がmphになっていることがあります。",
+        areaTip: "💡 コツ: 不動産広告では坪と平方メートルを混用して使用することが多いです。",
+        areaComparisonTip: "💡 コツ: 面積を日常生活と比較するとより直感的に理解できます。",
+        quickCalculationTip: "💡 コツ: 正確な計算が必要な時は上の変換機を使用してください！",
+        
+        // 早い計算方法内容
+        tempConversion: "温度変換: 摂氏から華氏: 摂氏 × 2 + 30（近似値）",
+        weightConversion: "重さ変換: kgからlb: kg × 2 + kg × 0.2",
+        distanceConversion: "距離変換: kmからmile: km × 0.6",
+        areaConversion: "面積変換: m²から坪: m² ÷ 3.3",
+        
+        // テーブルラベル
+        koreaSize: "韓国サイズ",
+        usSize: "米国サイズ",
+        
         // カテゴリカード例タグ
         lengthExamples: ["m ↔ cm", "km ↔ mile", "inch ↔ cm"],
         weightExamples: ["kg ↔ lb", "g ↔ oz", "mg ↔ g"],
@@ -1446,36 +1534,36 @@ const languages = {
     }
 };
 
-// 현재 언어 설정 (기본값: 한국어)
+// 当前语言设置 (默认值: 韩语)
 let currentLanguage = 'ko';
 
-// 언어 변경 함수
+// 语言切换函数
 function changeLanguage(lang) {
     currentLanguage = lang;
     updateUILanguage();
     localStorage.setItem('preferredLanguage', lang);
 }
 
-// UI 언어 업데이트 함수
+// UI 语言更新函数
 function updateUILanguage() {
     const lang = languages[currentLanguage];
     
-    // 로고 텍스트
+    // 标志文本
     const logoText = document.querySelector('.logo-text');
     if (logoText) logoText.textContent = lang.logoText;
     
-    // 히어로 섹션
+    // 英雄部分
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle) heroTitle.textContent = lang.heroTitle;
     
     const heroDescription = document.querySelector('.hero-description');
     if (heroDescription) heroDescription.textContent = lang.heroDescription;
     
-    // 검색 플레이스홀더
+    // 搜索输入框
     const searchInput = document.getElementById('search-input');
     if (searchInput) searchInput.placeholder = lang.searchPlaceholder;
     
-    // 네비게이션 메뉴
+    // 导航菜单
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach((link, index) => {
         const categories = ['length', 'weight', 'volume', 'temperature', 'area', 'speed'];
@@ -1484,7 +1572,7 @@ function updateUILanguage() {
         }
     });
     
-    // 카테고리 카드
+    // 类别卡片
     const categoryCards = document.querySelectorAll('.category-card');
     categoryCards.forEach((card, index) => {
         const categories = ['length', 'weight', 'volume', 'temperature', 'area', 'speed'];
@@ -1497,7 +1585,7 @@ function updateUILanguage() {
             if (title) title.textContent = lang[category];
             if (desc) desc.textContent = lang[category + 'Desc'];
             
-            // 예시 태그 업데이트
+            // 示例标签更新
             if (examples) {
                 const examplesKey = category + 'Examples';
                 if (lang[examplesKey]) {
@@ -1509,7 +1597,7 @@ function updateUILanguage() {
         }
     });
     
-    // 뒤로가기 버튼
+    // 返回按钮
     const backBtn = document.getElementById('back-to-main');
     if (backBtn) {
         const backText = backBtn.querySelector('.back-text');
@@ -1517,24 +1605,24 @@ function updateUILanguage() {
         backBtn.setAttribute('aria-label', lang.backToMainAria);
     }
     
-    // 단위 교체 버튼
+    // 单位交换按钮
     const swapBtn = document.getElementById('swap-btn');
     if (swapBtn) {
         swapBtn.setAttribute('aria-label', lang.swapLabelAria);
     }
     
-    // 변환하기 버튼
+    // 转换按钮
     const convertBtn = document.getElementById('convert-btn');
     if (convertBtn) convertBtn.textContent = lang.convertButton;
     
-    // 초기화 버튼
+    // 重置按钮
     const clearBtn = document.getElementById('clear-btn');
     if (clearBtn) clearBtn.textContent = lang.clearButton;
     
-    // 변환기 설명 (현재 카테고리에 맞게 업데이트)
+    // 转换器描述 (根据当前类别进行更新)
     const converterDesc = document.querySelector('.converter-description');
     if (converterDesc) {
-        // 현재 활성화된 카테고리 확인
+        // 检查当前激活的类别
         const activeNavLink = document.querySelector('.nav-link.active');
         if (activeNavLink) {
             const currentCategory = activeNavLink.dataset.category;
@@ -1549,7 +1637,7 @@ function updateUILanguage() {
         }
     }
     
-    // 변환기 카테고리 제목 업데이트
+    // 转换器类别标题更新
     const currentCategoryElement = document.getElementById('current-category');
     if (currentCategoryElement) {
         const activeNavLink = document.querySelector('.nav-link.active');
@@ -1561,14 +1649,14 @@ function updateUILanguage() {
         }
     }
     
-    // FAQ 페이지
+    // FAQ页面
     const faqTitle = document.querySelector('.faq-header h1');
     if (faqTitle) faqTitle.textContent = lang.faqTitle;
     
     const faqDescription = document.querySelector('.faq-header p');
     if (faqDescription) faqDescription.textContent = lang.faqDescription;
     
-    // FAQ 카테고리
+    // FAQ类别
     const faqCategories = document.querySelectorAll('.faq-category h2');
     faqCategories.forEach((category, index) => {
         const categories = ['faqUsage', 'faqAccuracy', 'faqLifestyle', 'faqTechnical', 'faqTroubleshooting'];
@@ -1577,14 +1665,14 @@ function updateUILanguage() {
         }
     });
     
-    // Tips 페이지
+    // Tips页面
     const tipsTitle = document.querySelector('.tips-header h1');
     if (tipsTitle) tipsTitle.textContent = lang.tipsTitle;
     
     const tipsDescription = document.querySelector('.tips-header p');
     if (tipsDescription) tipsDescription.textContent = lang.tipsDescription;
     
-    // Tips 카테고리
+    // Tips类别
     const tipsCategories = document.querySelectorAll('.tips-category h2');
     tipsCategories.forEach((category, index) => {
         const categories = ['tipsCooking', 'tipsShopping', 'tipsExercise', 'tipsTravel', 'tipsRealEstate', 'tipsMemory'];
@@ -1593,10 +1681,10 @@ function updateUILanguage() {
         }
     });
     
-    // Tips 카드 내용 업데이트
+    // Tips内容更新
     updateTipsContent(lang);
     
-    // 단위 선택 드롭다운 업데이트
+    // 单位选择下拉菜单更新
     const fromUnitSelect = document.getElementById('from-unit');
     const toUnitSelect = document.getElementById('to-unit');
     
@@ -1607,7 +1695,7 @@ function updateUILanguage() {
         window.unitConverterApp.updateRelatedUnits();
     }
     
-    // 변환팁 버튼 텍스트 업데이트
+    // 转换技巧按钮文本更新
     const tipsButtons = document.querySelectorAll('.tips-text');
     tipsButtons.forEach(tipsButton => {
         if (tipsButton) {
@@ -1616,41 +1704,46 @@ function updateUILanguage() {
     });
 }
 
-// Tips 페이지 내용 업데이트 함수
+// Tips页面内容更新函数
 function updateTipsContent(lang) {
     console.log('updateTipsContent called with language:', currentLanguage);
+    console.log('Language data keys:', Object.keys(lang));
     
-    // 모든 tip-card의 h3 제목들을 찾아서 업데이트
+    // 找到所有tip-card的h3标题并更新
     const tipTitles = document.querySelectorAll('.tip-card h3');
     console.log('Found tip titles:', tipTitles.length);
     
     tipTitles.forEach((title, index) => {
         console.log(`Title ${index}:`, title.textContent);
         
-        // 인덱스 기반으로 번역 키 매핑
+        // 根据索引进行翻译键映射
         const titleKeys = [
-            'cookingUnitTitle',    // 0: 요리 단위 변환
-            'flourTitle',          // 1: 밀가루 변환
-            'clothingTitle',       // 2: 의류 사이즈 변환
-            'shoesTitle',          // 3: 신발 사이즈 변환
-            'weightTitle',         // 4: 무게 변환 (운동)
-            'distanceTitle',       // 5: 거리 변환 (러닝)
-            'temperatureTitle',    // 6: 온도 변환 (여행)
-            'speedTitle',          // 7: 속도 변환 (운전)
-            'areaTitle',           // 8: 면적 변환 (부동산)
-            'areaComparisonTitle', // 9: 실용적인 면적 비교
-            'quickCalculationTitle' // 10: 빠른 계산법
+            'cookingUnitTitle',    // 0: 烹饪单位转换
+            'flourTitle',          // 1: 面粉转换
+            'clothingTitle',       // 2: 服装尺寸转换
+            'shoesTitle',          // 3: 鞋子尺寸转换
+            'weightTitle',         // 4: 重量转换 (运动)
+            'distanceTitle',       // 5: 距离转换 (跑步)
+            'temperatureTitle',    // 6: 温度转换 (旅行)
+            'speedTitle',          // 7: 速度转换 (驾驶)
+            'areaTitle',           // 8: 面积转换 (房地产)
+            'areaComparisonTitle', // 9: 实用面积比较
+            'quickCalculationTitle' // 10: 快速计算方法
         ];
         
-        if (titleKeys[index] && lang[titleKeys[index]]) {
-            console.log(`Updating title ${index} to:`, lang[titleKeys[index]]);
-            title.textContent = lang[titleKeys[index]];
+        const currentKey = titleKeys[index];
+        console.log(`Current key for index ${index}:`, currentKey);
+        console.log(`Translation available:`, lang[currentKey]);
+        
+        if (currentKey && lang[currentKey]) {
+            console.log(`Updating title ${index} from "${title.textContent}" to:`, lang[currentKey]);
+            title.textContent = lang[currentKey];
         } else {
-            console.log(`No translation found for title ${index}:`, titleKeys[index]);
+            console.log(`No translation found for title ${index}:`, currentKey);
         }
     });
     
-    // 팁 내용 업데이트
+    // 提示内容更新
     const tipNotes = document.querySelectorAll('.tip-note');
     console.log('Found tip notes:', tipNotes.length);
     
@@ -1660,13 +1753,16 @@ function updateTipsContent(lang) {
             'weightTip', 'distanceTip', 'temperatureTip', 'speedTip', 
             'areaTip', 'areaComparisonTip', 'quickCalculationTip'
         ];
-        if (tips[index] && lang[tips[index]]) {
-            console.log(`Updating tip note ${index} to:`, lang[tips[index]]);
-            note.textContent = lang[tips[index]];
+        const currentTipKey = tips[index];
+        console.log(`Tip note ${index} key:`, currentTipKey, 'Available:', lang[currentTipKey]);
+        
+        if (currentTipKey && lang[currentTipKey]) {
+            console.log(`Updating tip note ${index} from "${note.textContent}" to:`, lang[currentTipKey]);
+            note.textContent = lang[currentTipKey];
         }
     });
     
-    // 빠른 계산법 내용 업데이트
+    // 快速计算方法内容更新
     const tipItems = document.querySelectorAll('.tip-item');
     console.log('Found tip items:', tipItems.length);
     
@@ -1681,18 +1777,18 @@ function updateTipsContent(lang) {
         }
     });
     
-    // 테이블 라벨 업데이트
+    // 表格标签更新
     const tipLabels = document.querySelectorAll('.tip-label');
     tipLabels.forEach(label => {
-        if (label.textContent.includes('한국 사이즈') || label.textContent.includes('Korea Size') || label.textContent.includes('韓国サイズ') || label.textContent.includes('韩国尺寸')) {
+        if (label.textContent.includes('韩国尺寸') || label.textContent.includes('Korea Size') || label.textContent.includes('韓国サイズ') || label.textContent.includes('韩国尺寸')) {
             label.textContent = lang.koreaSize;
-        } else if (label.textContent.includes('미국 사이즈') || label.textContent.includes('US Size') || label.textContent.includes('米国サイズ') || label.textContent.includes('美国尺寸')) {
+        } else if (label.textContent.includes('美国尺寸') || label.textContent.includes('US Size') || label.textContent.includes('米国サイズ') || label.textContent.includes('美国尺寸')) {
             label.textContent = lang.usSize;
         }
     });
 }
 
-// 페이지 로드 시 저장된 언어 설정 불러오기
+// 页面加载时保存的语言设置加载
 document.addEventListener('DOMContentLoaded', function() {
     const savedLanguage = localStorage.getItem('preferredLanguage');
     if (savedLanguage && languages[savedLanguage]) {
