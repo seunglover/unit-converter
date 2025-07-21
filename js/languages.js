@@ -2184,200 +2184,105 @@ function updateTipRows(lang) {
     // 요리 단위 변환 데이터
     const cupLabels = document.querySelectorAll('.tip-label');
     cupLabels.forEach(label => {
+        console.log('Processing label:', label.textContent);
+        
+        // 요리 단위 변환
         if (label.textContent.includes('1 컵') || label.textContent.includes('1 cup') || label.textContent.includes('1カップ') || label.textContent.includes('1杯')) {
+            console.log('Updating cup label to:', lang.cupLabel);
             label.textContent = lang.cupLabel;
         } else if (label.textContent.includes('1 테이블스푼') || label.textContent.includes('1 tablespoon') || label.textContent.includes('1大さじ') || label.textContent.includes('1汤匙')) {
+            console.log('Updating tbsp label to:', lang.tbspLabel);
             label.textContent = lang.tbspLabel;
         } else if (label.textContent.includes('1 티스푼') || label.textContent.includes('1 teaspoon') || label.textContent.includes('1小さじ') || label.textContent.includes('1茶匙')) {
+            console.log('Updating tsp label to:', lang.tspLabel);
             label.textContent = lang.tspLabel;
         } else if (label.textContent.includes('1 온스') || label.textContent.includes('1 ounce') || label.textContent.includes('1オンス') || label.textContent.includes('1盎司')) {
+            console.log('Updating oz label to:', lang.ozLabel);
             label.textContent = lang.ozLabel;
         } else if (label.textContent.includes('1 파운드') || label.textContent.includes('1 pound') || label.textContent.includes('1ポンド') || label.textContent.includes('1磅')) {
+            console.log('Updating lb label to:', lang.lbLabel);
             label.textContent = lang.lbLabel;
+        }
+        // 밀가루 변환
+        else if (label.textContent.includes('1컵 밀가루') || label.textContent.includes('1 cup flour') || label.textContent.includes('1カップ小麦粉') || label.textContent.includes('1杯面粉')) {
+            console.log('Updating flour label to:', lang.allPurposeLabel);
+            label.textContent = lang.allPurposeLabel;
+        } else if (label.textContent.includes('1컵 설탕') || label.textContent.includes('1 cup sugar') || label.textContent.includes('1カップ砂糖') || label.textContent.includes('1杯糖')) {
+            console.log('Updating sugar label to:', lang.breadLabel);
+            label.textContent = lang.breadLabel;
+        } else if (label.textContent.includes('1컵 버터') || label.textContent.includes('1 cup butter') || label.textContent.includes('1カップバター') || label.textContent.includes('1杯黄油')) {
+            console.log('Updating butter label to:', lang.cakeLabel);
+            label.textContent = lang.cakeLabel;
+        }
+        // 의류 사이즈
+        else if (label.textContent.includes('한국 사이즈') || label.textContent.includes('Korea Size') || label.textContent.includes('韓国サイズ') || label.textContent.includes('韩国尺寸')) {
+            console.log('Updating korea size label to:', lang.koreaSize);
+            label.textContent = lang.koreaSize;
+        } else if (label.textContent.includes('미국 사이즈') || label.textContent.includes('US Size') || label.textContent.includes('米国サイズ') || label.textContent.includes('美国尺寸')) {
+            console.log('Updating us size label to:', lang.usSize);
+            label.textContent = lang.usSize;
+        }
+        // 한국 사이즈
+        else if (label.textContent.includes('S (90-95)') || label.textContent.includes('S (88-90)')) {
+            console.log('Updating korea S to:', lang.koreaS);
+            label.textContent = lang.koreaS;
+        } else if (label.textContent.includes('M (95-100)') || label.textContent.includes('M (91-93)')) {
+            console.log('Updating korea M to:', lang.koreaM);
+            label.textContent = lang.koreaM;
+        } else if (label.textContent.includes('L (100-105)') || label.textContent.includes('L (94-96)')) {
+            console.log('Updating korea L to:', lang.koreaL);
+            label.textContent = lang.koreaL;
+        } else if (label.textContent.includes('XL (105-110)') || label.textContent.includes('XL (97-99)')) {
+            console.log('Updating korea XL to:', lang.koreaXL);
+            label.textContent = lang.koreaXL;
+        }
+        // 미국 사이즈
+        else if (label.textContent.includes('XS (34-36)') || label.textContent.includes('S (34-36)')) {
+            console.log('Updating us S to:', lang.usS);
+            label.textContent = lang.usS;
+        } else if (label.textContent.includes('S (36-38)') || label.textContent.includes('M (38-40)')) {
+            console.log('Updating us M to:', lang.usM);
+            label.textContent = lang.usM;
+        } else if (label.textContent.includes('M (38-40)') || label.textContent.includes('L (42-44)')) {
+            console.log('Updating us L to:', lang.usL);
+            label.textContent = lang.usL;
+        } else if (label.textContent.includes('L (40-42)') || label.textContent.includes('XL (46-48)')) {
+            console.log('Updating us XL to:', lang.usXL);
+            label.textContent = lang.usXL;
         }
     });
     
     // 요리 단위 변환 값
     const cupValues = document.querySelectorAll('.tip-value');
     cupValues.forEach(value => {
+        console.log('Processing value:', value.textContent);
+        
         if (value.textContent.includes('= 240ml')) {
+            console.log('Updating cup value to:', lang.cupValue);
             value.textContent = lang.cupValue;
         } else if (value.textContent.includes('= 15ml')) {
+            console.log('Updating tbsp value to:', lang.tbspValue);
             value.textContent = lang.tbspValue;
         } else if (value.textContent.includes('= 5ml')) {
+            console.log('Updating tsp value to:', lang.tspValue);
             value.textContent = lang.tspValue;
         } else if (value.textContent.includes('= 28.35g')) {
+            console.log('Updating oz value to:', lang.ozValue);
             value.textContent = lang.ozValue;
         } else if (value.textContent.includes('= 453.59g')) {
+            console.log('Updating lb value to:', lang.lbValue);
             value.textContent = lang.lbValue;
         }
-    });
-    
-    // 밀가루 변환 데이터
-    const flourLabels = document.querySelectorAll('.tip-label');
-    flourLabels.forEach(label => {
-        if (label.textContent.includes('중력분') || label.textContent.includes('All-purpose') || label.textContent.includes('薄力粉') || label.textContent.includes('中筋面粉')) {
-            label.textContent = lang.allPurposeLabel;
-        } else if (label.textContent.includes('강력분') || label.textContent.includes('Bread flour') || label.textContent.includes('強力粉') || label.textContent.includes('高筋面粉')) {
-            label.textContent = lang.breadLabel;
-        } else if (label.textContent.includes('박력분') || label.textContent.includes('Cake flour') || label.textContent.includes('薄力粉') || label.textContent.includes('低筋面粉')) {
-            label.textContent = lang.cakeLabel;
-        }
-    });
-    
-    const flourValues = document.querySelectorAll('.tip-value');
-    flourValues.forEach(value => {
-        if (value.textContent.includes('= 125g')) {
+        // 밀가루 변환 값
+        else if (value.textContent.includes('= 120g') || value.textContent.includes('= 125g')) {
+            console.log('Updating flour value to:', lang.allPurposeValue);
             value.textContent = lang.allPurposeValue;
-        } else if (value.textContent.includes('= 130g')) {
+        } else if (value.textContent.includes('= 200g') || value.textContent.includes('= 130g')) {
+            console.log('Updating sugar value to:', lang.breadValue);
             value.textContent = lang.breadValue;
-        } else if (value.textContent.includes('= 115g')) {
+        } else if (value.textContent.includes('= 227g') || value.textContent.includes('= 115g')) {
+            console.log('Updating butter value to:', lang.cakeValue);
             value.textContent = lang.cakeValue;
-        }
-    });
-    
-    // 의류 사이즈 데이터
-    const clothingLabels = document.querySelectorAll('.tip-label');
-    clothingLabels.forEach(label => {
-        // 한국 사이즈
-        if (label.textContent.includes('S (88-90)')) {
-            label.textContent = lang.koreaS;
-        } else if (label.textContent.includes('M (91-93)')) {
-            label.textContent = lang.koreaM;
-        } else if (label.textContent.includes('L (94-96)')) {
-            label.textContent = lang.koreaL;
-        } else if (label.textContent.includes('XL (97-99)')) {
-            label.textContent = lang.koreaXL;
-        }
-        // 미국 사이즈
-        else if (label.textContent.includes('S (34-36)')) {
-            label.textContent = lang.usS;
-        } else if (label.textContent.includes('M (38-40)')) {
-            label.textContent = lang.usM;
-        } else if (label.textContent.includes('L (42-44)')) {
-            label.textContent = lang.usL;
-        } else if (label.textContent.includes('XL (46-48)')) {
-            label.textContent = lang.usXL;
-        }
-    });
-    
-    // 신발 사이즈 데이터
-    const shoeLabels = document.querySelectorAll('.tip-label');
-    shoeLabels.forEach(label => {
-        // 한국 사이즈
-        if (label.textContent.includes('240mm')) {
-            label.textContent = lang.koreaShoe240;
-        } else if (label.textContent.includes('250mm')) {
-            label.textContent = lang.koreaShoe250;
-        } else if (label.textContent.includes('260mm')) {
-            label.textContent = lang.koreaShoe260;
-        } else if (label.textContent.includes('270mm')) {
-            label.textContent = lang.koreaShoe270;
-        }
-        // 미국 사이즈
-        else if (label.textContent.includes('US 7')) {
-            label.textContent = lang.usShoe7;
-        } else if (label.textContent.includes('US 8')) {
-            label.textContent = lang.usShoe8;
-        } else if (label.textContent.includes('US 9')) {
-            label.textContent = lang.usShoe9;
-        } else if (label.textContent.includes('US 10')) {
-            label.textContent = lang.usShoe10;
-        }
-    });
-    
-    // 무게 변환 데이터
-    const weightLabels = document.querySelectorAll('.tip-label');
-    weightLabels.forEach(label => {
-        if (label.textContent.includes('1kg')) {
-            label.textContent = lang.kgLabel;
-        } else if (label.textContent.includes('1lb')) {
-            label.textContent = lang.lbLabel2;
-        }
-    });
-    
-    const weightValues = document.querySelectorAll('.tip-value');
-    weightValues.forEach(value => {
-        if (value.textContent.includes('= 2.2lb')) {
-            value.textContent = lang.kgValue;
-        } else if (value.textContent.includes('= 0.45kg')) {
-            value.textContent = lang.lbValue2;
-        }
-    });
-    
-    // 거리 변환 데이터
-    const distanceLabels = document.querySelectorAll('.tip-label');
-    distanceLabels.forEach(label => {
-        if (label.textContent.includes('1km')) {
-            label.textContent = lang.kmLabel;
-        } else if (label.textContent.includes('1mile')) {
-            label.textContent = lang.mileLabel;
-        }
-    });
-    
-    const distanceValues = document.querySelectorAll('.tip-value');
-    distanceValues.forEach(value => {
-        if (value.textContent.includes('= 0.62mile')) {
-            value.textContent = lang.kmValue;
-        } else if (value.textContent.includes('= 1.61km')) {
-            value.textContent = lang.mileValue;
-        }
-    });
-    
-    // 온도 변환 데이터
-    const tempLabels = document.querySelectorAll('.tip-label');
-    tempLabels.forEach(label => {
-        if (label.textContent.includes('20°C')) {
-            label.textContent = lang.celsiusLabel;
-        } else if (label.textContent.includes('68°F')) {
-            label.textContent = lang.fahrenheitLabel;
-        }
-    });
-    
-    const tempValues = document.querySelectorAll('.tip-value');
-    tempValues.forEach(value => {
-        if (value.textContent.includes('= 68°F')) {
-            value.textContent = lang.celsiusValue;
-        } else if (value.textContent.includes('= 20°C')) {
-            value.textContent = lang.fahrenheitValue;
-        }
-    });
-    
-    // 속도 변환 데이터
-    const speedLabels = document.querySelectorAll('.tip-label');
-    speedLabels.forEach(label => {
-        if (label.textContent.includes('60km/h')) {
-            label.textContent = lang.kmhLabel;
-        } else if (label.textContent.includes('60mph')) {
-            label.textContent = lang.mphLabel;
-        }
-    });
-    
-    const speedValues = document.querySelectorAll('.tip-value');
-    speedValues.forEach(value => {
-        if (value.textContent.includes('= 37mph')) {
-            value.textContent = lang.kmhValue;
-        } else if (value.textContent.includes('= 97km/h')) {
-            value.textContent = lang.mphValue;
-        }
-    });
-    
-    // 면적 변환 데이터
-    const areaLabels = document.querySelectorAll('.tip-label');
-    areaLabels.forEach(label => {
-        if (label.textContent.includes('1평') || label.textContent.includes('1 pyeong') || label.textContent.includes('1坪') || label.textContent.includes('1坪')) {
-            label.textContent = lang.pyeongLabel;
-        } else if (label.textContent.includes('1m²')) {
-            label.textContent = lang.m2Label;
-        }
-    });
-    
-    const areaValues = document.querySelectorAll('.tip-value');
-    areaValues.forEach(value => {
-        if (value.textContent.includes('= 3.3m²')) {
-            value.textContent = lang.pyeongValue;
-        } else if (value.textContent.includes('= 0.3평') || value.textContent.includes('= 0.3 pyeong') || value.textContent.includes('= 0.3坪') || value.textContent.includes('= 0.3坪')) {
-            value.textContent = lang.m2Value;
         }
     });
 }
