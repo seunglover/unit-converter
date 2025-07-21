@@ -744,6 +744,42 @@ const languages = {
         tipsRealEstate: "🏠 Useful Conversion Tips for Real Estate",
         tipsMemory: "🧠 Easy-to-Remember Conversion Tips",
         
+        // Tips content
+        cookingUnitTitle: "Cooking Unit Conversion",
+        flourTitle: "Flour Conversion",
+        clothingTitle: "Clothing Size Conversion",
+        shoesTitle: "Shoe Size Conversion",
+        weightTitle: "Weight Conversion (Exercise)",
+        distanceTitle: "Distance Conversion (Running)",
+        temperatureTitle: "Temperature Conversion (Travel)",
+        speedTitle: "Speed Conversion (Driving)",
+        areaTitle: "Area Conversion (Real Estate)",
+        areaComparisonTitle: "Practical Area Comparison",
+        quickCalculationTitle: "Quick Calculation Methods",
+        
+        // Tips content
+        cookingTip: "💡 Tip: Volume units are more convenient than exact weight when cooking.",
+        flourTip: "💡 Tip: The same volume can have different weights depending on the ingredient!",
+        clothingTip: "💡 Tip: Sizes vary by brand, so check the exact size before purchasing.",
+        shoesTip: "💡 Tip: Shoe sizes vary by brand, so always measure your feet before buying.",
+        weightTip: "💡 Tip: Weight units used in gyms are usually lb (pounds).",
+        distanceTip: "💡 Tip: Setting distance units to miles in running apps helps with overseas running events.",
+        temperatureTip: "💡 Tip: Use the formula (Celsius × 9/5) + 32 when converting from Celsius to Fahrenheit.",
+        speedTip: "💡 Tip: Speed limits are often displayed in mph when driving overseas.",
+        areaTip: "💡 Tip: Real estate ads often mix pyeong and square meters.",
+        areaComparisonTip: "💡 Tip: Comparing areas to daily life makes them more intuitive to understand.",
+        quickCalculationTip: "💡 Tip: Use the converter above when you need accurate calculations!",
+        
+        // Quick calculation methods content
+        tempConversion: "Temperature conversion: Celsius to Fahrenheit: Celsius × 2 + 30 (approximate)",
+        weightConversion: "Weight conversion: kg to lb: kg × 2 + kg × 0.2",
+        distanceConversion: "Distance conversion: km to mile: km × 0.6",
+        areaConversion: "Area conversion: m² to pyeong: m² ÷ 3.3",
+        
+        // Table labels
+        koreaSize: "Korea Size",
+        usSize: "US Size",
+        
         // Category card example tags
         lengthExamples: ["m ↔ cm", "km ↔ mile", "inch ↔ cm"],
         weightExamples: ["kg ↔ lb", "g ↔ oz", "mg ↔ g"],
@@ -1523,6 +1559,42 @@ const languages = {
         tipsTravel: "✈️ 旅行时有用的转换技巧",
         tipsRealEstate: "🏠 房地产时有用的转换技巧",
         tipsMemory: "🧠 容易记住的转换技巧",
+        
+        // Tips内容
+        cookingUnitTitle: "烹饪单位转换",
+        flourTitle: "面粉转换",
+        clothingTitle: "服装尺寸转换",
+        shoesTitle: "鞋子尺寸转换",
+        weightTitle: "重量转换（运动）",
+        distanceTitle: "距离转换（跑步）",
+        temperatureTitle: "温度转换（旅行）",
+        speedTitle: "速度转换（驾驶）",
+        areaTitle: "面积转换（房地产）",
+        areaComparisonTitle: "实用面积比较",
+        quickCalculationTitle: "快速计算方法",
+        
+        // Tips技巧内容
+        cookingTip: "💡 技巧: 烹饪时体积单位比精确重量更方便。",
+        flourTip: "💡 技巧: 相同体积的食材重量可能不同！",
+        clothingTip: "💡 技巧: 不同品牌的尺寸不同，购买前请确认准确尺寸。",
+        shoesTip: "💡 技巧: 鞋子尺寸因品牌而异，购买前请务必测量脚部。",
+        weightTip: "💡 技巧: 健身房使用的重量单位通常是lb（磅）。",
+        distanceTip: "💡 技巧: 在跑步应用中设置距离单位为英里有助于参加海外跑步活动。",
+        temperatureTip: "💡 技巧: 从摄氏度转换为华氏度时使用公式（摄氏度 × 9/5）+ 32。",
+        speedTip: "💡 技巧: 海外驾驶时速度限制通常以mph显示。",
+        areaTip: "💡 技巧: 房地产广告经常混合使用坪和平方米。",
+        areaComparisonTip: "💡 技巧: 将面积与日常生活比较可以更直观地理解。",
+        quickCalculationTip: "💡 技巧: 需要精确计算时请使用上面的转换器！",
+        
+        // 快速计算方法内容
+        tempConversion: "温度转换: 摄氏度到华氏度: 摄氏度 × 2 + 30（近似值）",
+        weightConversion: "重量转换: kg到lb: kg × 2 + kg × 0.2",
+        distanceConversion: "距离转换: km到mile: km × 0.6",
+        areaConversion: "面积转换: m²到坪: m² ÷ 3.3",
+        
+        // 表格标签
+        koreaSize: "韩国尺寸",
+        usSize: "美国尺寸",
         
         // 分类卡片示例标签
         lengthExamples: ["m ↔ cm", "km ↔ mile", "inch ↔ cm"],
