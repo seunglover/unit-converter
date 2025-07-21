@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단위의 역사 - 단위 변환기</title>
+    <meta name="description" content="미터, 킬로그램, 리터 등 다양한 단위의 역사와 배경을 알아보세요. 단위가 어떻게 탄생하고 발전했는지 재미있게 학습할 수 있습니다.">
+    <meta name="keywords" content="단위 역사, 미터 역사, 킬로그램 역사, 단위 기원, 측정 단위 발전">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2347391460222140"
+     crossorigin="anonymous"></script>
+    
+    <!-- Font Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#5AD4D4">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-icon">📏</span>
+                    <span class="logo-text">단위 변환기</span>
+                </a>
+            </div>
+            
+            <!-- 헤더 언어 선택기 -->
+            <div class="header-language-selector">
+                <select id="header-language-select" class="language-select" onchange="changeLanguage(this.value)">
+                    <option value="ko">🇰🇷 한국어</option>
+                    <option value="en">🇺🇸 English</option>
+                    <option value="ja">🇯🇵 日本語</option>
+                    <option value="zh">🇨🇳 中文</option>
+                </select>
+            </div>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="tips.html">변환 팁</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="history.html" class="active">단위 역사</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="history-header">
+                <h1 class="history-title">📚 단위의 역사</h1>
+                <p class="history-description">인류가 사용해온 다양한 측정 단위들의 흥미로운 역사를 알아보세요</p>
+            </div>
+
+            <!-- 길이 단위 역사 -->
+            <section class="history-section" data-history-section="lengthHistory">
+                <div class="history-card">
+                    <div class="history-icon">📏</div>
+                    <div class="history-content">
+                        <h2>길이 단위의 역사</h2>
+                        
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">고대</div>
+                                <div class="timeline-content">
+                                    <h3>인체를 기준으로 한 측정</h3>
+                                    <p>고대인들은 자신의 몸을 기준으로 길이를 측정했습니다. 발(foot), 팔꿈치(cubit), 손가락(finger) 등이 대표적인 예입니다.</p>
+                                    <ul>
+                                        <li><strong>피트(Foot)</strong>: 성인 남성의 발 길이를 기준</li>
+                                        <li><strong>큐빗(Cubit)</strong>: 팔꿈치에서 손가락 끝까지의 길이</li>
+                                        <li><strong>스팬(Span)</strong>: 엄지와 새끼손가락을 벌린 길이</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">1793년</div>
+                                <div class="timeline-content">
+                                    <h3>미터의 탄생</h3>
+                                    <p>프랑스 혁명 당시, 지구의 자오선 길이를 기준으로 미터가 정의되었습니다. 지구 자오선의 1/40,000,000을 1미터로 정했습니다.</p>
+                                    <div class="history-fact">
+                                        <strong>재미있는 사실:</strong> 최초의 미터 표준은 백금-이리듐 합금으로 만들어졌습니다.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">1960년</div>
+                                <div class="timeline-content">
+                                    <h3>현대적 정의</h3>
+                                    <p>크립톤-86 원자의 방출 스펙트럼을 기준으로 미터가 재정의되었습니다. 이후 1983년에는 빛의 속도를 기준으로 정의가 변경되었습니다.</p>
+                                    <div class="history-formula">
+                                        <strong>현재 정의:</strong> 1미터 = 빛이 진공에서 1/299,792,458초 동안 진행한 거리
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 무게 단위 역사 -->
+            <section class="history-section" data-history-section="weightHistory">
+                <div class="history-card">
+                    <div class="history-icon">⚖️</div>
+                    <div class="history-content">
+                        <h2>무게 단위의 역사</h2>
+                        
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">고대</div>
+                                <div class="timeline-content">
+                                    <h3>곡물을 기준으로 한 측정</h3>
+                                    <p>고대인들은 곡물의 무게를 기준으로 무게를 측정했습니다. 밀알, 보리알 등이 기본 단위로 사용되었습니다.</p>
+                                    <ul>
+                                        <li><strong>그레인(Grain)</strong>: 보리알 하나의 무게</li>
+                                        <li><strong>드램(Dram)</strong>: 16그레인</li>
+                                        <li><strong>온스(Ounce)</strong>: 437.5그레인</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">1795년</div>
+                                <div class="timeline-content">
+                                    <h3>킬로그램의 탄생</h3>
+                                    <p>프랑스에서 1리터의 물의 무게를 기준으로 킬로그램이 정의되었습니다. 최초의 킬로그램 표준은 백금으로 만들어졌습니다.</p>
+                                    <div class="history-fact">
+                                        <strong>재미있는 사실:</strong> 최초의 킬로그램 표준은 'Le Grand K'라고 불렸습니다.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">2019년</div>
+                                <div class="timeline-content">
+                                    <h3>현대적 정의</h3>
+                                    <p>플랑크 상수를 기준으로 킬로그램이 재정의되었습니다. 이제 물리적 상수를 기준으로 정확한 무게를 측정할 수 있습니다.</p>
+                                    <div class="history-formula">
+                                        <strong>현재 정의:</strong> 1킬로그램 = 플랑크 상수 h를 6.62607015×10⁻³⁴ J⋅s로 정의할 때의 질량
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 온도 단위 역사 -->
+            <section class="history-section" data-history-section="temperatureHistory">
+                <div class="history-card">
+                    <div class="history-icon">🌡️</div>
+                    <div class="history-content">
+                        <h2>온도 단위의 역사</h2>
+                        
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">1701년</div>
+                                <div class="timeline-content">
+                                    <h3>화씨의 탄생</h3>
+                                    <p>독일의 다니엘 가브리엘 화씨(Daniel Gabriel Fahrenheit)가 화씨 온도계를 발명했습니다.</p>
+                                    <ul>
+                                        <li><strong>0°F</strong>: 얼음, 소금, 암모니아의 혼합물 온도</li>
+                                        <li><strong>32°F</strong>: 물의 어는점</li>
+                                        <li><strong>212°F</strong>: 물의 끓는점</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">1742년</div>
+                                <div class="timeline-content">
+                                    <h3>섭씨의 탄생</h3>
+                                    <p>스웨덴의 안데르스 셀시우스(Anders Celsius)가 섭씨 온도계를 발명했습니다.</p>
+                                    <div class="history-fact">
+                                        <strong>재미있는 사실:</strong> 초기에는 물의 끓는점을 0°C, 어는점을 100°C로 정의했습니다.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">1848년</div>
+                                <div class="timeline-content">
+                                    <h3>켈빈의 탄생</h3>
+                                    <p>영국의 윌리엄 톰슨(켈빈 경)이 절대 온도 단위인 켈빈을 제안했습니다.</p>
+                                    <div class="history-formula">
+                                        <strong>현재 정의:</strong> 1K = 물의 삼중점 온도의 1/273.16
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 부피 단위 역사 -->
+            <section class="history-section" data-history-section="volumeHistory">
+                <div class="history-card">
+                    <div class="history-icon">🧪</div>
+                    <div class="history-content">
+                        <h2>부피 단위의 역사</h2>
+                        
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">고대</div>
+                                <div class="timeline-content">
+                                    <h3>일상용품을 기준으로 한 측정</h3>
+                                    <p>고대인들은 일상에서 사용하는 용기를 기준으로 부피를 측정했습니다.</p>
+                                    <ul>
+                                        <li><strong>컵(Cup)</strong>: 일반적인 마시는 컵의 부피</li>
+                                        <li><strong>갤런(Gallon)</strong>: 8파인트</li>
+                                        <li><strong>배럴(Barrel)</strong>: 와인이나 맥주를 담는 통</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">1793년</div>
+                                <div class="timeline-content">
+                                    <h3>리터의 탄생</h3>
+                                    <p>프랑스에서 1세제곱데시미터(1dm³)를 1리터로 정의했습니다.</p>
+                                    <div class="history-fact">
+                                        <strong>재미있는 사실:</strong> 리터는 그리스어 'λίτρα'(litra)에서 유래했습니다.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">1964년</div>
+                                <div class="timeline-content">
+                                    <h3>현대적 정의</h3>
+                                    <p>1리터는 정확히 1세제곱데시미터(1dm³)로 정의되었습니다.</p>
+                                    <div class="history-formula">
+                                        <strong>현재 정의:</strong> 1L = 1dm³ = 1000cm³
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 국제단위계(SI) 역사 -->
+            <section class="history-section" data-history-section="siHistory">
+                <div class="history-card">
+                    <div class="history-icon">🌍</div>
+                    <div class="history-content">
+                        <h2>국제단위계(SI)의 역사</h2>
+                        
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">1875년</div>
+                                <div class="timeline-content">
+                                    <h3>미터협약 체결</h3>
+                                    <p>17개국이 미터협약에 서명하여 국제적인 측정 표준을 확립했습니다.</p>
+                                    <div class="history-fact">
+                                        <strong>재미있는 사실:</strong> 한국은 1959년에 미터협약에 가입했습니다.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">1960년</div>
+                                <div class="timeline-content">
+                                    <h3>SI 단위계 확립</h3>
+                                    <p>국제도량형총회(CGPM)에서 국제단위계(SI)를 공식적으로 채택했습니다.</p>
+                                    <ul>
+                                        <li><strong>기본 단위 7개</strong>: 미터, 킬로그램, 초, 암페어, 켈빈, 몰, 칸델라</li>
+                                        <li><strong>보조 단위 2개</strong>: 라디안, 스테라디안</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">현재</div>
+                                <div class="timeline-content">
+                                    <h3>지속적인 발전</h3>
+                                    <p>모든 SI 단위가 물리적 상수를 기준으로 재정의되어 정확도가 크게 향상되었습니다.</p>
+                                    <div class="history-formula">
+                                        <strong>현재 7개 기본 단위:</strong> 미터(m), 킬로그램(kg), 초(s), 암페어(A), 켈빈(K), 몰(mol), 칸델라(cd)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 재미있는 단위 이야기 -->
+            <section class="history-section">
+                <div class="history-card">
+                    <div class="history-icon">🎭</div>
+                    <div class="history-content">
+                        <h2>재미있는 단위 이야기</h2>
+                        
+                        <div class="fun-facts">
+                            <div class="fun-fact-item">
+                                <h3>🐘 코끼리 단위</h3>
+                                <p>미국에서는 큰 물건의 무게를 '코끼리' 단위로 표현하기도 합니다. 1코끼리 = 약 6톤</p>
+                            </div>
+
+                            <div class="fun-fact-item">
+                                <h3>🏈 미식축구장 단위</h3>
+                                <p>미국에서는 거리를 '미식축구장' 단위로 표현합니다. 1미식축구장 = 100야드(약 91.44m)</p>
+                            </div>
+
+                            <div class="fun-fact-item">
+                                <h3>🍕 피자 단위</h3>
+                                <p>이탈리아에서는 면적을 '피자' 단위로 표현하기도 합니다. 1피자 = 약 0.5m²</p>
+                            </div>
+
+                            <div class="fun-fact-item">
+                                <h3>🚗 자동차 단위</h3>
+                                <p>주차장 면적을 '자동차' 단위로 표현합니다. 1자동차 = 약 15m²</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>단위 변환 도우미</h4>
+                    <p>정확하고 빠른 단위 변환을 도와드립니다.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>유용한 링크</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">홈</a></li>
+                        <li><a href="tips.html">변환 팁</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="history.html">단위 역사</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>지원하는 단위</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#length">길이</a></li>
+                        <li><a href="index.html#weight">무게</a></li>
+                        <li><a href="index.html#volume">부피</a></li>
+                        <li><a href="index.html#temperature">온도</a></li>
+                        <li><a href="index.html#area">면적</a></li>
+                        <li><a href="index.html#speed">속도</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 단위 변환기. 모든 권리 보유.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/languages.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html> 
