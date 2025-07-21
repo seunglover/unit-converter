@@ -371,51 +371,77 @@ const languages = {
         areaExamples: ["m² ↔ cm²", "acre ↔ ha", "km² ↔ m²"],
         speedExamples: ["km/h ↔ mph", "m/s ↔ km/h", "knot ↔ km/h"],
         
-        // Tipsカテゴリ
-        tipsCooking: "🍳 料理に役立つ変換のコツ",
-        tipsShopping: "🛒 海外通販に役立つ変換のコツ",
-        tipsExercise: "💪 運動に役立つ変換のコツ",
-        tipsTravel: "✈️ 旅行に役立つ変換のコツ",
-        tipsRealEstate: "🏠 不動産に役立つ変換のコツ",
-        tipsMemory: "🧠 覚えやすい変換のコツ",
+        // Tip-row 데이터
+        cupLabel: "1 컵 (cup)",
+        cupValue: "= 240ml",
+        tbspLabel: "1 테이블스푼 (tbsp)",
+        tbspValue: "= 15ml",
+        tspLabel: "1 티스푼 (tsp)",
+        tspValue: "= 5ml",
+        ozLabel: "1 온스 (oz)",
+        ozValue: "= 28.35g",
+        lbLabel: "1 파운드 (lb)",
+        lbValue: "= 453.59g",
         
-        // Tips内容
-        cookingUnitTitle: "料理単位変換",
-        flourTitle: "小麦粉変換",
-        clothingTitle: "服のサイズ変換",
-        shoesTitle: "靴のサイズ変換",
-        weightTitle: "重さ変換（運動）",
-        distanceTitle: "距離変換（ランニング）",
-        temperatureTitle: "温度変換（旅行）",
-        speedTitle: "速度変換（運転）",
-        areaTitle: "面積変換（不動産）",
-        areaComparisonTitle: "実用的な面積比較",
-        quickCalculationTitle: "早い計算方法",
+        // 밀가루 변환 데이터
+        allPurposeLabel: "중력분 (all-purpose)",
+        allPurposeValue: "= 125g",
+        breadLabel: "강력분 (bread)",
+        breadValue: "= 130g",
+        cakeLabel: "박력분 (cake)",
+        cakeValue: "= 115g",
         
-        // Tipsコツ内容
-        cookingTip: "💡 コツ: 料理では正確な重さよりも体積単位の方が便利です。",
-        flourTip: "💡 コツ: 材料によって同じ体積でも重さが違うことがあります！",
-        clothingTip: "💡 コツ: ブランドによってサイズが違うので正確なサイズを確認してください。",
-        shoesTip: "💡 コツ: 靴はブランドによってサイズが違うので必ず実測してから購入してください。",
-        weightTip: "💡 コツ: ジムで使用する重さの単位は通常lb（ポンド）です。",
-        distanceTip: "💡 コツ: ランニングアプリで距離単位をマイルに設定すると海外ランニングイベント参加に役立ちます。",
-        temperatureTip: "💡 コツ: 摂氏から華氏に変換する時は（摂氏 × 9/5）+ 32の公式を使用してください。",
-        speedTip: "💡 コツ: 海外運転時は速度制限表示がmphになっていることがあります。",
-        areaTip: "💡 コツ: 不動産広告では坪と平方メートルを混用して使用することが多いです。",
-        areaComparisonTip: "💡 コツ: 面積を日常生活と比較するとより直感的に理解できます。",
-        quickCalculationTip: "💡 コツ: 正確な計算が必要な時は上の変換機を使用してください！",
+        // 의류 사이즈 데이터
+        koreaS: "S (88-90)",
+        koreaM: "M (91-93)",
+        koreaL: "L (94-96)",
+        koreaXL: "XL (97-99)",
+        usS: "S (34-36)",
+        usM: "M (38-40)",
+        usL: "L (42-44)",
+        usXL: "XL (46-48)",
         
-        // 早い計算方法内容
-        tempConversion: "温度変換: 摂氏から華氏: 摂氏 × 2 + 30（近似値）",
-        weightConversion: "重さ変換: kgからlb: kg × 2 + kg × 0.2",
-        distanceConversion: "距離変換: kmからmile: km × 0.6",
-        areaConversion: "面積変換: m²から坪: m² ÷ 3.3",
+        // 신발 사이즈 데이터
+        koreaShoe240: "240mm",
+        koreaShoe250: "250mm",
+        koreaShoe260: "260mm",
+        koreaShoe270: "270mm",
+        usShoe7: "US 7",
+        usShoe8: "US 8",
+        usShoe9: "US 9",
+        usShoe10: "US 10",
         
-        // テーブルラベル
-        koreaSize: "韓国サイズ",
-        usSize: "米国サイズ",
+        // 무게 변환 데이터
+        kgLabel: "1kg",
+        kgValue: "= 2.2lb",
+        lbLabel2: "1lb",
+        lbValue2: "= 0.45kg",
         
-        // カテゴリカード例タグ
+        // 거리 변환 데이터
+        kmLabel: "1km",
+        kmValue: "= 0.62mile",
+        mileLabel: "1mile",
+        mileValue: "= 1.61km",
+        
+        // 온도 변환 데이터
+        celsiusLabel: "20°C",
+        celsiusValue: "= 68°F",
+        fahrenheitLabel: "68°F",
+        fahrenheitValue: "= 20°C",
+        
+        // 속도 변환 데이터
+        kmhLabel: "60km/h",
+        kmhValue: "= 37mph",
+        mphLabel: "60mph",
+        mphValue: "= 97km/h",
+        
+        // 면적 변환 데이터
+        pyeongLabel: "1평",
+        pyeongValue: "= 3.3m²",
+        m2Label: "1m²",
+        m2Value: "= 0.3평",
+        
+        // 카테고리 카드 예시 태그
         lengthExamples: ["m ↔ cm", "km ↔ mile", "inch ↔ cm"],
         weightExamples: ["kg ↔ lb", "g ↔ oz", "mg ↔ g"],
         volumeExamples: ["L ↔ gal", "ml ↔ cup", "tbsp ↔ ml"],
@@ -779,6 +805,76 @@ const languages = {
         // Table labels
         koreaSize: "Korea Size",
         usSize: "US Size",
+        
+        // Tip-row data
+        cupLabel: "1 cup",
+        cupValue: "= 240ml",
+        tbspLabel: "1 tablespoon (tbsp)",
+        tbspValue: "= 15ml",
+        tspLabel: "1 teaspoon (tsp)",
+        tspValue: "= 5ml",
+        ozLabel: "1 ounce (oz)",
+        ozValue: "= 28.35g",
+        lbLabel: "1 pound (lb)",
+        lbValue: "= 453.59g",
+        
+        // Flour conversion data
+        allPurposeLabel: "All-purpose flour",
+        allPurposeValue: "= 125g",
+        breadLabel: "Bread flour",
+        breadValue: "= 130g",
+        cakeLabel: "Cake flour",
+        cakeValue: "= 115g",
+        
+        // Clothing size data
+        koreaS: "S (88-90)",
+        koreaM: "M (91-93)",
+        koreaL: "L (94-96)",
+        koreaXL: "XL (97-99)",
+        usS: "S (34-36)",
+        usM: "M (38-40)",
+        usL: "L (42-44)",
+        usXL: "XL (46-48)",
+        
+        // Shoe size data
+        koreaShoe240: "240mm",
+        koreaShoe250: "250mm",
+        koreaShoe260: "260mm",
+        koreaShoe270: "270mm",
+        usShoe7: "US 7",
+        usShoe8: "US 8",
+        usShoe9: "US 9",
+        usShoe10: "US 10",
+        
+        // Weight conversion data
+        kgLabel: "1kg",
+        kgValue: "= 2.2lb",
+        lbLabel2: "1lb",
+        lbValue2: "= 0.45kg",
+        
+        // Distance conversion data
+        kmLabel: "1km",
+        kmValue: "= 0.62mile",
+        mileLabel: "1mile",
+        mileValue: "= 1.61km",
+        
+        // Temperature conversion data
+        celsiusLabel: "20°C",
+        celsiusValue: "= 68°F",
+        fahrenheitLabel: "68°F",
+        fahrenheitValue: "= 20°C",
+        
+        // Speed conversion data
+        kmhLabel: "60km/h",
+        kmhValue: "= 37mph",
+        mphLabel: "60mph",
+        mphValue: "= 97km/h",
+        
+        // Area conversion data
+        pyeongLabel: "1 pyeong",
+        pyeongValue: "= 3.3m²",
+        m2Label: "1m²",
+        m2Value: "= 0.3 pyeong",
         
         // Category card example tags
         lengthExamples: ["m ↔ cm", "km ↔ mile", "inch ↔ cm"],
@@ -1188,7 +1284,155 @@ const languages = {
         koreaSize: "韓国サイズ",
         usSize: "米国サイズ",
         
+        // Tip-rowデータ
+        cupLabel: "1カップ (cup)",
+        cupValue: "= 240ml",
+        tbspLabel: "1大さじ (tbsp)",
+        tbspValue: "= 15ml",
+        tspLabel: "1小さじ (tsp)",
+        tspValue: "= 5ml",
+        ozLabel: "1オンス (oz)",
+        ozValue: "= 28.35g",
+        lbLabel: "1ポンド (lb)",
+        lbValue: "= 453.59g",
+        
+        // 小麦粉変換データ
+        allPurposeLabel: "薄力粉 (all-purpose)",
+        allPurposeValue: "= 125g",
+        breadLabel: "強力粉 (bread)",
+        breadValue: "= 130g",
+        cakeLabel: "薄力粉 (cake)",
+        cakeValue: "= 115g",
+        
+        // 服のサイズデータ
+        koreaS: "S (88-90)",
+        koreaM: "M (91-93)",
+        koreaL: "L (94-96)",
+        koreaXL: "XL (97-99)",
+        usS: "S (34-36)",
+        usM: "M (38-40)",
+        usL: "L (42-44)",
+        usXL: "XL (46-48)",
+        
+        // 靴のサイズデータ
+        koreaShoe240: "240mm",
+        koreaShoe250: "250mm",
+        koreaShoe260: "260mm",
+        koreaShoe270: "270mm",
+        usShoe7: "US 7",
+        usShoe8: "US 8",
+        usShoe9: "US 9",
+        usShoe10: "US 10",
+        
+        // 重さ変換データ
+        kgLabel: "1kg",
+        kgValue: "= 2.2lb",
+        lbLabel2: "1lb",
+        lbValue2: "= 0.45kg",
+        
+        // 距離変換データ
+        kmLabel: "1km",
+        kmValue: "= 0.62mile",
+        mileLabel: "1mile",
+        mileValue: "= 1.61km",
+        
+        // 温度変換データ
+        celsiusLabel: "20°C",
+        celsiusValue: "= 68°F",
+        fahrenheitLabel: "68°F",
+        fahrenheitValue: "= 20°C",
+        
+        // 速度変換データ
+        kmhLabel: "60km/h",
+        kmhValue: "= 37mph",
+        mphLabel: "60mph",
+        mphValue: "= 97km/h",
+        
+        // 面積変換データ
+        pyeongLabel: "1坪",
+        pyeongValue: "= 3.3m²",
+        m2Label: "1m²",
+        m2Value: "= 0.3坪",
+        
         // カテゴリカード例タグ
+        lengthExamples: ["m ↔ cm", "km ↔ mile", "inch ↔ cm"],
+        weightExamples: ["kg ↔ lb", "g ↔ oz", "mg ↔ g"],
+        volumeExamples: ["L ↔ gal", "ml ↔ cup", "tbsp ↔ ml"],
+        temperatureExamples: ["°C ↔ °F", "°C ↔ K", "°F ↔ K"],
+        areaExamples: ["m² ↔ cm²", "acre ↔ ha", "km² ↔ m²"],
+        speedExamples: ["km/h ↔ mph", "m/s ↔ km/h", "knot ↔ km/h"],
+        
+        // Tip-row 데이터
+        cupLabel: "1 컵 (cup)",
+        cupValue: "= 240ml",
+        tbspLabel: "1 테이블스푼 (tbsp)",
+        tbspValue: "= 15ml",
+        tspLabel: "1 티스푼 (tsp)",
+        tspValue: "= 5ml",
+        ozLabel: "1 온스 (oz)",
+        ozValue: "= 28.35g",
+        lbLabel: "1 파운드 (lb)",
+        lbValue: "= 453.59g",
+        
+        // 밀가루 변환 데이터
+        allPurposeLabel: "중력분 (all-purpose)",
+        allPurposeValue: "= 125g",
+        breadLabel: "강력분 (bread)",
+        breadValue: "= 130g",
+        cakeLabel: "박력분 (cake)",
+        cakeValue: "= 115g",
+        
+        // 의류 사이즈 데이터
+        koreaS: "S (88-90)",
+        koreaM: "M (91-93)",
+        koreaL: "L (94-96)",
+        koreaXL: "XL (97-99)",
+        usS: "S (34-36)",
+        usM: "M (38-40)",
+        usL: "L (42-44)",
+        usXL: "XL (46-48)",
+        
+        // 신발 사이즈 데이터
+        koreaShoe240: "240mm",
+        koreaShoe250: "250mm",
+        koreaShoe260: "260mm",
+        koreaShoe270: "270mm",
+        usShoe7: "US 7",
+        usShoe8: "US 8",
+        usShoe9: "US 9",
+        usShoe10: "US 10",
+        
+        // 무게 변환 데이터
+        kgLabel: "1kg",
+        kgValue: "= 2.2lb",
+        lbLabel2: "1lb",
+        lbValue2: "= 0.45kg",
+        
+        // 거리 변환 데이터
+        kmLabel: "1km",
+        kmValue: "= 0.62mile",
+        mileLabel: "1mile",
+        mileValue: "= 1.61km",
+        
+        // 온도 변환 데이터
+        celsiusLabel: "20°C",
+        celsiusValue: "= 68°F",
+        fahrenheitLabel: "68°F",
+        fahrenheitValue: "= 20°C",
+        
+        // 속도 변환 데이터
+        kmhLabel: "60km/h",
+        kmhValue: "= 37mph",
+        mphLabel: "60mph",
+        mphValue: "= 97km/h",
+        
+        // 면적 변환 데이터
+        pyeongLabel: "1평",
+        pyeongValue: "= 3.3m²",
+        m2Label: "1m²",
+        m2Value: "= 0.3평",
+        
+        // 카테고리 카드 예시 태그
         lengthExamples: ["m ↔ cm", "km ↔ mile", "inch ↔ cm"],
         weightExamples: ["kg ↔ lb", "g ↔ oz", "mg ↔ g"],
         volumeExamples: ["L ↔ gal", "ml ↔ cup", "tbsp ↔ ml"],
@@ -1596,6 +1840,76 @@ const languages = {
         koreaSize: "韩国尺寸",
         usSize: "美国尺寸",
         
+        // Tip-row数据
+        cupLabel: "1杯 (cup)",
+        cupValue: "= 240ml",
+        tbspLabel: "1汤匙 (tbsp)",
+        tbspValue: "= 15ml",
+        tspLabel: "1茶匙 (tsp)",
+        tspValue: "= 5ml",
+        ozLabel: "1盎司 (oz)",
+        ozValue: "= 28.35g",
+        lbLabel: "1磅 (lb)",
+        lbValue: "= 453.59g",
+        
+        // 面粉转换数据
+        allPurposeLabel: "中筋面粉 (all-purpose)",
+        allPurposeValue: "= 125g",
+        breadLabel: "高筋面粉 (bread)",
+        breadValue: "= 130g",
+        cakeLabel: "低筋面粉 (cake)",
+        cakeValue: "= 115g",
+        
+        // 服装尺寸数据
+        koreaS: "S (88-90)",
+        koreaM: "M (91-93)",
+        koreaL: "L (94-96)",
+        koreaXL: "XL (97-99)",
+        usS: "S (34-36)",
+        usM: "M (38-40)",
+        usL: "L (42-44)",
+        usXL: "XL (46-48)",
+        
+        // 鞋子尺寸数据
+        koreaShoe240: "240mm",
+        koreaShoe250: "250mm",
+        koreaShoe260: "260mm",
+        koreaShoe270: "270mm",
+        usShoe7: "US 7",
+        usShoe8: "US 8",
+        usShoe9: "US 9",
+        usShoe10: "US 10",
+        
+        // 重量转换数据
+        kgLabel: "1kg",
+        kgValue: "= 2.2lb",
+        lbLabel2: "1lb",
+        lbValue2: "= 0.45kg",
+        
+        // 距离转换数据
+        kmLabel: "1km",
+        kmValue: "= 0.62mile",
+        mileLabel: "1mile",
+        mileValue: "= 1.61km",
+        
+        // 温度转换数据
+        celsiusLabel: "20°C",
+        celsiusValue: "= 68°F",
+        fahrenheitLabel: "68°F",
+        fahrenheitValue: "= 20°C",
+        
+        // 速度转换数据
+        kmhLabel: "60km/h",
+        kmhValue: "= 37mph",
+        mphLabel: "60mph",
+        mphValue: "= 97km/h",
+        
+        // 面积转换数据
+        pyeongLabel: "1坪",
+        pyeongValue: "= 3.3m²",
+        m2Label: "1m²",
+        m2Value: "= 0.3坪",
+        
         // 分类卡片示例标签
         lengthExamples: ["m ↔ cm", "km ↔ mile", "inch ↔ cm"],
         weightExamples: ["kg ↔ lb", "g ↔ oz", "mg ↔ g"],
@@ -1856,6 +2170,214 @@ function updateTipsContent(lang) {
             label.textContent = lang.koreaSize;
         } else if (label.textContent.includes('美国尺寸') || label.textContent.includes('US Size') || label.textContent.includes('米国サイズ') || label.textContent.includes('美国尺寸')) {
             label.textContent = lang.usSize;
+        }
+    });
+    
+    // Tip-row 데이터 업데이트
+    updateTipRows(lang);
+}
+
+// Tip-row 데이터 업데이트 함수
+function updateTipRows(lang) {
+    console.log('Updating tip rows with language:', currentLanguage);
+    
+    // 요리 단위 변환 데이터
+    const cupLabels = document.querySelectorAll('.tip-label');
+    cupLabels.forEach(label => {
+        if (label.textContent.includes('1 컵') || label.textContent.includes('1 cup') || label.textContent.includes('1カップ') || label.textContent.includes('1杯')) {
+            label.textContent = lang.cupLabel;
+        } else if (label.textContent.includes('1 테이블스푼') || label.textContent.includes('1 tablespoon') || label.textContent.includes('1大さじ') || label.textContent.includes('1汤匙')) {
+            label.textContent = lang.tbspLabel;
+        } else if (label.textContent.includes('1 티스푼') || label.textContent.includes('1 teaspoon') || label.textContent.includes('1小さじ') || label.textContent.includes('1茶匙')) {
+            label.textContent = lang.tspLabel;
+        } else if (label.textContent.includes('1 온스') || label.textContent.includes('1 ounce') || label.textContent.includes('1オンス') || label.textContent.includes('1盎司')) {
+            label.textContent = lang.ozLabel;
+        } else if (label.textContent.includes('1 파운드') || label.textContent.includes('1 pound') || label.textContent.includes('1ポンド') || label.textContent.includes('1磅')) {
+            label.textContent = lang.lbLabel;
+        }
+    });
+    
+    // 요리 단위 변환 값
+    const cupValues = document.querySelectorAll('.tip-value');
+    cupValues.forEach(value => {
+        if (value.textContent.includes('= 240ml')) {
+            value.textContent = lang.cupValue;
+        } else if (value.textContent.includes('= 15ml')) {
+            value.textContent = lang.tbspValue;
+        } else if (value.textContent.includes('= 5ml')) {
+            value.textContent = lang.tspValue;
+        } else if (value.textContent.includes('= 28.35g')) {
+            value.textContent = lang.ozValue;
+        } else if (value.textContent.includes('= 453.59g')) {
+            value.textContent = lang.lbValue;
+        }
+    });
+    
+    // 밀가루 변환 데이터
+    const flourLabels = document.querySelectorAll('.tip-label');
+    flourLabels.forEach(label => {
+        if (label.textContent.includes('중력분') || label.textContent.includes('All-purpose') || label.textContent.includes('薄力粉') || label.textContent.includes('中筋面粉')) {
+            label.textContent = lang.allPurposeLabel;
+        } else if (label.textContent.includes('강력분') || label.textContent.includes('Bread flour') || label.textContent.includes('強力粉') || label.textContent.includes('高筋面粉')) {
+            label.textContent = lang.breadLabel;
+        } else if (label.textContent.includes('박력분') || label.textContent.includes('Cake flour') || label.textContent.includes('薄力粉') || label.textContent.includes('低筋面粉')) {
+            label.textContent = lang.cakeLabel;
+        }
+    });
+    
+    const flourValues = document.querySelectorAll('.tip-value');
+    flourValues.forEach(value => {
+        if (value.textContent.includes('= 125g')) {
+            value.textContent = lang.allPurposeValue;
+        } else if (value.textContent.includes('= 130g')) {
+            value.textContent = lang.breadValue;
+        } else if (value.textContent.includes('= 115g')) {
+            value.textContent = lang.cakeValue;
+        }
+    });
+    
+    // 의류 사이즈 데이터
+    const clothingLabels = document.querySelectorAll('.tip-label');
+    clothingLabels.forEach(label => {
+        // 한국 사이즈
+        if (label.textContent.includes('S (88-90)')) {
+            label.textContent = lang.koreaS;
+        } else if (label.textContent.includes('M (91-93)')) {
+            label.textContent = lang.koreaM;
+        } else if (label.textContent.includes('L (94-96)')) {
+            label.textContent = lang.koreaL;
+        } else if (label.textContent.includes('XL (97-99)')) {
+            label.textContent = lang.koreaXL;
+        }
+        // 미국 사이즈
+        else if (label.textContent.includes('S (34-36)')) {
+            label.textContent = lang.usS;
+        } else if (label.textContent.includes('M (38-40)')) {
+            label.textContent = lang.usM;
+        } else if (label.textContent.includes('L (42-44)')) {
+            label.textContent = lang.usL;
+        } else if (label.textContent.includes('XL (46-48)')) {
+            label.textContent = lang.usXL;
+        }
+    });
+    
+    // 신발 사이즈 데이터
+    const shoeLabels = document.querySelectorAll('.tip-label');
+    shoeLabels.forEach(label => {
+        // 한국 사이즈
+        if (label.textContent.includes('240mm')) {
+            label.textContent = lang.koreaShoe240;
+        } else if (label.textContent.includes('250mm')) {
+            label.textContent = lang.koreaShoe250;
+        } else if (label.textContent.includes('260mm')) {
+            label.textContent = lang.koreaShoe260;
+        } else if (label.textContent.includes('270mm')) {
+            label.textContent = lang.koreaShoe270;
+        }
+        // 미국 사이즈
+        else if (label.textContent.includes('US 7')) {
+            label.textContent = lang.usShoe7;
+        } else if (label.textContent.includes('US 8')) {
+            label.textContent = lang.usShoe8;
+        } else if (label.textContent.includes('US 9')) {
+            label.textContent = lang.usShoe9;
+        } else if (label.textContent.includes('US 10')) {
+            label.textContent = lang.usShoe10;
+        }
+    });
+    
+    // 무게 변환 데이터
+    const weightLabels = document.querySelectorAll('.tip-label');
+    weightLabels.forEach(label => {
+        if (label.textContent.includes('1kg')) {
+            label.textContent = lang.kgLabel;
+        } else if (label.textContent.includes('1lb')) {
+            label.textContent = lang.lbLabel2;
+        }
+    });
+    
+    const weightValues = document.querySelectorAll('.tip-value');
+    weightValues.forEach(value => {
+        if (value.textContent.includes('= 2.2lb')) {
+            value.textContent = lang.kgValue;
+        } else if (value.textContent.includes('= 0.45kg')) {
+            value.textContent = lang.lbValue2;
+        }
+    });
+    
+    // 거리 변환 데이터
+    const distanceLabels = document.querySelectorAll('.tip-label');
+    distanceLabels.forEach(label => {
+        if (label.textContent.includes('1km')) {
+            label.textContent = lang.kmLabel;
+        } else if (label.textContent.includes('1mile')) {
+            label.textContent = lang.mileLabel;
+        }
+    });
+    
+    const distanceValues = document.querySelectorAll('.tip-value');
+    distanceValues.forEach(value => {
+        if (value.textContent.includes('= 0.62mile')) {
+            value.textContent = lang.kmValue;
+        } else if (value.textContent.includes('= 1.61km')) {
+            value.textContent = lang.mileValue;
+        }
+    });
+    
+    // 온도 변환 데이터
+    const tempLabels = document.querySelectorAll('.tip-label');
+    tempLabels.forEach(label => {
+        if (label.textContent.includes('20°C')) {
+            label.textContent = lang.celsiusLabel;
+        } else if (label.textContent.includes('68°F')) {
+            label.textContent = lang.fahrenheitLabel;
+        }
+    });
+    
+    const tempValues = document.querySelectorAll('.tip-value');
+    tempValues.forEach(value => {
+        if (value.textContent.includes('= 68°F')) {
+            value.textContent = lang.celsiusValue;
+        } else if (value.textContent.includes('= 20°C')) {
+            value.textContent = lang.fahrenheitValue;
+        }
+    });
+    
+    // 속도 변환 데이터
+    const speedLabels = document.querySelectorAll('.tip-label');
+    speedLabels.forEach(label => {
+        if (label.textContent.includes('60km/h')) {
+            label.textContent = lang.kmhLabel;
+        } else if (label.textContent.includes('60mph')) {
+            label.textContent = lang.mphLabel;
+        }
+    });
+    
+    const speedValues = document.querySelectorAll('.tip-value');
+    speedValues.forEach(value => {
+        if (value.textContent.includes('= 37mph')) {
+            value.textContent = lang.kmhValue;
+        } else if (value.textContent.includes('= 97km/h')) {
+            value.textContent = lang.mphValue;
+        }
+    });
+    
+    // 면적 변환 데이터
+    const areaLabels = document.querySelectorAll('.tip-label');
+    areaLabels.forEach(label => {
+        if (label.textContent.includes('1평') || label.textContent.includes('1 pyeong') || label.textContent.includes('1坪') || label.textContent.includes('1坪')) {
+            label.textContent = lang.pyeongLabel;
+        } else if (label.textContent.includes('1m²')) {
+            label.textContent = lang.m2Label;
+        }
+    });
+    
+    const areaValues = document.querySelectorAll('.tip-value');
+    areaValues.forEach(value => {
+        if (value.textContent.includes('= 3.3m²')) {
+            value.textContent = lang.pyeongValue;
+        } else if (value.textContent.includes('= 0.3평') || value.textContent.includes('= 0.3 pyeong') || value.textContent.includes('= 0.3坪') || value.textContent.includes('= 0.3坪')) {
+            value.textContent = lang.m2Value;
         }
     });
 }
