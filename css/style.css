@@ -1570,30 +1570,6 @@ textarea:focus {
 } 
 
 /* 단위 역사 페이지 스타일 */
-.history-header {
-    text-align: center;
-    margin-bottom: var(--spacing-12);
-    padding: var(--spacing-8) 0;
-}
-
-.history-title {
-    font-size: var(--font-size-4xl);
-    font-weight: var(--font-weight-bold);
-    color: var(--text-primary);
-    margin-bottom: var(--spacing-4);
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.history-description {
-    font-size: var(--font-size-lg);
-    color: var(--text-secondary);
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: var(--line-height-relaxed);
-}
 
 .history-section {
     margin-bottom: var(--spacing-12);

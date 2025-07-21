@@ -2796,8 +2796,8 @@ function updateHistoryContent(lang) {
     const history = currentLang.history;
     
     // 페이지 제목과 설명 업데이트
-    const titleElement = document.querySelector('.history-title');
-    const descElement = document.querySelector('.history-description');
+    const titleElement = document.querySelector('.hero-title');
+    const descElement = document.querySelector('.hero-description');
     
     if (titleElement) titleElement.textContent = history.title;
     if (descElement) descElement.textContent = history.description;
