@@ -1042,67 +1042,67 @@ const languages = {
         areaExamples: ["m² ↔ cm²", "acre ↔ ha", "km² ↔ m²"],
         speedExamples: ["km/h ↔ mph", "m/s ↔ km/h", "knot ↔ km/h"],
         
-        // 단위 역사 페이지
+        // Unit History Page
         history: {
-            title: "📚 단위의 역사",
-            description: "인류가 사용해온 다양한 측정 단위들의 흥미로운 역사를 알아보세요",
+            title: "📚 History of Units",
+            description: "Discover the fascinating history of various measurement units used by humanity",
             
-            // 날짜 텍스트
+            // Date texts
             dates: {
-                ancient: "고대",
-                year1793: "1793년",
-                year1795: "1795년",
-                year1701: "1701년",
-                year1742: "1742년",
-                year1848: "1848년",
-                year1875: "1875년",
-                year1960: "1960년",
-                year1964: "1964년",
-                year2019: "2019년",
-                current: "현재"
+                ancient: "Ancient",
+                year1793: "1793",
+                year1795: "1795",
+                year1701: "1701",
+                year1742: "1742",
+                year1848: "1848",
+                year1875: "1875",
+                year1960: "1960",
+                year1964: "1964",
+                year2019: "2019",
+                current: "Present"
             },
             
-            // 길이 단위 역사
+            // Length unit history
             lengthHistory: {
-                title: "길이 단위의 역사",
+                title: "History of Length Units",
                 ancient: {
-                    title: "인체를 기준으로 한 측정",
-                    description: "고대인들은 자신의 몸을 기준으로 길이를 측정했습니다. 발(foot), 팔꿈치(cubit), 손가락(finger) 등이 대표적인 예입니다.",
-                    foot: "피트(Foot): 성인 남성의 발 길이를 기준",
-                    cubit: "큐빗(Cubit): 팔꿈치에서 손가락 끝까지의 길이",
-                    span: "스팬(Span): 엄지와 새끼손가락을 벌린 길이"
+                    title: "Body-based Measurement",
+                    description: "Ancient people measured length based on their own bodies. Foot, cubit, and finger are typical examples.",
+                    foot: "Foot: Based on the length of an adult male's foot",
+                    cubit: "Cubit: From the elbow to the tip of the middle finger",
+                    span: "Span: The distance between the tip of the thumb and little finger when stretched"
                 },
                 meter1793: {
-                    title: "미터의 탄생",
-                    description: "프랑스 혁명 당시, 지구의 자오선 길이를 기준으로 미터가 정의되었습니다. 지구 자오선의 1/40,000,000을 1미터로 정했습니다.",
-                    fact: "재미있는 사실: 최초의 미터 표준은 백금-이리듐 합금으로 만들어졌습니다."
+                    title: "Birth of the Meter",
+                    description: "During the French Revolution, the meter was defined based on the Earth's meridian. 1 meter was set as 1/40,000,000 of the Earth's meridian.",
+                    fact: "Fun Fact: The first meter standard was made of platinum-iridium alloy."
                 },
                 modern1960: {
-                    title: "현대적 정의",
-                    description: "크립톤-86 원자의 방출 스펙트럼을 기준으로 미터가 재정의되었습니다. 이후 1983년에는 빛의 속도를 기준으로 정의가 변경되었습니다.",
-                    formula: "현재 정의: 1미터 = 빛이 진공에서 1/299,792,458초 동안 진행한 거리"
+                    title: "Modern Definition",
+                    description: "The meter was redefined based on the spectrum of krypton-86. In 1983, it was redefined based on the speed of light.",
+                    formula: "Current Definition: 1 meter = the distance light travels in vacuum in 1/299,792,458 seconds"
                 }
             },
             
-            // 무게 단위 역사
+            // Weight unit history
             weightHistory: {
-                title: "무게 단위의 역사",
+                title: "History of Weight Units",
                 ancient: {
-                    title: "곡물을 기준으로 한 측정",
-                    description: "고대인들은 곡물의 무게를 기준으로 무게를 측정했습니다. 밀알, 보리알 등이 기본 단위로 사용되었습니다.",
-                    grain: "그레인(Grain): 보리알 하나의 무게",
-                    dram: "드램(Dram): 16그레인",
-                    ounce: "온스(Ounce): 437.5그레인"
+                    title: "Grain-based Measurement",
+                    description: "Ancient people measured weight based on grains. Wheat and barley grains were used as basic units.",
+                    grain: "Grain: Weight of one barley grain",
+                    dram: "Dram: 16 grains",
+                    ounce: "Ounce: 437.5 grains"
                 },
                 kg1795: {
-                    title: "킬로그램의 탄생",
-                    description: "프랑스에서 1리터의 물의 무게를 기준으로 킬로그램이 정의되었습니다. 최초의 킬로그램 표준은 백금으로 만들어졌습니다.",
-                    fact: "재미있는 사실: 최초의 킬로그램 표준은 'Le Grand K'라고 불렸습니다."
+                    title: "Birth of the Kilogram",
+                    description: "In France, the kilogram was defined based on the weight of 1 liter of water. The first kilogram standard was made of platinum.",
+                    fact: "Fun Fact: The first kilogram standard was called 'Le Grand K'."
                 },
                 modern2019: {
-                    title: "현대적 정의",
-                    description: "플랑크 상수를 기준으로 킬로그램이 재정의되었습니다. 이제 물리적 상수를 기준으로 정확한 무게를 측정할 수 있습니다.",
-                    formula: "현재 정의: 1킬로그램 = 플랑크 상수 h를 6.62607015×10⁻³⁴ J⋅s로 정의할 때의 질량"
+                    title: "Modern Definition",
+                    description: "The kilogram was redefined based on Planck's constant. Now we can measure weight accurately based on physical constants.",
+                    formula: "Current Definition: 1 kilogram = the mass when Planck's constant h is defined as 6.62607015×10⁻³⁴ J⋅s"
                 }
             },
             
