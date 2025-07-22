@@ -1,9 +1,26 @@
-// 다국어 지원 데이터
-const languages = {
-    ko: ko,
-    en: en,
-    ja: ja
-};
+// 다국어 지원 데이터 - 지연 로딩으로 변경
+function getLanguages() {
+    if (typeof window.ko === 'undefined' || typeof window.en === 'undefined' || typeof window.ja === 'undefined') {
+        console.log('언어 파일들이 아직 로드되지 않았습니다. 잠시 후 다시 시도합니다.');
+        return null;
+    }
+    return {
+        ko: window.ko,
+        en: window.en,
+        ja: window.ja
+    };
+}
+
+// 전역 languages 객체
+let languages = null;
+
+// languages 객체 초기화
+function initializeLanguages() {
+    if (!languages) {
+        languages = getLanguages();
+    }
+    return languages;
+}
 
 // 当前语言设置 (默认值: 韩语)
 let currentLanguage = 'ko';
@@ -31,6 +48,12 @@ function changeLanguage(lang) {
 }
 
 function updateHistoryContent(lang) {
+    // languages 객체 초기화
+    if (!initializeLanguages()) {
+        console.log('언어 파일들이 아직 로드되지 않았습니다.');
+        return;
+    }
+    
     const langData = languages[lang].history;
     if (!langData) return;
 
@@ -95,6 +118,12 @@ function updateHistoryContent(lang) {
 }
 
 function updateTipsContent(lang) {
+    // languages 객체 초기화
+    if (!initializeLanguages()) {
+        console.log('언어 파일들이 아직 로드되지 않았습니다.');
+        return;
+    }
+    
     const langData = languages[lang];
     if (!langData) return;
 
@@ -118,6 +147,12 @@ function updateTipsContent(lang) {
 }
 
 function updateTipRows(lang) {
+    // languages 객체 초기화
+    if (!initializeLanguages()) {
+        console.log('언어 파일들이 아직 로드되지 않았습니다.');
+        return;
+    }
+    
     const langData = languages[lang];
     if (!langData) return;
 
@@ -139,6 +174,12 @@ function updateTipRows(lang) {
 
 // UI 语言更新函数
 function updateUILanguage() {
+    // languages 객체 초기화
+    if (!initializeLanguages()) {
+        console.log('언어 파일들이 아직 로드되지 않았습니다.');
+        return;
+    }
+    
     const lang = languages[currentLanguage];
     
     // 标志文本
