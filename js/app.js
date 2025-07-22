@@ -78,9 +78,12 @@ class UnitConverterApp {
         });
         
         // 로고 클릭 이벤트 - 메인 페이지로 이동
-        const logo = document.querySelector('.logo');
+        const logo = document.querySelector('.logo a');
         if (logo) {
-            logo.addEventListener('click', () => this.showMainPage());
+            logo.addEventListener('click', (e) => {
+                e.preventDefault(); // 기본 링크 동작 방지
+                this.showMainPage();
+            });
             logo.style.cursor = 'pointer';
         }
         
@@ -370,6 +373,27 @@ class UnitConverterApp {
     // 단위 선택 옵션 채우기
     populateUnitSelects() {
         const units = UNIT_DATA[this.currentCategory].units;
+        
+        // languages 객체 초기화 확인
+        if (!initializeLanguages()) {
+            console.log('언어 파일들이 아직 로드되지 않았습니다. 기본값으로 처리합니다.');
+            // 기본값으로 처리
+            this.fromUnitSelect.innerHTML = units.map(unit => 
+                `<option value="${unit.symbol}">${unit.name} (${unit.symbol})</option>`
+            ).join('');
+            
+            this.toUnitSelect.innerHTML = units.map(unit => 
+                `<option value="${unit.symbol}">${unit.name} (${unit.symbol})</option>`
+            ).join('');
+            
+            // 기본값 설정
+            if (units.length >= 2) {
+                this.fromUnitSelect.value = units[0].symbol;
+                this.toUnitSelect.value = units[1].symbol;
+            }
+            return;
+        }
+        
         const lang = languages[currentLanguage];
         
         this.fromUnitSelect.innerHTML = units.map(unit => {
@@ -392,6 +416,24 @@ class UnitConverterApp {
     // 카테고리 정보 업데이트
     updateCategoryInfo() {
         const categoryInfo = UNIT_DATA[this.currentCategory];
+        
+        // languages 객체 초기화 확인
+        if (!initializeLanguages()) {
+            console.log('언어 파일들이 아직 로드되지 않았습니다. 기본값으로 처리합니다.');
+            // 기본값으로 처리
+            this.currentCategoryElement.textContent = categoryInfo.name;
+            this.unitInfoTitle.textContent = `${categoryInfo.name} 정보`;
+            
+            this.unitInfoContent.innerHTML = categoryInfo.units.map(unit => `
+                <div class="unit-item">
+                    <h4>${unit.name} (${unit.symbol})</h4>
+                    <p>${unit.description}</p>
+                    ${unit.formula ? `<div class="unit-formula">${unit.formula}</div>` : ''}
+                </div>
+            `).join('');
+            return;
+        }
+        
         const lang = languages[currentLanguage];
         
         // 다국어 카테고리 정보 사용
@@ -558,6 +600,21 @@ class UnitConverterApp {
         const date = new Date(timestamp);
         const now = new Date();
         const diff = now - date;
+        
+        // languages 객체 초기화 확인
+        if (!initializeLanguages()) {
+            // 기본값으로 처리
+            if (diff < 60000) {
+                return '방금 전';
+            } else if (diff < 3600000) {
+                return `${Math.floor(diff / 60000)}분 전`;
+            } else if (diff < 86400000) {
+                return `${Math.floor(diff / 3600000)}시간 전`;
+            } else {
+                return date.toLocaleDateString('ko-KR');
+            }
+        }
+        
         const lang = languages[currentLanguage];
         
         if (diff < 60000) { // 1분 미만
