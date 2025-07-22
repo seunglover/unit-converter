@@ -1,12 +1,49 @@
-/*
+# HTML 파일 - 짧은 캐시 (1시간)
+/*.html
+  Cache-Control: public, max-age=3600, s-maxage=3600
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
 
+# 루트 HTML (index.html)
+/
+  Cache-Control: public, max-age=3600, s-maxage=3600
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# CSS 파일 - 긴 캐시 (1년)
+/css/*
+  Cache-Control: public, max-age=31536000, s-maxage=31536000, immutable
+  Content-Type: text/css
+
+# JavaScript 파일 - 긴 캐시 (1년) 
+/js/*
+  Cache-Control: public, max-age=31536000, s-maxage=31536000, immutable
+  Content-Type: application/javascript
+
+# 이미지 파일 - 긴 캐시 (1년)
+/assets/*
+  Cache-Control: public, max-age=31536000, s-maxage=31536000, immutable
+
+# Manifest 파일 - 중간 캐시 (1일)
 /manifest.json
   Content-Type: application/manifest+json
+  Cache-Control: public, max-age=86400, s-maxage=86400
 
+# Service Worker - 캐시 안함 (개발 중)
 /sw.js
   Content-Type: application/javascript
-  Cache-Control: no-cache 
+  Cache-Control: no-cache, no-store, must-revalidate
+  
+# 기타 정적 파일들
+/robots.txt
+  Cache-Control: public, max-age=86400, s-maxage=86400
+
+/sitemap.xml
+  Cache-Control: public, max-age=86400, s-maxage=86400
+
+/ads.txt
+  Cache-Control: public, max-age=86400, s-maxage=86400 
