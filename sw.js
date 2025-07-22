@@ -40,6 +40,17 @@ self.addEventListener('fetch', event => {
             if (cachedResponse) {
               return cachedResponse;
             }
+            // If no cached response, continue to network fetch
+            return fetch(event.request, {
+              redirect: 'follow'
+            }).catch(error => {
+              console.log('Fetch failed:', error);
+              // Return a fallback response for navigation requests
+              if (event.request.mode === 'navigate') {
+                return caches.match('/');
+              }
+              return new Response('Network error', { status: 503 });
+            });
           });
         }
         

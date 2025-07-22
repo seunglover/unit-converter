@@ -698,7 +698,9 @@ class UnitConverterApp {
 
     // 서비스 워커 등록
     registerServiceWorker() {
-        if ('serviceWorker' in navigator) {
+        // Service Worker는 HTTPS 또는 localhost에서만 작동하며, file:// 프로토콜에서는 작동하지 않음
+        if ('serviceWorker' in navigator && 
+            (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
             navigator.serviceWorker.register('/sw.js')
                 .then(registration => {
                     console.log('Service Worker registered:', registration);
@@ -706,6 +708,8 @@ class UnitConverterApp {
                 .catch(error => {
                     console.log('Service Worker registration failed:', error);
                 });
+        } else {
+            console.log('Service Worker not supported in this environment');
         }
     }
     
