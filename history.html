@@ -39,7 +39,6 @@
                     <option value="ko">🇰🇷 한국어</option>
                     <option value="en">🇺🇸 English</option>
                     <option value="ja">🇯🇵 日本語</option>
-                    <option value="zh">🇨🇳 中文</option>
                 </select>
             </div>
             
@@ -58,8 +57,8 @@
         <div class="container">
             <!-- 히어로 섹션 -->
             <section class="hero-section">
-                <h2 class="hero-title">📚 단위의 역사</h2>
-                <p class="hero-description">인류가 사용해온 다양한 측정 단위들의 흥미로운 역사를 알아보세요</p>
+                <h2 class="hero-title" data-translate="history.title">📚 단위의 역사</h2>
+                <p class="hero-description" data-translate="history.description">인류가 사용해온 다양한 측정 단위들의 흥미로운 역사를 알아보세요</p>
             </section>
 
             <!-- 길이 단위 역사 -->
@@ -297,29 +296,29 @@
             </section>
 
             <!-- 재미있는 단위 이야기 -->
-            <section class="history-section">
+            <section class="history-section" data-history-section="funFacts">
                 <div class="history-card">
                     <div class="history-icon">🎭</div>
                     <div class="history-content">
                         <h2>재미있는 단위 이야기</h2>
                         
                         <div class="fun-facts">
-                            <div class="fun-fact-item">
+                            <div class="fun-fact-item" data-fun-fact="elephant">
                                 <h3>🐘 코끼리 단위</h3>
                                 <p>미국에서는 큰 물건의 무게를 '코끼리' 단위로 표현하기도 합니다. 1코끼리 = 약 6톤</p>
                             </div>
 
-                            <div class="fun-fact-item">
+                            <div class="fun-fact-item" data-fun-fact="football">
                                 <h3>🏈 미식축구장 단위</h3>
                                 <p>미국에서는 거리를 '미식축구장' 단위로 표현합니다. 1미식축구장 = 100야드(약 91.44m)</p>
                             </div>
 
-                            <div class="fun-fact-item">
+                            <div class="fun-fact-item" data-fun-fact="pizza">
                                 <h3>🍕 피자 단위</h3>
                                 <p>이탈리아에서는 면적을 '피자' 단위로 표현하기도 합니다. 1피자 = 약 0.5m²</p>
                             </div>
 
-                            <div class="fun-fact-item">
+                            <div class="fun-fact-item" data-fun-fact="car">
                                 <h3>🚗 자동차 단위</h3>
                                 <p>주차장 면적을 '자동차' 단위로 표현합니다. 1자동차 = 약 15m²</p>
                             </div>
@@ -365,7 +364,18 @@
     </footer>
 
     <!-- JavaScript -->
+    <script src="js/languages/ko.js"></script>
+    <script src="js/languages/en.js"></script>
+    <script src="js/languages/ja.js"></script>
     <script src="js/languages.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/converter.js"></script>
     <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLanguage = localStorage.getItem('preferredLanguage') || 'ko';
+            changeLanguage(savedLanguage);
+        });
+    </script>
 </body>
 </html> 

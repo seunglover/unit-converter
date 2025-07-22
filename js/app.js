@@ -306,15 +306,16 @@ class UnitConverterApp {
     displaySearchResults(results) {
         this.searchResultsArray = results;
         this.selectedSearchIndex = -1;
+        const lang = languages[currentLanguage];
         
         console.log('검색 결과:', results);
         
         if (results.length === 0) {
-            this.searchResults.innerHTML = '<div class="search-result-item"><p>검색 결과가 없습니다.</p></div>';
+            this.searchResults.innerHTML = `<div class="search-result-item"><p>${lang.noResults || '검색 결과가 없습니다.'}</p></div>`;
         } else {
             this.searchResults.innerHTML = results.map((result, index) => `
                 <div class="search-result-item ${index === this.selectedSearchIndex ? 'selected' : ''}" data-category="${result.category}" data-index="${index}">
-                    <div class="search-result-category">${result.icon} ${result.type === 'category' ? '카테고리' : '단위'}</div>
+                    <div class="search-result-category">${result.icon} ${result.type === 'category' ? (lang.category || '카테고리') : (lang.unit || '단위')}</div>
                     <div class="search-result-title">${result.title}</div>
                     <div class="search-result-description">${result.description}</div>
                 </div>
@@ -399,7 +400,7 @@ class UnitConverterApp {
         const categoryDesc = categoryLang ? categoryLang.description : categoryInfo.description;
         
         this.currentCategoryElement.textContent = categoryName;
-        this.unitInfoTitle.textContent = `${categoryName} 정보`;
+        this.unitInfoTitle.textContent = `${categoryName} ${lang.information || '정보'}`;
         
         this.unitInfoContent.innerHTML = categoryInfo.units.map(unit => {
             const unitName = lang.units && lang.units[unit.symbol] ? lang.units[unit.symbol] : unit.name;
@@ -557,15 +558,16 @@ class UnitConverterApp {
         const date = new Date(timestamp);
         const now = new Date();
         const diff = now - date;
+        const lang = languages[currentLanguage];
         
         if (diff < 60000) { // 1분 미만
-            return '방금 전';
+            return lang.justNow || '방금 전';
         } else if (diff < 3600000) { // 1시간 미만
-            return `${Math.floor(diff / 60000)}분 전`;
+            return `${Math.floor(diff / 60000)}${lang.minutesAgo || '분 전'}`;
         } else if (diff < 86400000) { // 1일 미만
-            return `${Math.floor(diff / 3600000)}시간 전`;
+            return `${Math.floor(diff / 3600000)}${lang.hoursAgo || '시간 전'}`;
         } else {
-            return date.toLocaleDateString('ko-KR');
+            return date.toLocaleDateString(lang.locale || 'ko-KR');
         }
     }
 

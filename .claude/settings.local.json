@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx:*)",
+      "Bash(youtube-data-mcp-server:*)",
+      "Bash(claude mcp:*)",
+      "Bash(timeout:*)",
+      "Bash(node:*)",
+      "mcp__playwright__playwright_navigate",
+      "mcp__terminal__execute_command",
+      "mcp__playwright__playwright_screenshot",
+      "Bash(cp:*)",
+      "Bash(wc:*)",
+      "Bash(sed:*)"
+    ],
+    "deny": []
+  }
+}

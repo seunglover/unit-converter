@@ -3,25 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>변환 팁 - 단위 변환 도우미 | 실용적인 변환 가이드</title>
+    <title>변환 팁 - 단위 변환 도우미</title>
     <meta name="description" content="일상생활에서 유용한 단위 변환 팁과 활용법을 확인하세요. 요리, 해외직구, 운동, 여행 등 다양한 상황에서 활용할 수 있는 변환 팁을 제공합니다.">
     <meta name="keywords" content="단위 변환 팁, 요리 단위, 해외직구 단위, 운동 단위, 여행 단위, 실용 변환">
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="변환 팁 - 단위 변환 도우미">
-    <meta property="og:description" content="일상생활에서 유용한 단위 변환 팁과 활용법">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourdomain.com/tips.html">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="변환 팁 - 단위 변환 도우미">
-    <meta name="twitter:description" content="일상생활에서 유용한 단위 변환 팁">
-    
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="icon" href="assets/icons/icon-144x144.png">
-    <link rel="manifest" href="manifest.json">
     
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2347391460222140"
@@ -34,26 +22,27 @@
             <div class="logo">
                 <a href="index.html">
                     <span class="logo-icon">📏</span>
-                    <span class="logo-text">단위 변환 도우미</span>
+                    <span class="logo-text">단위 변환기</span>
                 </a>
             </div>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">홈</a></li>
-                    <li><a href="tips.html" class="nav-link active">변환 팁</a></li>
-                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
-                    <li><a href="history.html" class="nav-link">단위 역사</a></li>
-                </ul>
-            </nav>
-            <!-- 언어 선택기 -->
-            <div class="language-selector">
-                <select id="language-select" onchange="changeLanguage(this.value)">
-                    <option value="ko">한국어</option>
-                    <option value="en">English</option>
-                    <option value="ja">日本語</option>
-                    <option value="zh">中文</option>
+            
+            <!-- 헤더 언어 선택기 -->
+            <div class="header-language-selector">
+                <select id="header-language-select" class="language-select">
+                    <option value="ko">🇰🇷 한국어</option>
+                    <option value="en">🇺🇸 English</option>
+                    <option value="ja">🇯🇵 日本語</option>
                 </select>
             </div>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="tips.html" class="active">변환 팁</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="history.html">단위 역사</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -62,327 +51,172 @@
         <div class="container">
             <section class="tips-section">
                 <div class="tips-header">
-                    <h1>실용적인 변환 팁</h1>
-                    <p>일상생활에서 바로 활용할 수 있는 단위 변환 팁들을 모았습니다</p>
+                    <h1 data-translate="tipsTitle">실용적인 변환 팁</h1>
+                    <p data-translate="tipsDescription">일상생활에서 바로 활용할 수 있는 단위 변환 팁들을 모았습니다</p>
                 </div>
 
                 <div class="tips-content">
                     <!-- 요리 팁 섹션 -->
                     <div class="tips-category">
-                        <h2>🍳 요리할 때 유용한 변환 팁</h2>
-                        
+                        <h2 data-translate="tipsCooking">🍳 요리할 때 유용한 변환 팁</h2>
                         <div class="tip-card">
                             <div class="tip-icon">🥄</div>
                             <div class="tip-content">
-                                <h3>요리 단위 변환</h3>
+                                <h3 data-translate="cookingUnitTitle">요리 단위 변환</h3>
                                 <div class="tip-table">
-                                    <div class="tip-row">
-                                        <span class="tip-label">1 컵 (cup)</span>
-                                        <span class="tip-value">= 240ml</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">1 테이블스푼 (tbsp)</span>
-                                        <span class="tip-value">= 15ml</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">1 티스푼 (tsp)</span>
-                                        <span class="tip-value">= 5ml</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">1 온스 (oz)</span>
-                                        <span class="tip-value">= 28.35g</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">1 파운드 (lb)</span>
-                                        <span class="tip-value">= 453.59g</span>
-                                    </div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="cupLabel">1 컵 (cup)</span><span class="tip-value" data-translate="cupValue">= 240ml</span></div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="tbspLabel">1 테이블스푼 (tbsp)</span><span class="tip-value" data-translate="tbspValue">= 15ml</span></div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="tspLabel">1 티스푼 (tsp)</span><span class="tip-value" data-translate="tspValue">= 5ml</span></div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="ozLabel">1 온스 (oz)</span><span class="tip-value" data-translate="ozValue">= 28.35g</span></div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="lbLabel">1 파운드 (lb)</span><span class="tip-value" data-translate="lbValue">= 453.59g</span></div>
                                 </div>
-                                <p class="tip-note">💡 팁: 요리할 때는 정확한 무게보다는 부피 단위가 더 편리합니다.</p>
+                                <p class="tip-note" data-translate="cookingTip">💡 팁: 요리할 때는 정확한 무게보다는 부피 단위가 더 편리합니다.</p>
                             </div>
                         </div>
-
                         <div class="tip-card">
                             <div class="tip-icon">🌾</div>
                             <div class="tip-content">
-                                <h3>밀가루 변환</h3>
+                                <h3 data-translate="flourTitle">밀가루 변환</h3>
                                 <div class="tip-table">
-                                    <div class="tip-row">
-                                        <span class="tip-label">1컵 밀가루</span>
-                                        <span class="tip-value">= 120g</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">1컵 설탕</span>
-                                        <span class="tip-value">= 200g</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">1컵 버터</span>
-                                        <span class="tip-value">= 227g</span>
-                                    </div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="allPurposeLabel">중력분 (all-purpose)</span><span class="tip-value" data-translate="allPurposeValue">= 125g</span></div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="breadLabel">강력분 (bread)</span><span class="tip-value" data-translate="breadValue">= 130g</span></div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="cakeLabel">박력분 (cake)</span><span class="tip-value" data-translate="cakeValue">= 115g</span></div>
                                 </div>
-                                <p class="tip-note">💡 팁: 재료별로 같은 부피라도 무게가 다를 수 있어요!</p>
+                                <p class="tip-note" data-translate="flourTip">💡 팁: 재료별로 같은 부피라도 무게가 다를 수 있어요!</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- 해외직구 팁 섹션 -->
                     <div class="tips-category">
-                        <h2>🛒 해외직구할 때 유용한 변환 팁</h2>
-                        
+                        <h2 data-translate="tipsShopping">🛒 해외직구할 때 유용한 변환 팁</h2>
                         <div class="tip-card">
                             <div class="tip-icon">👕</div>
                             <div class="tip-content">
-                                <h3>의류 사이즈 변환</h3>
+                                <h3 data-translate="clothingTitle">의류 사이즈 변환</h3>
                                 <div class="tip-table">
-                                    <div class="tip-row">
-                                        <span class="tip-label">한국 사이즈</span>
-                                        <span class="tip-value">미국 사이즈</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">S (90-95)</span>
-                                        <span class="tip-value">XS (34-36)</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">M (95-100)</span>
-                                        <span class="tip-value">S (36-38)</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">L (100-105)</span>
-                                        <span class="tip-value">M (38-40)</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">XL (105-110)</span>
-                                        <span class="tip-value">L (40-42)</span>
-                                    </div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="koreaSize">한국 사이즈</span><span class="tip-value" data-translate="usSize">미국 사이즈</span></div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="koreaS">S (88-90)</span><span class="tip-value" data-translate="usS">S (34-36)</span></div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="koreaM">M (91-93)</span><span class="tip-value" data-translate="usM">M (38-40)</span></div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="koreaL">L (94-96)</span><span class="tip-value" data-translate="usL">L (42-44)</span></div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="koreaXL">XL (97-99)</span><span class="tip-value" data-translate="usXL">XL (46-48)</span></div>
                                 </div>
-                                <p class="tip-note">💡 팁: 브랜드마다 사이즈가 다를 수 있으니 정확한 치수를 확인하세요.</p>
+                                <p class="tip-note" data-translate="clothingTip">💡 팁: 브랜드마다 사이즈가 다를 수 있으니 정확한 치수를 확인하세요.</p>
                             </div>
                         </div>
-
                         <div class="tip-card">
                             <div class="tip-icon">👟</div>
                             <div class="tip-content">
-                                <h3>신발 사이즈 변환</h3>
+                                <h3 data-translate="shoesTitle">신발 사이즈 변환</h3>
                                 <div class="tip-table">
-                                    <div class="tip-row">
-                                        <span class="tip-label">한국 사이즈</span>
-                                        <span class="tip-value">미국 사이즈</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">250mm</span>
-                                        <span class="tip-value">7.5</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">260mm</span>
-                                        <span class="tip-value">8.5</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">270mm</span>
-                                        <span class="tip-value">9.5</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">280mm</span>
-                                        <span class="tip-value">10.5</span>
-                                    </div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="koreaSize">한국 사이즈</span><span class="tip-value" data-translate="usSize">미국 사이즈</span></div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="koreaShoe240">240mm</span><span class="tip-value" data-translate="usShoe7">US 7</span></div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="koreaShoe250">250mm</span><span class="tip-value" data-translate="usShoe8">US 8</span></div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="koreaShoe260">260mm</span><span class="tip-value" data-translate="usShoe9">US 9</span></div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="koreaShoe270">270mm</span><span class="tip-value" data-translate="usShoe10">US 10</span></div>
                                 </div>
-                                <p class="tip-note">💡 팁: 신발은 브랜드마다 사이즈가 다르니 반드시 실측 후 구매하세요.</p>
+                                <p class="tip-note" data-translate="shoesTip">💡 팁: 신발은 브랜드마다 사이즈가 다르니 반드시 실측 후 구매하세요.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- 운동 팁 섹션 -->
                     <div class="tips-category">
-                        <h2>💪 운동할 때 유용한 변환 팁</h2>
-                        
+                        <h2 data-translate="tipsExercise">💪 운동할 때 유용한 변환 팁</h2>
                         <div class="tip-card">
                             <div class="tip-icon">🏋️</div>
                             <div class="tip-content">
-                                <h3>무게 변환 (운동)</h3>
+                                <h3 data-translate="weightTitle">무게 변환 (운동)</h3>
                                 <div class="tip-table">
-                                    <div class="tip-row">
-                                        <span class="tip-label">1kg</span>
-                                        <span class="tip-value">= 2.2lb</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">5kg</span>
-                                        <span class="tip-value">= 11lb</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">10kg</span>
-                                        <span class="tip-value">= 22lb</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">20kg</span>
-                                        <span class="tip-value">= 44lb</span>
-                                    </div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="kgLabel">1kg</span><span class="tip-value" data-translate="kgValue">= 2.2lb</span></div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="lbLabel2">1lb</span><span class="tip-value" data-translate="lbValue2">= 0.45kg</span></div>
                                 </div>
-                                <p class="tip-note">💡 팁: 헬스장에서 사용하는 무게 단위는 보통 lb(파운드)입니다.</p>
+                                <p class="tip-note" data-translate="weightTip">💡 팁: 헬스장에서 사용하는 무게 단위는 보통 lb(파운드)입니다.</p>
                             </div>
                         </div>
-
                         <div class="tip-card">
                             <div class="tip-icon">🏃</div>
                             <div class="tip-content">
-                                <h3>거리 변환 (러닝)</h3>
+                                <h3 data-translate="distanceTitle">거리 변환 (러닝)</h3>
                                 <div class="tip-table">
-                                    <div class="tip-row">
-                                        <span class="tip-label">5km</span>
-                                        <span class="tip-value">= 3.1마일</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">10km</span>
-                                        <span class="tip-value">= 6.2마일</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">하프마라톤</span>
-                                        <span class="tip-value">= 21.1km</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">풀마라톤</span>
-                                        <span class="tip-value">= 42.2km</span>
-                                    </div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="kmLabel">1km</span><span class="tip-value" data-translate="kmValue">= 0.62mile</span></div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="mileLabel">1mile</span><span class="tip-value" data-translate="mileValue">= 1.61km</span></div>
                                 </div>
-                                <p class="tip-note">💡 팁: 러닝 앱에서 거리 단위를 마일로 설정하면 해외 러닝 이벤트 참가에 도움이 됩니다.</p>
+                                <p class="tip-note" data-translate="distanceTip">💡 팁: 러닝 앱에서 거리 단위를 마일로 설정하면 해외 러닝 이벤트 참가에 도움이 됩니다.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- 여행 팁 섹션 -->
                     <div class="tips-category">
-                        <h2>✈️ 여행할 때 유용한 변환 팁</h2>
-                        
+                        <h2 data-translate="tipsTravel">✈️ 여행할 때 유용한 변환 팁</h2>
                         <div class="tip-card">
                             <div class="tip-icon">🌡️</div>
                             <div class="tip-content">
-                                <h3>온도 변환 (여행)</h3>
+                                <h3 data-translate="temperatureTitle">온도 변환 (여행)</h3>
                                 <div class="tip-table">
-                                    <div class="tip-row">
-                                        <span class="tip-label">0°C</span>
-                                        <span class="tip-value">= 32°F</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">20°C</span>
-                                        <span class="tip-value">= 68°F</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">30°C</span>
-                                        <span class="tip-value">= 86°F</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">100°C</span>
-                                        <span class="tip-value">= 212°F</span>
-                                    </div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="celsiusLabel">20°C</span><span class="tip-value" data-translate="celsiusValue">= 68°F</span></div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="fahrenheitLabel">68°F</span><span class="tip-value" data-translate="fahrenheitValue">= 20°C</span></div>
                                 </div>
-                                <p class="tip-note">💡 팁: 섭씨에서 화씨로 변환할 때는 (섭씨 × 9/5) + 32 공식을 사용하세요.</p>
+                                <p class="tip-note" data-translate="temperatureTip">💡 팁: 섭씨에서 화씨로 변환할 때는 (섭씨 × 9/5) + 32 공식을 사용하세요.</p>
                             </div>
                         </div>
-
                         <div class="tip-card">
                             <div class="tip-icon">🚗</div>
                             <div class="tip-content">
-                                <h3>속도 변환 (운전)</h3>
+                                <h3 data-translate="speedTitle">속도 변환 (운전)</h3>
                                 <div class="tip-table">
-                                    <div class="tip-row">
-                                        <span class="tip-label">50km/h</span>
-                                        <span class="tip-value">= 31mph</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">80km/h</span>
-                                        <span class="tip-value">= 50mph</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">100km/h</span>
-                                        <span class="tip-value">= 62mph</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">120km/h</span>
-                                        <span class="tip-value">= 75mph</span>
-                                    </div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="kmhLabel">60km/h</span><span class="tip-value" data-translate="kmhValue">= 37mph</span></div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="mphLabel">60mph</span><span class="tip-value" data-translate="mphValue">= 97km/h</span></div>
                                 </div>
-                                <p class="tip-note">💡 팁: 해외 운전 시 속도 제한 표시가 mph로 되어 있을 수 있습니다.</p>
+                                <p class="tip-note" data-translate="speedTip">💡 팁: 해외 운전 시 속도 제한 표시가 mph로 되어 있을 수 있습니다.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- 부동산 팁 섹션 -->
                     <div class="tips-category">
-                        <h2>🏠 부동산할 때 유용한 변환 팁</h2>
-                        
+                        <h2 data-translate="tipsRealEstate">🏠 부동산할 때 유용한 변환 팁</h2>
                         <div class="tip-card">
                             <div class="tip-icon">📐</div>
                             <div class="tip-content">
-                                <h3>면적 변환 (부동산)</h3>
+                                <h3 data-translate="areaTitle">면적 변환 (부동산)</h3>
                                 <div class="tip-table">
-                                    <div class="tip-row">
-                                        <span class="tip-label">1평</span>
-                                        <span class="tip-value">= 3.3058m²</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">1제곱미터</span>
-                                        <span class="tip-value">= 0.3025평</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">1에이커</span>
-                                        <span class="tip-value">= 4046.86m²</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">1헥타르</span>
-                                        <span class="tip-value">= 10000m²</span>
-                                    </div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="pyeongLabel">1평</span><span class="tip-value" data-translate="pyeongValue">= 3.3m²</span></div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="m2Label">1m²</span><span class="tip-value" data-translate="m2Value">= 0.3평</span></div>
                                 </div>
-                                <p class="tip-note">💡 팁: 부동산 광고에서 평수와 제곱미터를 혼용해서 사용하는 경우가 많습니다.</p>
+                                <p class="tip-note" data-translate="areaTip">💡 팁: 부동산 광고에서 평수와 제곱미터를 혼용해서 사용하는 경우가 많습니다.</p>
                             </div>
                         </div>
-
                         <div class="tip-card">
                             <div class="tip-icon">🏢</div>
                             <div class="tip-content">
-                                <h3>실용적인 면적 비교</h3>
+                                <h3 data-translate="areaComparisonTitle">실용적인 면적 비교</h3>
                                 <div class="tip-table">
-                                    <div class="tip-row">
-                                        <span class="tip-label">1평</span>
-                                        <span class="tip-value">= 약 2개의 자동차 주차공간</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">3평</span>
-                                        <span class="tip-value">= 약 1개의 원룸 방</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">10평</span>
-                                        <span class="tip-value">= 약 1개의 원룸 전체</span>
-                                    </div>
-                                    <div class="tip-row">
-                                        <span class="tip-label">30평</span>
-                                        <span class="tip-value">= 약 1개의 3룸 아파트</span>
-                                    </div>
+                                    <div class="tip-row"><span class="tip-label" data-translate="pyeongLabel">1평</span><span class="tip-value">= 약 2개의 자동차 주차공간</span></div>
+                                    <div class="tip-row"><span class="tip-label">3평</span><span class="tip-value">= 약 1개의 원룸 방</span></div>
+                                    <div class="tip-row"><span class="tip-label">10평</span><span class="tip-value">= 약 1개의 원룸 전체</span></div>
+                                    <div class="tip-row"><span class="tip-label">30평</span><span class="tip-value">= 약 1개의 3룸 아파트</span></div>
                                 </div>
-                                <p class="tip-note">💡 팁: 면적을 실생활과 비교하면 더 직관적으로 이해할 수 있습니다.</p>
+                                <p class="tip-note" data-translate="areaComparisonTip">💡 팁: 면적을 실생활과 비교하면 더 직관적으로 이해할 수 있습니다.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- 기억하기 쉬운 팁 섹션 -->
                     <div class="tips-category">
-                        <h2>🧠 기억하기 쉬운 변환 팁</h2>
-                        
+                        <h2 data-translate="tipsMemory">🧠 기억하기 쉬운 변환 팁</h2>
                         <div class="tip-card">
                             <div class="tip-icon">💡</div>
                             <div class="tip-content">
-                                <h3>빠른 계산법</h3>
+                                <h3 data-translate="quickCalculationTitle">빠른 계산법</h3>
                                 <div class="tip-list">
-                                    <div class="tip-item">
-                                        <strong>온도 변환:</strong> 섭씨에서 화씨로 변환할 때는 섭씨 × 2 + 30 (근사값)
-                                    </div>
-                                    <div class="tip-item">
-                                        <strong>무게 변환:</strong> kg에서 lb로 변환할 때는 kg × 2 + kg × 0.2
-                                    </div>
-                                    <div class="tip-item">
-                                        <strong>거리 변환:</strong> km에서 mile로 변환할 때는 km × 0.6
-                                    </div>
-                                    <div class="tip-item">
-                                        <strong>면적 변환:</strong> m²에서 평으로 변환할 때는 m² ÷ 3.3
-                                    </div>
+                                    <div class="tip-item"><span data-translate="tempConversion"><strong>온도 변환:</strong> 섭씨에서 화씨로 변환할 때는 섭씨 × 2 + 30 (근사값)</span></div>
+                                    <div class="tip-item"><span data-translate="weightConversion"><strong>무게 변환:</strong> kg에서 lb로 변환할 때는 kg × 2 + kg × 0.2</span></div>
+                                    <div class="tip-item"><span data-translate="distanceConversion"><strong>거리 변환:</strong> km에서 mile로 변환할 때는 km × 0.6</span></div>
+                                    <div class="tip-item"><span data-translate="areaConversion"><strong>면적 변환:</strong> m²에서 평으로 변환할 때는 m² ÷ 3.3</span></div>
                                 </div>
-                                <p class="tip-note">💡 팁: 정확한 계산이 필요할 때는 위의 변환기를 사용하세요!</p>
+                                <p class="tip-note" data-translate="quickCalculationTip">💡 팁: 정확한 계산이 필요할 때는 위의 변환기를 사용하세요!</p>
                             </div>
                         </div>
                     </div>
@@ -403,55 +237,72 @@
                     <h4>유용한 링크</h4>
                     <ul class="footer-links">
                         <li><a href="index.html">홈</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
                         <li><a href="tips.html">변환 팁</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="history.html">단위 역사</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>지원하는 단위</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#length">길이</a></li>
+                        <li><a href="index.html#weight">무게</a></li>
+                        <li><a href="index.html#volume">부피</a></li>
+                        <li><a href="index.html#temperature">온도</a></li>
+                        <li><a href="index.html#area">면적</a></li>
+                        <li><a href="index.html#speed">속도</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
-                    <p>&copy; 2025 단위 변환 도우미. 모든 권리 보유.</p>
+                    <p>&copy; 2025 단위 변환기. 모든 권리 보유.</p>
                     <div class="language-selector">
                         <select id="language-select" class="language-select">
                             <option value="ko">🇰🇷 한국어</option>
                             <option value="en">🇺🇸 English</option>
                             <option value="ja">🇯🇵 日本語</option>
-                            <option value="zh">🇨🇳 中文</option>
-                        </select>
+                                </select>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript -->
+    <script src="js/languages/ko.js"></script>
+    <script src="js/languages/en.js"></script>
+    <script src="js/languages/ja.js"></script>
     <script src="js/languages.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/converter.js"></script>
-    <script src="js/app.js"></script>
     <script>
-        // 페이지 로드 시 언어 설정 확인
+        // 페이지 로드 시 언어 설정
         document.addEventListener('DOMContentLoaded', function() {
             console.log('Tips page loaded');
-            const savedLanguage = localStorage.getItem('preferredLanguage');
-            if (savedLanguage) {
-                console.log('Saved language:', savedLanguage);
-                currentLanguage = savedLanguage;
+            
+            // 현재 언어 확인 및 설정
+            const savedLanguage = localStorage.getItem('preferredLanguage') || 'ko';
+            currentLanguage = savedLanguage;
+            
+            // 언어 선택기 업데이트 및 이벤트 리스너 추가
+            const languageSelects = document.querySelectorAll('#language-select, #header-language-select');
+            languageSelects.forEach(select => {
+                select.value = savedLanguage;
                 
-                // 모든 언어 선택기 업데이트
-                const languageSelects = document.querySelectorAll('#language-select');
-                languageSelects.forEach(select => {
-                    select.value = savedLanguage;
+                // 이벤트 리스너 추가
+                select.addEventListener('change', function() {
+                    if (typeof changeLanguage === 'function') {
+                        changeLanguage(this.value);
+                    }
                 });
-                
-                // UI 언어 업데이트
-                updateUILanguage();
-            } else {
-                console.log('No saved language, using default (Korean)');
-                // 기본 언어로 설정
-                currentLanguage = 'ko';
-                updateUILanguage();
+            });
+            
+            // 언어 적용
+            if (typeof changeLanguage === 'function') {
+                changeLanguage(savedLanguage);
             }
+            
+            console.log('Tips page initialization complete');
         });
     </script>
 </body>
-</html> 
+</html>
