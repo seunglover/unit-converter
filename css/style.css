@@ -1845,3 +1845,29 @@ textarea:focus {
 .history-text {
     font-weight: var(--font-weight-medium);
 } 
+
+/* 개인정보 처리방침 카드 스타일 */
+.policy-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    padding: 2.5rem 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.policy-card h2 {
+    margin-top: 2rem;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+.policy-card ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+.policy-card li {
+    margin-bottom: 0.5rem;
+} 

@@ -8,13 +8,17 @@
     <script defer src="js/languages.js"></script>
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="container">
+            <div class="logo">
+                <a href="index.html" role="button">
+                    <span class="logo-icon">📏</span>
+                    <span class="logo-text">단위 변환기</span>
+                </a>
+            </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">홈</a></li>
-                    <li><a href="privacy.html" class="active">개인정보 취급방침</a></li>
-                    <li><a href="terms.html">이용약관</a></li>
+                    
                 </ul>
             </nav>
         </div>
@@ -23,13 +27,42 @@
         <div class="container">
             <section class="policy-section">
                 <h1 id="privacy-title">개인정보 취급방침</h1>
-                <div id="privacy-content">
-                    <!-- 다국어 내용 동적 출력 -->
+                <div id="privacy-content" class="policy-card">
+                    <p>
+                        <strong>단위 변환기</strong>(이하 "사이트")는 이용자의 개인정보를 소중하게 생각하며, 아래와 같이 최소한의 개인정보만을 안전하게 처리합니다.
+                    </p>
+                    <h2>1. 수집하는 개인정보 항목</h2>
+                    <ul>
+                        <li>본 사이트는 별도의 회원가입 없이 자유롭게 이용하실 수 있습니다.</li>
+                        <li>서비스 개선을 위한 <strong>쿠키, 방문 기록, 브라우저 정보</strong> 등 비식별 정보만을 수집할 수 있습니다.</li>
+                    </ul>
+                    <h2>2. 개인정보의 이용 목적</h2>
+                    <ul>
+                        <li>서비스 품질 향상 및 통계 분석</li>
+                        <li>이용자 문의 응대</li>
+                    </ul>
+                    <h2>3. 개인정보의 보관 및 파기</h2>
+                    <ul>
+                        <li>수집된 정보는 목적 달성 후 즉시 파기하거나, 법령에 따라 안전하게 보관합니다.</li>
+                    </ul>
+                    <h2>4. 제3자 제공</h2>
+                    <ul>
+                        <li>본 사이트는 이용자의 개인정보를 외부에 제공하지 않습니다.</li>
+                    </ul>
+                    <h2>5. 이용자의 권리</h2>
+                    <ul>
+                        <li>언제든지 개인정보 열람, 정정, 삭제를 요청하실 수 있습니다.</li>
+                    </ul>
+                    <h2>6. 정책 변경 안내</h2>
+                    <ul>
+                        <li>본 방침은 법령 및 서비스 변경에 따라 사전 고지 후 수정될 수 있습니다.</li>
+                    </ul>
+                    <p class="text-secondary" style="margin-top:2rem;">최종 업데이트: 2025-07-01</p>
                 </div>
             </section>
         </div>
     </main>
-    <footer>
+    <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
                 <p>&copy; 2025 단위 변환기. 모든 권리 보유.</p>
