@@ -24,45 +24,33 @@ self.addEventListener('install', event => {
 
 // Fetch event
 self.addEventListener('fetch', event => {
+  // Skip cross-origin requests and non-GET requests
+  if (!event.request.url.startsWith(self.location.origin) || event.request.method !== 'GET') {
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request)
       .then(response => {
-        // Return cached version or fetch from network
+        // Return cached version if available
         if (response) {
           return response;
         }
         
-        // Handle .html extension redirects
-        const url = new URL(event.request.url);
-        if (url.pathname.endsWith('.html')) {
-          const pathWithoutHtml = url.pathname.replace('.html', '');
-          return caches.match(pathWithoutHtml).then(cachedResponse => {
-            if (cachedResponse) {
-              return cachedResponse;
-            }
-            // If no cached response, continue to network fetch
-            return fetch(event.request, {
-              redirect: 'follow'
-            }).catch(error => {
-              console.log('Fetch failed:', error);
-              // Return a fallback response for navigation requests
-              if (event.request.mode === 'navigate') {
-                return caches.match('/');
-              }
-              return new Response('Network error', { status: 503 });
-            });
-          });
-        }
-        
-        // For network requests, handle redirects properly
-        return fetch(event.request, {
-          redirect: 'follow'
-        }).catch(error => {
+        // Fetch from network
+        return fetch(event.request).catch(error => {
           console.log('Fetch failed:', error);
+          
           // Return a fallback response for navigation requests
           if (event.request.mode === 'navigate') {
-            return caches.match('/');
+            return caches.match('/').then(fallback => {
+              return fallback || new Response('페이지를 찾을 수 없습니다.', {
+                status: 404,
+                headers: { 'Content-Type': 'text/html; charset=utf-8' }
+              });
+            });
           }
+          
           return new Response('Network error', { status: 503 });
         });
       })
