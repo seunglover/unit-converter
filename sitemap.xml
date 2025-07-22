@@ -1,124 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- 메인 페이지 -->
     <url>
-        <loc>https://yourdomain.com/</loc>
-        <lastmod>2024-07-20</lastmod>
+        <loc>https://unit-converter-3nd.pages.dev/</loc>
+        <lastmod>2024-07-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-    
-    <!-- FAQ 페이지 -->
     <url>
-        <loc>https://yourdomain.com/faq.html</loc>
-        <lastmod>2024-07-20</lastmod>
+        <loc>https://unit-converter-3nd.pages.dev/faq.html</loc>
+        <lastmod>2024-07-22</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
-    <!-- 변환 팁 페이지 -->
     <url>
-        <loc>https://yourdomain.com/tips.html</loc>
-        <lastmod>2024-07-20</lastmod>
+        <loc>https://unit-converter-3nd.pages.dev/tips.html</loc>
+        <lastmod>2024-07-22</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
-    <!-- 단위 변환 페이지들 (향후 추가 예정) -->
-    <!-- 길이 변환 -->
     <url>
-        <loc>https://yourdomain.com/unit/cm-inch.html</loc>
-        <lastmod>2024-07-20</lastmod>
+        <loc>https://unit-converter-3nd.pages.dev/history.html</loc>
+        <lastmod>2024-07-22</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-    
     <url>
-        <loc>https://yourdomain.com/unit/m-ft.html</loc>
-        <lastmod>2024-07-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <loc>https://unit-converter-3nd.pages.dev/privacy.html</loc>
+        <lastmod>2024-07-22</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
     </url>
-    
     <url>
-        <loc>https://yourdomain.com/unit/km-mile.html</loc>
-        <lastmod>2024-07-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <loc>https://unit-converter-3nd.pages.dev/terms.html</loc>
+        <lastmod>2024-07-22</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
     </url>
-    
-    <!-- 무게 변환 -->
     <url>
-        <loc>https://yourdomain.com/unit/g-oz.html</loc>
-        <lastmod>2024-07-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <loc>https://unit-converter-3nd.pages.dev/analytics.html</loc>
+        <lastmod>2024-07-22</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
     </url>
-    
-    <url>
-        <loc>https://yourdomain.com/unit/kg-lb.html</loc>
-        <lastmod>2024-07-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- 부피 변환 -->
-    <url>
-        <loc>https://yourdomain.com/unit/ml-floz.html</loc>
-        <lastmod>2024-07-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <url>
-        <loc>https://yourdomain.com/unit/l-gal.html</loc>
-        <lastmod>2024-07-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- 온도 변환 -->
-    <url>
-        <loc>https://yourdomain.com/unit/celsius-fahrenheit.html</loc>
-        <lastmod>2024-07-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <url>
-        <loc>https://yourdomain.com/unit/celsius-kelvin.html</loc>
-        <lastmod>2024-07-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- 면적 변환 -->
-    <url>
-        <loc>https://yourdomain.com/unit/m2-pyeong.html</loc>
-        <lastmod>2024-07-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <url>
-        <loc>https://yourdomain.com/unit/m2-ft2.html</loc>
-        <lastmod>2024-07-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- 속도 변환 -->
-    <url>
-        <loc>https://yourdomain.com/unit/kmh-mph.html</loc>
-        <lastmod>2024-07-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <url>
-        <loc>https://yourdomain.com/unit/ms-kmh.html</loc>
-        <lastmod>2024-07-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-</urlset> 
+</urlset>
