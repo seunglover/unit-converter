@@ -597,3 +597,6 @@ const en = {
         locale: "en-US"
     }
 };
+
+// 전역 변수로 할당
+window.en = en;

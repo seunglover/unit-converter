@@ -613,3 +613,6 @@ const ko = {
         locale: "ko-KR"
     }
 };
+
+// 전역 변수로 할당
+window.ko = ko;

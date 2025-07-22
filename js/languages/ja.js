@@ -641,3 +641,6 @@ const ja = {
         locale: "ja-JP"
     }
 };
+
+// 전역 변수로 할당
+window.ja = ja;
