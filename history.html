@@ -364,14 +364,20 @@
     <script src="js/app.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // localStorage 로드 비활성화 - 기본값 사용
-            const savedLanguage = 'ko';
-            changeLanguage(savedLanguage);
+            // 저장된 언어 설정 복원
+            if (typeof restoreLanguageSetting === 'function') {
+                restoreLanguageSetting();
+            }
+            
+            // 현재 언어로 UI 업데이트
+            if (typeof updateHistoryContent === 'function') {
+                updateHistoryContent(currentLanguage);
+            }
             
             // 언어 선택기 이벤트 추가
             const languageSelect = document.getElementById('language-select');
             if (languageSelect) {
-                languageSelect.value = savedLanguage;
+                languageSelect.value = currentLanguage;
                 languageSelect.addEventListener('change', function() {
                     changeLanguage(this.value);
                 });

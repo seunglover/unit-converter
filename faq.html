@@ -323,38 +323,27 @@
                 });
             });
             
-            // 언어 설정 확인 및 적용
-            console.log('FAQ page loaded');
-            // localStorage 로드 비활성화 - 기본값 사용
-        const savedLanguage = 'ko';
-            if (savedLanguage) {
-                console.log('Saved language:', savedLanguage);
-                currentLanguage = savedLanguage;
-                
-                // 모든 언어 선택기 업데이트
-                const languageSelects = document.querySelectorAll('#language-select');
-                languageSelects.forEach(select => {
-                    select.value = savedLanguage;
-                    select.addEventListener('change', (e) => {
-                        changeLanguage(e.target.value);
-                    });
+            // 저장된 언어 설정 복원
+            if (typeof restoreLanguageSetting === 'function') {
+                restoreLanguageSetting();
+            }
+            
+            // 현재 언어로 UI 업데이트
+            if (typeof updateFaqContent === 'function') {
+                updateFaqContent(currentLanguage);
+            }
+            
+            // 언어 선택기 업데이트 및 이벤트 리스너 추가
+            const languageSelects = document.querySelectorAll('#language-select');
+            languageSelects.forEach(select => {
+                select.value = currentLanguage;
+                select.addEventListener('change', (e) => {
+                    changeLanguage(e.target.value);
                 });
-                
-                // UI 언어 업데이트
-                updateUILanguage();
-            } else {
-                console.log('No saved language, using default (Korean)');
-                // 기본 언어로 설정
-                currentLanguage = 'ko';
-                
-                // 언어 선택기에 이벤트 리스너 추가
-                const languageSelects = document.querySelectorAll('#language-select');
-                languageSelects.forEach(select => {
-                    select.addEventListener('change', (e) => {
-                        changeLanguage(e.target.value);
-                    });
-                });
-                
+            });
+            
+            // UI 언어 업데이트
+            if (typeof updateUILanguage === 'function') {
                 updateUILanguage();
             }
         });

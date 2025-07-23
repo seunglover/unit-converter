@@ -24,12 +24,13 @@ function initializeLanguages() {
 }
 
 // 当前语言设置 (默认值: 韩语)
-let currentLanguage = 'ko';
+let currentLanguage = localStorage.getItem('selectedLanguage') || 'ko';
 
 // 语言切换函数
 function changeLanguage(lang) {
     currentLanguage = lang;
-    // localStorage 저장 비활성화
+    // localStorage에 선택한 언어 저장
+    localStorage.setItem('selectedLanguage', lang);
     
     // 현재 페이지에 따라 적절한 업데이트 함수 호출
     if (window.location.pathname.includes('tips.html')) {
@@ -183,6 +184,25 @@ function updateTipRows(lang) {
     });
 }
 
+
+// 페이지 로드 시 저장된 언어 설정 복원
+function restoreLanguageSetting() {
+    const savedLanguage = localStorage.getItem('selectedLanguage');
+    if (savedLanguage && savedLanguage !== currentLanguage) {
+        currentLanguage = savedLanguage;
+        // 언어 선택기 UI 업데이트
+        const languageSelectors = document.querySelectorAll('.language-selector select, .language-selector button[data-lang]');
+        languageSelectors.forEach(selector => {
+            if (selector.tagName === 'SELECT') {
+                selector.value = currentLanguage;
+            } else if (selector.dataset.lang === currentLanguage) {
+                selector.classList.add('active');
+            } else {
+                selector.classList.remove('active');
+            }
+        });
+    }
+}
 
 // UI 语言更新函数
 function updateUILanguage() {

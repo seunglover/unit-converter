@@ -192,6 +192,15 @@ class UnitConverterApp {
         this.updateHistory();
         this.registerServiceWorker();
         this.initializeLanguageSelector();
+        
+        // 저장된 언어 설정 복원
+        if (typeof restoreLanguageSetting === 'function') {
+            restoreLanguageSetting();
+            // 복원된 언어로 UI 업데이트
+            if (typeof updateUILanguage === 'function') {
+                updateUILanguage();
+            }
+        }
     }
 
     // 메인 페이지 표시
