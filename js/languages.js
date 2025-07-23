@@ -55,8 +55,11 @@ function updateHistoryContent(lang) {
         return;
     }
     
-    const langData = languages[lang].history;
-    if (!langData) return;
+    const langData = languages[lang];
+    if (!langData || !langData.history) {
+        console.log('history 데이터를 찾을 수 없습니다:', lang);
+        return;
+    }
 
     document.querySelector('[data-translate="history.title"]').textContent = langData.title;
     document.querySelector('[data-translate="history.description"]').textContent = langData.description;
