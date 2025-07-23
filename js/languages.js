@@ -28,7 +28,8 @@ let currentLanguage = 'ko';
 // 语言切换函数
 function changeLanguage(lang) {
     currentLanguage = lang;
-    localStorage.setItem('preferredLanguage', lang);
+    // localStorage 저장 비활성화
+    console.log('언어 설정 저장 비활성화됨:', lang);
     
     // 현재 페이지에 따라 적절한 업데이트 함수 호출
     if (window.location.pathname.includes('tips.html')) {

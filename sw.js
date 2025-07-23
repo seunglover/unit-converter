@@ -1,28 +1,13 @@
-const CACHE_NAME = 'unit-converter-v3';
-const urlsToCache = [
-  '/',
-  '/faq',
-  '/tips',
-  '/css/style.css',
-  '/css/responsive.css',
-  '/js/data.js',
-  '/js/converter.js',
-  '/js/app.js',
-  'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap'
-];
+// Service Worker - 캐시 기능 비활성화
+// 모든 요청을 네트워크에서 직접 가져옴
 
-// Install event
+// Install event - 캐시 설치 안함
 self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
-      })
-  );
+  console.log('Service Worker 설치됨 - 캐시 없음');
+  self.skipWaiting();
 });
 
-// Fetch event
+// Fetch event - 네트워크에서 직접 가져오기
 self.addEventListener('fetch', event => {
   // Skip cross-origin requests and non-GET requests
   if (!event.request.url.startsWith(self.location.origin) || event.request.method !== 'GET') {
@@ -30,45 +15,27 @@ self.addEventListener('fetch', event => {
   }
 
   event.respondWith(
-    caches.match(event.request)
-      .then(response => {
-        // Return cached version if available
-        if (response) {
-          return response;
-        }
-        
-        // Fetch from network
-        return fetch(event.request).catch(error => {
-          console.log('Fetch failed:', error);
-          
-          // Return a fallback response for navigation requests
-          if (event.request.mode === 'navigate') {
-            return caches.match('/').then(fallback => {
-              return fallback || new Response('페이지를 찾을 수 없습니다.', {
-                status: 404,
-                headers: { 'Content-Type': 'text/html; charset=utf-8' }
-              });
-            });
-          }
-          
-          return new Response('Network error', { status: 503 });
-        });
+    fetch(event.request)
+      .catch(error => {
+        console.log('Fetch failed:', error);
+        return new Response('Network error', { status: 503 });
       })
   );
 });
 
-// Activate event
+// Activate event - 기존 캐시 모두 삭제
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(cacheNames => {
       return Promise.all(
         cacheNames.map(cacheName => {
-          if (cacheName !== CACHE_NAME) {
-            console.log('Deleting old cache:', cacheName);
-            return caches.delete(cacheName);
-          }
+          console.log('Deleting cache:', cacheName);
+          return caches.delete(cacheName);
         })
       );
+    }).then(() => {
+      console.log('All caches deleted');
+      return self.clients.claim();
     })
   );
 }); 

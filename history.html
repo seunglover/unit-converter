@@ -355,7 +355,8 @@
     <script src="js/app.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const savedLanguage = localStorage.getItem('preferredLanguage') || 'ko';
+            // localStorage 로드 비활성화 - 기본값 사용
+        const savedLanguage = 'ko';
             changeLanguage(savedLanguage);
         });
     </script>

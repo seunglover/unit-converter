@@ -360,30 +360,17 @@ class UnitConverter {
         this.saveHistoryToStorage();
     }
 
-    // 로컬 스토리지에 기록 저장
+    // 로컬 스토리지에 기록 저장 - 캐시 비활성화
     saveHistoryToStorage() {
-        try {
-            localStorage.setItem('conversionHistory', JSON.stringify(this.conversionHistory));
-        } catch (error) {
-            console.warn('변환 기록을 저장할 수 없습니다:', error);
-        }
+        // 캐시 저장 비활성화
+        console.log('변환 기록 저장 비활성화됨');
     }
 
-    // 로컬 스토리지에서 기록 불러오기
+    // 로컬 스토리지에서 기록 불러오기 - 캐시 비활성화
     loadHistoryFromStorage() {
-        try {
-            const stored = localStorage.getItem('conversionHistory');
-            if (stored) {
-                this.conversionHistory = JSON.parse(stored);
-                // 날짜 객체로 변환
-                this.conversionHistory.forEach(item => {
-                    item.timestamp = new Date(item.timestamp);
-                });
-            }
-        } catch (error) {
-            console.warn('변환 기록을 불러올 수 없습니다:', error);
-            this.conversionHistory = [];
-        }
+        // 캐시 로드 비활성화
+        console.log('변환 기록 로드 비활성화됨');
+        this.conversionHistory = [];
     }
 
     // 변환 기록 가져오기

@@ -262,7 +262,8 @@
             console.log('Tips page loaded');
             
             // 현재 언어 확인 및 설정
-            const savedLanguage = localStorage.getItem('preferredLanguage') || 'ko';
+            // localStorage 로드 비활성화 - 기본값 사용
+        const savedLanguage = 'ko';
             currentLanguage = savedLanguage;
             
             // 언어 선택기 업데이트 및 이벤트 리스너 추가

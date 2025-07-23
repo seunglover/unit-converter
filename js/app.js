@@ -774,7 +774,8 @@ class UnitConverterApp {
     initializeLanguageSelector() {
         const languageSelect = document.getElementById('language-select');
         const headerLanguageSelect = document.getElementById('header-language-select');
-        const savedLanguage = localStorage.getItem('preferredLanguage') || 'ko';
+        // localStorage 로드 비활성화 - 기본값 사용
+        const savedLanguage = 'ko';
         
         if (languageSelect) {
             languageSelect.value = savedLanguage;
