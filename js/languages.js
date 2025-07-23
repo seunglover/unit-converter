@@ -49,80 +49,29 @@ function changeLanguage(lang) {
 }
 
 function updateHistoryContent(lang) {
-    // 언어 파일들이 로드되었는지 확인
-    if (typeof window[lang] === 'undefined') {
-        console.log('언어 파일이 아직 로드되지 않았습니다:', lang);
+    // window[lang]에서 직접 history 데이터 사용
+    if (typeof window[lang] === 'undefined' || !window[lang].history) {
+        console.log('해당 언어의 history 데이터가 없습니다:', lang);
         return;
     }
-    
-    const langData = window[lang];
-    
-    if (!langData || !langData.history) {
-        console.log('history 데이터를 찾을 수 없습니다:', lang);
-        return;
-    }
+    const historyData = window[lang].history;
 
-    const historyData = langData.history;
+    // 타이틀/설명
+    const titleEl = document.querySelector('[data-translate="history.title"]');
+    const descEl = document.querySelector('[data-translate="history.description"]');
+    if (titleEl && historyData.title) titleEl.textContent = historyData.title;
+    if (descEl && historyData.description) descEl.textContent = historyData.description;
 
-    document.querySelector('[data-translate="history.title"]').textContent = historyData.title;
-    document.querySelector('[data-translate="history.description"]').textContent = historyData.description;
-
+    // 각 섹션별 텍스트
     const historySections = document.querySelectorAll('.history-section');
     historySections.forEach(section => {
         const sectionKey = section.dataset.historySection;
         const sectionData = historyData[sectionKey];
-        if (!sectionData) {
-            return;
-        }
-
-        section.querySelector('h2').textContent = sectionData.title;
-
-        if (sectionKey === 'funFacts') {
-            const funFactItems = section.querySelectorAll('.fun-fact-item');
-            funFactItems.forEach(item => {
-                const funFactKey = item.dataset.funFact;
-                const funFactData = sectionData[funFactKey];
-                if(funFactData) {
-                    item.querySelector('h3').innerHTML = funFactData.title;
-                    item.querySelector('p').textContent = funFactData.description;
-                }
-            });
-        } else {
-            const timelineItems = section.querySelectorAll('.timeline-item');
-            let i = 0;
-            for (const key in sectionData) {
-                if (key !== 'title') {
-                    const itemData = sectionData[key];
-                    const timelineItem = timelineItems[i];
-                    if(timelineItem) {
-                        timelineItem.querySelector('.timeline-date').textContent = langData.dates[key];
-                        timelineItem.querySelector('h3').textContent = itemData.title;
-                        timelineItem.querySelector('p').textContent = itemData.description;
-
-                        if(itemData.fact) {
-                            timelineItem.querySelector('.history-fact').innerHTML = `<strong>${langData.labels.fact}</strong> ${itemData.fact}`;
-                        }
-
-                        if(itemData.formula) {
-                            timelineItem.querySelector('.history-formula').innerHTML = `<strong>${langData.labels.formula}</strong> ${itemData.formula}`;
-                        }
-
-                        const ul = timelineItem.querySelector('ul');
-                        if (ul) {
-                            ul.innerHTML = '';
-                            for (const liKey in itemData) {
-                                if (liKey !== 'title' && liKey !== 'description' && liKey !== 'fact' && liKey !== 'formula') {
-                                    const li = document.createElement('li');
-                                    li.innerHTML = `<strong>${liKey.charAt(0).toUpperCase() + liKey.slice(1)}:</strong> ${itemData[liKey]}`;
-                                    ul.appendChild(li);
-                                }
-                            }
-                        }
-                    }
-                    i++;
-                }
-            }
-        }
+        if (!sectionData) return;
+        const h2 = section.querySelector('h2');
+        const desc = section.querySelector('.section-desc');
+        if (h2 && sectionData.title) h2.textContent = sectionData.title;
+        if (desc && sectionData.description) desc.textContent = sectionData.description;
     });
 }
 
