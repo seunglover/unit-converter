@@ -69,9 +69,63 @@ function updateHistoryContent(lang) {
         const sectionData = historyData[sectionKey];
         if (!sectionData) return;
         const h2 = section.querySelector('h2');
-        const desc = section.querySelector('.section-desc');
         if (h2 && sectionData.title) h2.textContent = sectionData.title;
-        if (desc && sectionData.description) desc.textContent = sectionData.description;
+
+        // funFacts 섹션 처리
+        if (sectionKey === 'funFacts') {
+            const funFactItems = section.querySelectorAll('.fun-fact-item');
+            funFactItems.forEach(item => {
+                const funFactKey = item.dataset.funFact;
+                const funFactData = sectionData[funFactKey];
+                if (!funFactData) return;
+                const h3 = item.querySelector('h3');
+                const p = item.querySelector('p');
+                if (h3 && funFactData.title) h3.textContent = funFactData.title;
+                if (p && funFactData.description) p.textContent = funFactData.description;
+            });
+            return;
+        }
+
+        // 타임라인 아이템 갱신
+        const timelineItems = section.querySelectorAll('.timeline-item');
+        let i = 0;
+        for (const key in sectionData) {
+            if (key === 'title') continue;
+            const itemData = sectionData[key];
+            const timelineItem = timelineItems[i];
+            if (!timelineItem || !itemData) continue;
+            // 날짜
+            const dateEl = timelineItem.querySelector('.timeline-date');
+            if (dateEl && historyData.dates && historyData.dates[key]) dateEl.textContent = historyData.dates[key];
+            // 제목
+            const h3 = timelineItem.querySelector('h3');
+            if (h3 && itemData.title) h3.textContent = itemData.title;
+            // 본문
+            const p = timelineItem.querySelector('p');
+            if (p && itemData.description) p.textContent = itemData.description;
+            // fact
+            const factEl = timelineItem.querySelector('.history-fact');
+            if (factEl && itemData.fact && historyData.labels && historyData.labels.fact) {
+                factEl.innerHTML = `<strong>${historyData.labels.fact}</strong> ${itemData.fact}`;
+            }
+            // formula
+            const formulaEl = timelineItem.querySelector('.history-formula');
+            if (formulaEl && itemData.formula && historyData.labels && historyData.labels.formula) {
+                formulaEl.innerHTML = `<strong>${historyData.labels.formula}</strong> ${itemData.formula}`;
+            }
+            // ul (세부 항목)
+            const ul = timelineItem.querySelector('ul');
+            if (ul) {
+                ul.innerHTML = '';
+                for (const liKey in itemData) {
+                    if (['title','description','fact','formula'].includes(liKey)) continue;
+                    const li = document.createElement('li');
+                    li.innerHTML = `<strong>${liKey.charAt(0).toUpperCase() + liKey.slice(1)}</strong>: ${itemData[liKey]}`;
+                    ul.appendChild(li);
+                }
+            }
+            i++;
+        }
     });
 }
 
