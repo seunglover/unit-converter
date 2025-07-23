@@ -27,6 +27,7 @@ let currentLanguage = 'ko';
 
 // 语言切换函数
 function changeLanguage(lang) {
+    console.log('changeLanguage 호출됨:', lang);
     currentLanguage = lang;
     // localStorage 저장 비활성화
     console.log('언어 설정 저장 비활성화됨:', lang);
@@ -49,6 +50,8 @@ function changeLanguage(lang) {
 }
 
 function updateHistoryContent(lang) {
+    console.log('updateHistoryContent 호출됨:', lang);
+    
     // languages 객체 초기화
     if (!initializeLanguages()) {
         console.log('언어 파일들이 아직 로드되지 않았습니다.');
@@ -56,19 +59,30 @@ function updateHistoryContent(lang) {
     }
     
     const langData = languages[lang];
+    console.log('langData:', langData);
+    
     if (!langData || !langData.history) {
         console.log('history 데이터를 찾을 수 없습니다:', lang);
         return;
     }
 
-    document.querySelector('[data-translate="history.title"]').textContent = langData.title;
-    document.querySelector('[data-translate="history.description"]').textContent = langData.description;
+    const historyData = langData.history;
+    if (!historyData) {
+        console.log('history 데이터가 없습니다:', lang);
+        return;
+    }
+
+    document.querySelector('[data-translate="history.title"]').textContent = historyData.title;
+    document.querySelector('[data-translate="history.description"]').textContent = historyData.description;
 
     const historySections = document.querySelectorAll('.history-section');
     historySections.forEach(section => {
         const sectionKey = section.dataset.historySection;
-        const sectionData = langData[sectionKey];
-        if (!sectionData) return;
+        const sectionData = historyData[sectionKey];
+        if (!sectionData) {
+            console.log('section 데이터가 없습니다:', sectionKey);
+            return;
+        }
 
         section.querySelector('h2').textContent = sectionData.title;
 
