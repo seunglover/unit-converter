@@ -5,12 +5,6 @@ function getLanguages() {
         return null;
     }
     
-    // 언어 파일들이 완전히 로드되었는지 확인
-    if (!window.ko.history || !window.en.history || !window.ja.history) {
-        console.log('언어 파일들의 history 데이터가 아직 로드되지 않았습니다. 잠시 후 다시 시도합니다.');
-        return null;
-    }
-    
     return {
         ko: window.ko,
         en: window.en,
@@ -55,13 +49,13 @@ function changeLanguage(lang) {
 }
 
 function updateHistoryContent(lang) {
-    // languages 객체 초기화
-    if (!initializeLanguages()) {
-        console.log('언어 파일들이 아직 로드되지 않았습니다.');
+    // 언어 파일들이 로드되었는지 확인
+    if (typeof window[lang] === 'undefined') {
+        console.log('언어 파일이 아직 로드되지 않았습니다:', lang);
         return;
     }
     
-    const langData = languages[lang];
+    const langData = window[lang];
     
     if (!langData || !langData.history) {
         console.log('history 데이터를 찾을 수 없습니다:', lang);
