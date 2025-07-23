@@ -4,6 +4,13 @@ function getLanguages() {
         console.log('언어 파일들이 아직 로드되지 않았습니다. 잠시 후 다시 시도합니다.');
         return null;
     }
+    
+    // 언어 파일들이 완전히 로드되었는지 확인
+    if (!window.ko.history || !window.en.history || !window.ja.history) {
+        console.log('언어 파일들의 history 데이터가 아직 로드되지 않았습니다. 잠시 후 다시 시도합니다.');
+        return null;
+    }
+    
     return {
         ko: window.ko,
         en: window.en,
@@ -29,7 +36,6 @@ let currentLanguage = 'ko';
 function changeLanguage(lang) {
     currentLanguage = lang;
     // localStorage 저장 비활성화
-    console.log('언어 설정 저장 비활성화됨:', lang);
     
     // 현재 페이지에 따라 적절한 업데이트 함수 호출
     if (window.location.pathname.includes('tips.html')) {
@@ -63,10 +69,6 @@ function updateHistoryContent(lang) {
     }
 
     const historyData = langData.history;
-    if (!historyData) {
-        console.log('history 데이터가 없습니다:', lang);
-        return;
-    }
 
     document.querySelector('[data-translate="history.title"]').textContent = historyData.title;
     document.querySelector('[data-translate="history.description"]').textContent = historyData.description;
