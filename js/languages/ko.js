@@ -352,6 +352,90 @@ const ko = {
     faqTechnical: "🔧 기술적 질문",
     faqTroubleshooting: "⚠️ 문제 해결",
     
+    // FAQ 내용
+    faqHowToUse: "단위 변환기는 어떻게 사용하나요?",
+    faqHowToUseAnswer1: "1. 원하는 카테고리(길이, 무게, 부피 등)를 선택합니다.",
+    faqHowToUseAnswer2: "2. 변환하고 싶은 값을 입력합니다.",
+    faqHowToUseAnswer3: "3. 변환할 단위를 선택합니다.",
+    faqHowToUseAnswer4: "4. 실시간으로 변환 결과가 표시됩니다.",
+    
+    faqSearch: "검색 기능은 어떻게 사용하나요?",
+    faqSearchAnswer1: "• 상단 검색창에 단위명(예: \"그램\", \"온스\") 또는 카테고리명(예: \"길이\", \"무게\")을 입력하세요.",
+    faqSearchAnswer2: "• 방향키(↑↓)로 검색 결과를 선택할 수 있습니다.",
+    faqSearchAnswer3: "• Enter 키로 선택한 항목으로 이동합니다.",
+    
+    faqShortcuts: "키보드 단축키는 무엇이 있나요?",
+    faqShortcutsAnswer1: "Ctrl + K: 검색창 포커스",
+    faqShortcutsAnswer2: "Ctrl + Enter: 변환 실행",
+    faqShortcutsAnswer3: "Ctrl + S: 단위 교체",
+    faqShortcutsAnswer4: "Escape: 검색 결과 숨기기",
+    
+    faqAccuracy: "변환 결과의 정확도는 어느 정도인가요?",
+    faqAccuracyAnswer1: "• 모든 변환 계수는 국제 표준에 기반합니다.",
+    faqAccuracyAnswer2: "• 소수점 6자리까지 정확한 계산을 제공합니다.",
+    faqAccuracyAnswer3: "• 온도 변환은 물리적 한계(절대 영도)를 고려합니다.",
+    faqAccuracyAnswer4: "• 큰 숫자는 천 단위 구분자와 과학적 표기법을 사용합니다.",
+    
+    faqTemperature: "온도 변환 시 주의사항은 무엇인가요?",
+    faqTemperatureAnswer1: "• 절대 영도(-273.15°C, -459.67°F, 0K) 이하의 온도는 입력할 수 없습니다.",
+    faqTemperatureAnswer2: "• 온도는 음수 값도 허용됩니다.",
+    faqTemperatureAnswer3: "• 켈빈(K)은 항상 양수 값만 가능합니다.",
+    
+    faqLargeNumbers: "큰 숫자가 \"1.057856e+8\"로 표시되는 이유는?",
+    faqLargeNumbersAnswer1: "• 10억(1,000,000,000) 이상의 숫자는 가독성을 위해 과학적 표기법을 사용합니다.",
+    faqLargeNumbersAnswer2: "• 10만 이상의 숫자는 천 단위 구분자(,)를 추가합니다.",
+    faqLargeNumbersAnswer3: "• 이는 숫자의 크기에 따라 자동으로 적용됩니다.",
+    
+    faqCooking: "요리할 때 어떤 단위를 사용하나요?",
+    faqCookingAnswer1: "무게: 그램(g) ↔ 온스(oz), 킬로그램(kg) ↔ 파운드(lb)",
+    faqCookingAnswer2: "부피: 밀리리터(ml) ↔ 플루이드 온스(fl oz), 리터(L) ↔ 갤런(gal)",
+    faqCookingAnswer3: "용량: 컵(cup) ↔ 밀리리터(ml), 테이블스푼(tbsp) ↔ 밀리리터(ml)",
+    
+    faqShopping: "해외 직구할 때 유용한 단위는?",
+    faqShoppingAnswer1: "길이: 센티미터(cm) ↔ 인치(inch), 미터(m) ↔ 피트(ft)",
+    faqShoppingAnswer2: "무게: 그램(g) ↔ 온스(oz), 킬로그램(kg) ↔ 파운드(lb)",
+    faqShoppingAnswer3: "면적: 제곱미터(m²) ↔ 평, 제곱피트(ft²)",
+    
+    faqExercise: "운동할 때 사용하는 단위는?",
+    faqExerciseAnswer1: "무게: 킬로그램(kg) ↔ 파운드(lb) - 운동 기구 무게",
+    faqExerciseAnswer2: "거리: 킬로미터(km) ↔ 마일(mile) - 러닝 거리",
+    faqExerciseAnswer3: "속도: 킬로미터/시간(km/h) ↔ 마일/시간(mph) - 운동 속도",
+    
+    faqOffline: "오프라인에서도 사용할 수 있나요?",
+    faqOfflineAnswer1: "• 네, PWA(Progressive Web App) 기능을 지원합니다.",
+    faqOfflineAnswer2: "• 브라우저에서 \"홈 화면에 추가\"를 통해 앱처럼 설치할 수 있습니다.",
+    faqOfflineAnswer3: "• 한 번 방문한 후에는 오프라인에서도 기본 기능을 사용할 수 있습니다.",
+    
+    faqPrivacy: "개인정보는 어떻게 보호되나요?",
+    faqPrivacyAnswer1: "• 모든 계산은 브라우저에서만 처리됩니다.",
+    faqPrivacyAnswer2: "• 서버에 개인정보를 전송하지 않습니다.",
+    faqPrivacyAnswer3: "• 변환 기록은 로컬 스토리지에만 저장됩니다.",
+    faqPrivacyAnswer4: "• 외부 서비스와의 연동 없이 독립적으로 작동합니다.",
+    
+    faqMobile: "모바일에서도 잘 작동하나요?",
+    faqMobileAnswer1: "• 네, 모든 모바일 기기에서 최적화되어 있습니다.",
+    faqMobileAnswer2: "• 터치 인터페이스에 최적화된 UI를 제공합니다.",
+    faqMobileAnswer3: "• 반응형 디자인으로 화면 크기에 자동으로 조정됩니다.",
+    faqMobileAnswer4: "• 모바일 브라우저에서도 모든 기능을 사용할 수 있습니다.",
+    
+    faqNotWorking: "변환이 되지 않을 때는 어떻게 하나요?",
+    faqNotWorkingAnswer1: "• 올바른 숫자를 입력했는지 확인하세요.",
+    faqNotWorkingAnswer2: "• 음수 입력이 허용되지 않는 단위인지 확인하세요.",
+    faqNotWorkingAnswer3: "• 온도 변환 시 절대 영도 이하 값은 입력할 수 없습니다.",
+    faqNotWorkingAnswer4: "• 브라우저를 새로고침해보세요.",
+    
+    faqNoSearch: "검색 결과가 나타나지 않을 때는?",
+    faqNoSearchAnswer1: "• 검색어를 2글자 이상 입력하세요.",
+    faqNoSearchAnswer2: "• 단위명이나 카테고리명을 정확히 입력하세요.",
+    faqNoSearchAnswer3: "• 예: \"그램\", \"온스\", \"길이\", \"무게\" 등",
+    faqNoSearchAnswer4: "• 브라우저 캐시를 지워보세요.",
+    
+    faqSlowLoading: "페이지가 느리게 로딩될 때는?",
+    faqSlowLoadingAnswer1: "• 인터넷 연결 상태를 확인하세요.",
+    faqSlowLoadingAnswer2: "• 브라우저 캐시를 지워보세요.",
+    faqSlowLoadingAnswer3: "• 다른 브라우저로 시도해보세요.",
+    faqSlowLoadingAnswer4: "• 모바일에서는 Wi-Fi 연결을 권장합니다.",
+    
     // Tips 페이지
     tipsTitle: "실용적인 변환 팁",
     tipsDescription: "일상생활에서 바로 활용할 수 있는 단위 변환 팁들을 모았습니다",

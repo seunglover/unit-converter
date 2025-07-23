@@ -351,6 +351,90 @@ const ja = {
     faqTechnical: "🔧 技術的な質問",
     faqTroubleshooting: "⚠️ トラブルシューティング",
     
+    // FAQ内容
+    faqHowToUse: "単位変換機はどのように使用しますか？",
+    faqHowToUseAnswer1: "1. 希望するカテゴリ（長さ、重さ、体積など）を選択します。",
+    faqHowToUseAnswer2: "2. 変換したい値を入力します。",
+    faqHowToUseAnswer3: "3. 変換する単位を選択します。",
+    faqHowToUseAnswer4: "4. リアルタイムで変換結果が表示されます。",
+    
+    faqSearch: "検索機能はどのように使用しますか？",
+    faqSearchAnswer1: "• 上部の検索ボックスに単位名（例：「グラム」、「オンス」）またはカテゴリ名（例：「長さ」、「重さ」）を入力してください。",
+    faqSearchAnswer2: "• 矢印キー（↑↓）で検索結果を選択できます。",
+    faqSearchAnswer3: "• Enterキーで選択した項目に移動します。",
+    
+    faqShortcuts: "キーボードショートカットは何がありますか？",
+    faqShortcutsAnswer1: "Ctrl + K: 検索ボックスにフォーカス",
+    faqShortcutsAnswer2: "Ctrl + Enter: 変換実行",
+    faqShortcutsAnswer3: "Ctrl + S: 単位交換",
+    faqShortcutsAnswer4: "Escape: 検索結果を隠す",
+    
+    faqAccuracy: "変換結果の精度はどの程度ですか？",
+    faqAccuracyAnswer1: "• すべての変換係数は国際標準に基づいています。",
+    faqAccuracyAnswer2: "• 小数点6桁まで正確な計算を提供します。",
+    faqAccuracyAnswer3: "• 温度変換は物理的限界（絶対零度）を考慮します。",
+    faqAccuracyAnswer4: "• 大きな数字は千単位区切りと科学的表記を使用します。",
+    
+    faqTemperature: "温度変換時の注意事項は何ですか？",
+    faqTemperatureAnswer1: "• 絶対零度（-273.15°C、-459.67°F、0K）以下の温度は入力できません。",
+    faqTemperatureAnswer2: "• 温度は負の値も許可されます。",
+    faqTemperatureAnswer3: "• ケルビン（K）は常に正の値のみ可能です。",
+    
+    faqLargeNumbers: "大きな数字が「1.057856e+8」と表示される理由は？",
+    faqLargeNumbersAnswer1: "• 10億（1,000,000,000）以上の数字は可読性のために科学的表記を使用します。",
+    faqLargeNumbersAnswer2: "• 10万以上の数字は千単位区切り（,）を追加します。",
+    faqLargeNumbersAnswer3: "• これは数字の大きさに応じて自動的に適用されます。",
+    
+    faqCooking: "料理時に使用する単位は？",
+    faqCookingAnswer1: "重さ: グラム（g）↔ オンス（oz）、キログラム（kg）↔ ポンド（lb）",
+    faqCookingAnswer2: "体積: ミリリットル（ml）↔ 液量オンス（fl oz）、リットル（L）↔ ガロン（gal）",
+    faqCookingAnswer3: "容量: カップ ↔ ミリリットル（ml）、大さじ（tbsp）↔ ミリリットル（ml）",
+    
+    faqShopping: "海外通販に役立つ単位は？",
+    faqShoppingAnswer1: "長さ: センチメートル（cm）↔ インチ、メートル（m）↔ フィート（ft）",
+    faqShoppingAnswer2: "重さ: グラム（g）↔ オンス（oz）、キログラム（kg）↔ ポンド（lb）",
+    faqShoppingAnswer3: "面積: 平方メートル（m²）↔ 坪、平方フィート（ft²）",
+    
+    faqExercise: "運動時に使用する単位は？",
+    faqExerciseAnswer1: "重さ: キログラム（kg）↔ ポンド（lb）- 運動器具の重さ",
+    faqExerciseAnswer2: "距離: キロメートル（km）↔ マイル - ランニング距離",
+    faqExerciseAnswer3: "速度: キロメートル/時（km/h）↔ マイル/時（mph）- 運動速度",
+    
+    faqOffline: "オフラインでも使用できますか？",
+    faqOfflineAnswer1: "• はい、PWA（Progressive Web App）機能をサポートしています。",
+    faqOfflineAnswer2: "• ブラウザで「ホーム画面に追加」を通じてアプリのようにインストールできます。",
+    faqOfflineAnswer3: "• 一度訪問した後はオフラインでも基本機能を使用できます。",
+    
+    faqPrivacy: "個人情報はどのように保護されますか？",
+    faqPrivacyAnswer1: "• すべての計算はブラウザでのみ処理されます。",
+    faqPrivacyAnswer2: "• サーバーに個人情報を送信しません。",
+    faqPrivacyAnswer3: "• 変換履歴はローカルストレージにのみ保存されます。",
+    faqPrivacyAnswer4: "• 外部サービスとの連携なしに独立して動作します。",
+    
+    faqMobile: "モバイルでもよく動作しますか？",
+    faqMobileAnswer1: "• はい、すべてのモバイルデバイスで最適化されています。",
+    faqMobileAnswer2: "• タッチインターフェースに最適化されたUIを提供します。",
+    faqMobileAnswer3: "• レスポンシブデザインで画面サイズに自動調整されます。",
+    faqMobileAnswer4: "• モバイルブラウザでもすべての機能を使用できます。",
+    
+    faqNotWorking: "変換が動作しない時はどうすればよいですか？",
+    faqNotWorkingAnswer1: "• 正しい数字を入力したか確認してください。",
+    faqNotWorkingAnswer2: "• 負の入力が許可されていない単位かどうか確認してください。",
+    faqNotWorkingAnswer3: "• 温度変換時は絶対零度以下の値は入力できません。",
+    faqNotWorkingAnswer4: "• ブラウザをリフレッシュしてみてください。",
+    
+    faqNoSearch: "検索結果が表示されない時は？",
+    faqNoSearchAnswer1: "• 検索語を2文字以上入力してください。",
+    faqNoSearchAnswer2: "• 単位名やカテゴリ名を正確に入力してください。",
+    faqNoSearchAnswer3: "• 例：「グラム」、「オンス」、「長さ」、「重さ」など",
+    faqNoSearchAnswer4: "• ブラウザキャッシュをクリアしてみてください。",
+    
+    faqSlowLoading: "ページが遅く読み込まれる時は？",
+    faqSlowLoadingAnswer1: "• インターネット接続状態を確認してください。",
+    faqSlowLoadingAnswer2: "• ブラウザキャッシュをクリアしてみてください。",
+    faqSlowLoadingAnswer3: "• 別のブラウザで試してみてください。",
+    faqSlowLoadingAnswer4: "• モバイルではWi-Fi接続を推奨します。",
+    
     // Tipsページ
     tipsTitle: "実用的な変換コツ",
     tipsDescription: "日常生活ですぐに活用できる単位変換のコツを集めました",

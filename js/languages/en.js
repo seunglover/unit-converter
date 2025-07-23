@@ -308,6 +308,90 @@ const en = {
     faqTechnical: "🔧 Technical Questions",
     faqTroubleshooting: "⚠️ Troubleshooting",
     
+    // FAQ content
+    faqHowToUse: "How do I use the unit converter?",
+    faqHowToUseAnswer1: "1. Select the desired category (length, weight, volume, etc.).",
+    faqHowToUseAnswer2: "2. Enter the value you want to convert.",
+    faqHowToUseAnswer3: "3. Select the unit to convert to.",
+    faqHowToUseAnswer4: "4. The conversion result is displayed in real-time.",
+    
+    faqSearch: "How do I use the search function?",
+    faqSearchAnswer1: "• Enter unit names (e.g., \"gram\", \"ounce\") or category names (e.g., \"length\", \"weight\") in the search box at the top.",
+    faqSearchAnswer2: "• Use arrow keys (↑↓) to select search results.",
+    faqSearchAnswer3: "• Press Enter to navigate to the selected item.",
+    
+    faqShortcuts: "What keyboard shortcuts are available?",
+    faqShortcutsAnswer1: "Ctrl + K: Focus on search box",
+    faqShortcutsAnswer2: "Ctrl + Enter: Execute conversion",
+    faqShortcutsAnswer3: "Ctrl + S: Swap units",
+    faqShortcutsAnswer4: "Escape: Hide search results",
+    
+    faqAccuracy: "How accurate are the conversion results?",
+    faqAccuracyAnswer1: "• All conversion factors are based on international standards.",
+    faqAccuracyAnswer2: "• Provides accurate calculations up to 6 decimal places.",
+    faqAccuracyAnswer3: "• Temperature conversion considers physical limits (absolute zero).",
+    faqAccuracyAnswer4: "• Large numbers use thousand separators and scientific notation.",
+    
+    faqTemperature: "What should I be careful about when converting temperature?",
+    faqTemperatureAnswer1: "• Temperatures below absolute zero (-273.15°C, -459.67°F, 0K) cannot be entered.",
+    faqTemperatureAnswer2: "• Temperature allows negative values.",
+    faqTemperatureAnswer3: "• Kelvin (K) can only have positive values.",
+    
+    faqLargeNumbers: "Why are large numbers displayed as \"1.057856e+8\"?",
+    faqLargeNumbersAnswer1: "• Numbers above 1 billion (1,000,000,000) use scientific notation for readability.",
+    faqLargeNumbersAnswer2: "• Numbers above 100,000 add thousand separators (,).",
+    faqLargeNumbersAnswer3: "• This is automatically applied based on the size of the number.",
+    
+    faqCooking: "What units do I use when cooking?",
+    faqCookingAnswer1: "Weight: gram (g) ↔ ounce (oz), kilogram (kg) ↔ pound (lb)",
+    faqCookingAnswer2: "Volume: milliliter (ml) ↔ fluid ounce (fl oz), liter (L) ↔ gallon (gal)",
+    faqCookingAnswer3: "Capacity: cup ↔ milliliter (ml), tablespoon (tbsp) ↔ milliliter (ml)",
+    
+    faqShopping: "What units are useful for overseas shopping?",
+    faqShoppingAnswer1: "Length: centimeter (cm) ↔ inch, meter (m) ↔ foot (ft)",
+    faqShoppingAnswer2: "Weight: gram (g) ↔ ounce (oz), kilogram (kg) ↔ pound (lb)",
+    faqShoppingAnswer3: "Area: square meter (m²) ↔ pyeong, square foot (ft²)",
+    
+    faqExercise: "What units do I use when exercising?",
+    faqExerciseAnswer1: "Weight: kilogram (kg) ↔ pound (lb) - exercise equipment weight",
+    faqExerciseAnswer2: "Distance: kilometer (km) ↔ mile - running distance",
+    faqExerciseAnswer3: "Speed: kilometer/hour (km/h) ↔ mile/hour (mph) - exercise speed",
+    
+    faqOffline: "Can I use it offline?",
+    faqOfflineAnswer1: "• Yes, it supports PWA (Progressive Web App) functionality.",
+    faqOfflineAnswer2: "• You can install it like an app through \"Add to Home Screen\" in your browser.",
+    faqOfflineAnswer3: "• After visiting once, you can use basic functions offline.",
+    
+    faqPrivacy: "How is personal information protected?",
+    faqPrivacyAnswer1: "• All calculations are processed only in the browser.",
+    faqPrivacyAnswer2: "• No personal information is sent to the server.",
+    faqPrivacyAnswer3: "• Conversion history is stored only in local storage.",
+    faqPrivacyAnswer4: "• It operates independently without integration with external services.",
+    
+    faqMobile: "Does it work well on mobile?",
+    faqMobileAnswer1: "• Yes, it is optimized for all mobile devices.",
+    faqMobileAnswer2: "• Provides UI optimized for touch interface.",
+    faqMobileAnswer3: "• Responsive design automatically adjusts to screen size.",
+    faqMobileAnswer4: "• All features can be used in mobile browsers.",
+    
+    faqNotWorking: "What should I do when conversion doesn't work?",
+    faqNotWorkingAnswer1: "• Check if you entered the correct number.",
+    faqNotWorkingAnswer2: "• Check if negative input is not allowed for the unit.",
+    faqNotWorkingAnswer3: "• Values below absolute zero cannot be entered for temperature conversion.",
+    faqNotWorkingAnswer4: "• Try refreshing the browser.",
+    
+    faqNoSearch: "What should I do when search results don't appear?",
+    faqNoSearchAnswer1: "• Enter at least 2 characters in the search term.",
+    faqNoSearchAnswer2: "• Enter unit names or category names accurately.",
+    faqNoSearchAnswer3: "• Examples: \"gram\", \"ounce\", \"length\", \"weight\", etc.",
+    faqNoSearchAnswer4: "• Try clearing browser cache.",
+    
+    faqSlowLoading: "What should I do when the page loads slowly?",
+    faqSlowLoadingAnswer1: "• Check your internet connection status.",
+    faqSlowLoadingAnswer2: "• Try clearing browser cache.",
+    faqSlowLoadingAnswer3: "• Try a different browser.",
+    faqSlowLoadingAnswer4: "• Wi-Fi connection is recommended on mobile.",
+    
     // Tips page
     tipsTitle: "Practical Conversion Tips",
     tipsDescription: "Unit conversion tips you can use right away in daily life",
