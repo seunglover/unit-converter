@@ -59,6 +59,12 @@ function updateHistoryContent(lang) {
     }
     const historyData = window[lang].history;
 
+    // 로고 텍스트 업데이트
+    const logoText = document.querySelector('.logo-text');
+    if (logoText && window[lang].logoText) {
+        logoText.textContent = window[lang].logoText;
+    }
+
     // 타이틀/설명
     const titleEl = document.querySelector('[data-translate="history.title"]');
     const descEl = document.querySelector('[data-translate="history.description"]');
@@ -142,6 +148,12 @@ function updateTipsContent(lang) {
     const langData = languages[lang];
     if (!langData) return;
 
+    // 로고 텍스트 업데이트
+    const logoText = document.querySelector('.logo-text');
+    if (logoText && langData.logoText) {
+        logoText.textContent = langData.logoText;
+    }
+
     const translatableElements = document.querySelectorAll('[data-translate]');
     translatableElements.forEach(element => {
         const key = element.dataset.translate;
@@ -196,6 +208,12 @@ function updateFaqContent(lang) {
     const langData = languages[lang];
     if (!langData) return;
 
+    // 로고 텍스트 업데이트
+    const logoText = document.querySelector('.logo-text');
+    if (logoText && langData.logoText) {
+        logoText.textContent = langData.logoText;
+    }
+
     const translatableElements = document.querySelectorAll('[data-translate]');
     translatableElements.forEach(element => {
         const key = element.dataset.translate;
@@ -224,6 +242,12 @@ function updatePrivacyContent(lang) {
     
     const langData = languages[lang];
     if (!langData) return;
+
+    // 로고 텍스트 업데이트
+    const logoText = document.querySelector('.logo-text');
+    if (logoText && langData.logoText) {
+        logoText.textContent = langData.logoText;
+    }
 
     const translatableElements = document.querySelectorAll('[data-translate]');
     translatableElements.forEach(element => {

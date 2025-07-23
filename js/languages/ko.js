@@ -1,5 +1,8 @@
 
 const ko = {
+    // 로고 텍스트
+    logoText: "단위 변환기",
+    
     // 메인 페이지
     heroTitle: "일상생활의 모든 단위 변환",
     heroDescription: "길이, 무게, 부피, 온도 등 다양한 단위를 쉽고 빠르게 변환해보세요",

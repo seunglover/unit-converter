@@ -1,0 +1,5 @@
+[33m1f6a197[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m 개인정보 취급방침 페이지 다국어 지원 추가
+[33mc8fb483[m Add complete FAQ translation support - all FAQ content now translatable in Korean, English, and Japanese
+[33mf58276a[m Add localStorage language persistence across pages - language selection now maintained when navigating between pages
+[33m49f5680[m Fix language switching on history.html - add missing language selector and update funFacts translation
+[33m3279e71[m fix: history.html 언어 변환 window[lang].history 직접 참조로 구조 개선 및 실제 변환 정상화

@@ -1,5 +1,8 @@
 
 const en = {
+    // Logo text
+    logoText: "Unit Converter",
+    
     // Main page
     heroTitle: "All Unit Conversions for Daily Life",
     heroDescription: "Convert length, weight, volume, temperature and other various units easily and quickly",
