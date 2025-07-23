@@ -435,6 +435,25 @@ const ja = {
     faqSlowLoadingAnswer3: "• 別のブラウザで試してみてください。",
     faqSlowLoadingAnswer4: "• モバイルではWi-Fi接続を推奨します。",
     
+    // プライバシーポリシー
+    privacyTitle: "プライバシーポリシー",
+    privacyIntro: "<strong>単位変換機</strong>（以下「サイト」）は利用者の個人情報を大切に考え、以下のように最小限の個人情報のみを安全に処理します。",
+    privacySection1: "1. 収集する個人情報項目",
+    privacySection1Item1: "本サイトは別途の会員登録なしで自由にご利用いただけます。",
+    privacySection1Item2: "サービス改善のための<strong>クッキー、訪問記録、ブラウザ情報</strong>などの非識別情報のみを収集する場合があります。",
+    privacySection2: "2. 個人情報の利用目的",
+    privacySection2Item1: "サービス品質向上及び統計分析",
+    privacySection2Item2: "利用者お問い合わせ対応",
+    privacySection3: "3. 個人情報の保管及び廃棄",
+    privacySection3Item1: "収集された情報は目的達成後即座に廃棄するか、法令に従って安全に保管します。",
+    privacySection4: "4. 第三者提供",
+    privacySection4Item1: "本サイトは利用者の個人情報を外部に提供しません。",
+    privacySection5: "5. 利用者の権利",
+    privacySection5Item1: "いつでも個人情報の閲覧、訂正、削除を請求できます。",
+    privacySection6: "6. ポリシー変更案内",
+    privacySection6Item1: "本方針は法令及びサービス変更に伴い事前告知後修正される場合があります。",
+    privacyLastUpdate: "最終更新: 2025-07-01",
+    
     // Tipsページ
     tipsTitle: "実用的な変換コツ",
     tipsDescription: "日常生活ですぐに活用できる単位変換のコツを集めました",

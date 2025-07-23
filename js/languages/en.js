@@ -392,6 +392,25 @@ const en = {
     faqSlowLoadingAnswer3: "• Try a different browser.",
     faqSlowLoadingAnswer4: "• Wi-Fi connection is recommended on mobile.",
     
+    // Privacy Policy
+    privacyTitle: "Privacy Policy",
+    privacyIntro: "<strong>Unit Converter</strong> (hereinafter \"Site\") values your personal information and processes only the minimum personal information safely as described below.",
+    privacySection1: "1. Personal Information Collected",
+    privacySection1Item1: "This site can be used freely without separate registration.",
+    privacySection1Item2: "Only non-identifying information such as <strong>cookies, visit records, browser information</strong> may be collected for service improvement.",
+    privacySection2: "2. Purpose of Using Personal Information",
+    privacySection2Item1: "Service quality improvement and statistical analysis",
+    privacySection2Item2: "User inquiry response",
+    privacySection3: "3. Storage and Disposal of Personal Information",
+    privacySection3Item1: "Collected information is disposed of immediately after achieving the purpose or stored safely in accordance with laws and regulations.",
+    privacySection4: "4. Third Party Provision",
+    privacySection4Item1: "This site does not provide users' personal information to external parties.",
+    privacySection5: "5. User Rights",
+    privacySection5Item1: "You can request to view, correct, or delete personal information at any time.",
+    privacySection6: "6. Policy Change Notice",
+    privacySection6Item1: "This policy may be modified with prior notice in accordance with laws and service changes.",
+    privacyLastUpdate: "Last updated: 2025-07-01",
+    
     // Tips page
     tipsTitle: "Practical Conversion Tips",
     tipsDescription: "Unit conversion tips you can use right away in daily life",

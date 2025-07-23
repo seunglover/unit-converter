@@ -40,6 +40,8 @@ function changeLanguage(lang) {
         updateFaqContent(lang);
     } else if (window.location.pathname.includes('history.html')) {
         updateHistoryContent(lang);
+    } else if (window.location.pathname.includes('privacy.html')) {
+        updatePrivacyContent(lang);
     } else {
         updateUILanguage();
         // If on the converter page, also update category info
@@ -185,6 +187,35 @@ function updateTipRows(lang) {
 }
 
 function updateFaqContent(lang) {
+    // languages 객체 초기화
+    if (!initializeLanguages()) {
+        console.log('언어 파일들이 아직 로드되지 않았습니다.');
+        return;
+    }
+    
+    const langData = languages[lang];
+    if (!langData) return;
+
+    const translatableElements = document.querySelectorAll('[data-translate]');
+    translatableElements.forEach(element => {
+        const key = element.dataset.translate;
+        if (langData[key]) {
+            // Check if the element is a direct text element or has children
+            if (element.children.length > 0) {
+                // It has children, so we should probably just set the text content of the parent
+                let textContent = langData[key];
+                Array.from(element.children).forEach(child => {
+                    textContent = textContent.replace(child.outerHTML, "");
+                });
+                element.innerHTML = langData[key];
+            } else {
+                element.textContent = langData[key];
+            }
+        }
+    });
+}
+
+function updatePrivacyContent(lang) {
     // languages 객체 초기화
     if (!initializeLanguages()) {
         console.log('언어 파일들이 아직 로드되지 않았습니다.');

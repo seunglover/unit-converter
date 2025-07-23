@@ -436,6 +436,25 @@ const ko = {
     faqSlowLoadingAnswer3: "• 다른 브라우저로 시도해보세요.",
     faqSlowLoadingAnswer4: "• 모바일에서는 Wi-Fi 연결을 권장합니다.",
     
+    // 개인정보 취급방침
+    privacyTitle: "개인정보 취급방침",
+    privacyIntro: "<strong>단위 변환기</strong>(이하 \"사이트\")는 이용자의 개인정보를 소중하게 생각하며, 아래와 같이 최소한의 개인정보만을 안전하게 처리합니다.",
+    privacySection1: "1. 수집하는 개인정보 항목",
+    privacySection1Item1: "본 사이트는 별도의 회원가입 없이 자유롭게 이용하실 수 있습니다.",
+    privacySection1Item2: "서비스 개선을 위한 <strong>쿠키, 방문 기록, 브라우저 정보</strong> 등 비식별 정보만을 수집할 수 있습니다.",
+    privacySection2: "2. 개인정보의 이용 목적",
+    privacySection2Item1: "서비스 품질 향상 및 통계 분석",
+    privacySection2Item2: "이용자 문의 응대",
+    privacySection3: "3. 개인정보의 보관 및 파기",
+    privacySection3Item1: "수집된 정보는 목적 달성 후 즉시 파기하거나, 법령에 따라 안전하게 보관합니다.",
+    privacySection4: "4. 제3자 제공",
+    privacySection4Item1: "본 사이트는 이용자의 개인정보를 외부에 제공하지 않습니다.",
+    privacySection5: "5. 이용자의 권리",
+    privacySection5Item1: "언제든지 개인정보 열람, 정정, 삭제를 요청하실 수 있습니다.",
+    privacySection6: "6. 정책 변경 안내",
+    privacySection6Item1: "본 방침은 법령 및 서비스 변경에 따라 사전 고지 후 수정될 수 있습니다.",
+    privacyLastUpdate: "최종 업데이트: 2025-07-01",
+    
     // Tips 페이지
     tipsTitle: "실용적인 변환 팁",
     tipsDescription: "일상생활에서 바로 활용할 수 있는 단위 변환 팁들을 모았습니다",
