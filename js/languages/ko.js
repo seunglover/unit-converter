@@ -93,6 +93,14 @@ const ko = {
     justNow: "방금 전",
     minutesAgo: "분 전",
     hoursAgo: "시간 전",
+    
+    // 교육 페이지 관련
+    show_answer: "답 보기",
+    hide_answer: "답 숨기기",
+    answer: "답",
+    solution: "풀이",
+    example: "예제",
+    
     locale: "ko-KR"
 };
 

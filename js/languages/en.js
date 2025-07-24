@@ -442,6 +442,7 @@ const en = {
     practice_1: "1.",
     practice_1_question: "Convert 2.5km to meters.",
     show_answer: "Show Answer",
+    hide_answer: "Hide Answer",
     answer: "Answer:",
     practice_1_answer: "2,500m",
     solution: "Solution:",

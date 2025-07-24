@@ -311,14 +311,46 @@
     <script src="js/languages/ja.js?v=20250724"></script>
     <script src="js/languages.js?v=20250724"></script>
     <script>
+        // 답보기 기능 구현
+        function showAnswer(questionNumber) {
+            console.log('showAnswer 함수 호출됨:', questionNumber);
+            const answerElement = document.getElementById('answer' + questionNumber);
+            const buttonElement = document.querySelector(`button[onclick="showAnswer(${questionNumber})"]`);
+            
+            if (answerElement && buttonElement) {
+                if (answerElement.style.display === 'none' || answerElement.style.display === '') {
+                    answerElement.style.display = 'block';
+                    // 현재 언어에 맞는 텍스트로 변경
+                    const currentLanguage = localStorage.getItem('selectedLanguage') || 'ko';
+                    const hideText = window[currentLanguage] && window[currentLanguage].hide_answer ? window[currentLanguage].hide_answer : '답 숨기기';
+                    buttonElement.textContent = hideText;
+                    buttonElement.setAttribute('data-translate', 'hide_answer');
+                    console.log('답 표시됨:', questionNumber);
+                } else {
+                    answerElement.style.display = 'none';
+                    // 현재 언어에 맞는 텍스트로 변경
+                    const currentLanguage = localStorage.getItem('selectedLanguage') || 'ko';
+                    const showText = window[currentLanguage] && window[currentLanguage].show_answer ? window[currentLanguage].show_answer : '답 보기';
+                    buttonElement.textContent = showText;
+                    buttonElement.setAttribute('data-translate', 'show_answer');
+                    console.log('답 숨겨짐:', questionNumber);
+                }
+            } else {
+                console.error('요소를 찾을 수 없음:', questionNumber);
+            }
+        }
+
         // education.html 언어 초기화 (고정 언어 표시)
         document.addEventListener('DOMContentLoaded', function() {
+            console.log('education.html DOM 로드 완료');
+            
             // 저장된 언어 설정 읽기
             const savedLanguage = localStorage.getItem('selectedLanguage') || 'ko';
             
             // 해당 언어로 페이지 표시
             if (typeof changeLanguage === 'function') {
                 changeLanguage(savedLanguage);
+                console.log('언어 설정 적용됨:', savedLanguage);
             }
         });
     </script>

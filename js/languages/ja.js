@@ -485,6 +485,7 @@ const ja = {
     practice_1: "1.",
     practice_1_question: "2.5kmをメートルに変換してください。",
     show_answer: "答えを見る",
+    hide_answer: "答えを隠す",
     answer: "答え:",
     practice_1_answer: "2,500m",
     solution: "解答:",

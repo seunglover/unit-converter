@@ -51,6 +51,25 @@
     - `education.html`로 연결되는 링크 설정
     - CSS 스타일링으로 그라데이션 버튼 디자인 적용
     - 다국어 지원 (한국어, 영어, 일본어)
+- **언어 파일 구조 통합 완료**
+    - 페이지별 개별 언어 파일 삭제 (index.js, privacy.js, faq.js, tips.js, history.js, education.js)
+    - 모든 HTML 파일에서 통합 언어 파일 사용하도록 수정
+    - CSS 파일에 버전 파라미터 추가 (v=20250724)
+    - 언어 전환 시스템 통합 완료
+    - 브라우저 테스트를 통한 언어 전환 기능 정상 작동 확인
+- **Git 커밋 및 푸시 완료**
+    - 커밋 해시: `ba9495e`
+    - 커밋 메시지: "feat: 언어 파일 구조 통합 및 CSS 버전 파라미터 추가"
+    - 변경된 파일: index.html, education.html, faq.html, privacy.html, history.html
+    - 원격 저장소: https://github.com/seunglover/unit-converter
+    - 브랜치: master
+    - 상태: 성공적으로 푸시 완료
+- **education.html 답보기 기능 수정 완료**
+    - `showAnswer()` 함수 구현하여 답보기/답숨기기 기능 추가
+    - 다국어 지원 (한국어, 영어, 일본어) 구현
+    - 언어 파일에 `hide_answer` 번역 추가 (ko.js, en.js, ja.js)
+    - MCP Playwright를 활용한 기능 테스트 완료
+    - 실습 문제 5개 모두 답보기 기능 정상 작동 확인
 
 ## 7. 해야 할 일
 - `js/app.js` 및 `js/converter.js`의 기능 개선 및 버그 수정
@@ -72,7 +91,7 @@
 
 ---
 **최근 업데이트**: 2025년 7월 24일 목요일
-**업데이트 내용**: `index.html`에 교육 가이드 버튼 추가 완료. hero 섹션에 `education.html`로 연결되는 스타일링된 버튼이 추가되었으며, 다국어 지원이 포함되었습니다.
+**업데이트 내용**: `education.html`의 답보기 기능 수정 완료. `showAnswer()` 함수를 구현하여 실습 문제의 답보기/답숨기기 기능이 정상 작동하며, 다국어 지원 및 MCP 테스트를 통해 검증되었습니다.
 ---
 
 ---
