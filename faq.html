@@ -37,14 +37,6 @@
                     <span class="logo-text" data-translate="logoText">단위 변환 도우미</span>
                 </a>
             </div>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">홈</a></li>
-                    <li><a href="tips.html" class="nav-link">변환 팁</a></li>
-                    <li><a href="faq.html" class="nav-link active">FAQ</a></li>
-                    <li><a href="history.html" class="nav-link">단위 역사</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
@@ -300,8 +292,15 @@
     <script src="js/app.js"></script>
     
     <script>
-        // FAQ 아코디언 기능
+        // FAQ 아코디언 기능 및 언어 초기화
         document.addEventListener('DOMContentLoaded', function() {
+            // 언어 초기화 (고정 언어 표시)
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'ko';
+            if (typeof changeLanguage === 'function') {
+                changeLanguage(savedLanguage);
+            }
+            
+            // FAQ 아코디언 기능
             const faqItems = document.querySelectorAll('.faq-item');
             
             faqItems.forEach(item => {

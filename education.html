@@ -19,22 +19,6 @@
                     <span class="logo-text" data-translate="logo">단위 변환 도우미</span>
                 </a>
             </div>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link" data-translate="nav_home">홈</a></li>
-                    <li><a href="education.html" class="nav-link active" data-translate="nav_education">교육</a></li>
-                    <li><a href="tips.html" class="nav-link" data-translate="nav_tips">변환 팁</a></li>
-                    <li><a href="faq.html" class="nav-link" data-translate="nav_faq">FAQ</a></li>
-                    <li><a href="history.html" class="nav-link" data-translate="nav_history">단위 역사</a></li>
-                </ul>
-            </nav>
-            <div class="language-selector">
-                <select id="languageSelect" onchange="changeLanguage(this.value)">
-                    <option value="ko">한국어</option>
-                    <option value="en">English</option>
-                    <option value="ja">日本語</option>
-                </select>
-            </div>
         </div>
     </header>
     <main class="main">
@@ -107,7 +91,6 @@
                     </div>
                 </section>
 
-                <!-- 무게 단위 변환 섹션 -->
                 <section id="weight" class="edu-section">
                     <h2 data-translate="section_weight_title">3. 무게 단위 변환</h2>
                     <div class="edu-card">
@@ -133,7 +116,6 @@
                     </div>
                 </section>
 
-                <!-- 부피 단위 변환 섹션 -->
                 <section id="volume" class="edu-section">
                     <h2 data-translate="section_volume_title">4. 부피 단위 변환</h2>
                     <div class="edu-card">
@@ -188,7 +170,6 @@
                     </div>
                 </section>
 
-                <!-- 면적 단위 변환 섹션 -->
                 <section id="area" class="edu-section">
                     <h2 data-translate="section_area_title">6. 면적 단위 변환</h2>
                     <div class="edu-card">
@@ -214,7 +195,6 @@
                     </div>
                 </section>
 
-                <!-- 속도 단위 변환 섹션 -->
                 <section id="speed" class="edu-section">
                     <h2 data-translate="section_speed_title">7. 속도 단위 변환</h2>
                     <div class="edu-card">
@@ -241,7 +221,6 @@
                     </div>
                 </section>
 
-                <!-- 실습 문제 섹션 -->
                 <section id="practice" class="edu-section">
                     <h2 data-translate="section_practice_title">8. 실습 문제</h2>
                     <div class="edu-card">
@@ -267,7 +246,7 @@
                             <button class="show-answer-btn" onclick="showAnswer(3)" data-translate="show_answer">답 보기</button>
                             <div class="answer" id="answer3" style="display: none;">
                                 <p><strong data-translate="answer">답:</strong> <span data-translate="practice_3_answer">77°F</span></p>
-                                <p><strong data-translate="solution">풀이:</strong> <span data-translate="practice_3_solution">(25 × 9/5) + 32 = 45 + 32 = 77°F</span></p>
+                                <p><strong data-translate="solution">풀이:</b> <span data-translate="practice_3_solution">(25 × 9/5) + 32 = 45 + 32 = 77°F</span></p>
                             </div>
                         </div>
                     </div>
@@ -315,6 +294,13 @@
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
                     <p data-translate="footer_copyright">&copy; 2025 단위 변환 도우미. 모든 권리 보유.</p>
+                    <div class="language-selector">
+                        <select id="language-select" class="language-select">
+                            <option value="ko">🇰🇷 한국어</option>
+                            <option value="en">🇺🇸 English</option>
+                            <option value="ja">🇯🇵 日本語</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
@@ -324,5 +310,17 @@
     <script src="js/languages/en.js?v=20250724"></script>
     <script src="js/languages/ja.js?v=20250724"></script>
     <script src="js/languages.js?v=20250724"></script>
+    <script>
+        // education.html 언어 초기화 (고정 언어 표시)
+        document.addEventListener('DOMContentLoaded', function() {
+            // 저장된 언어 설정 읽기
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'ko';
+            
+            // 해당 언어로 페이지 표시
+            if (typeof changeLanguage === 'function') {
+                changeLanguage(savedLanguage);
+            }
+        });
+    </script>
 </body>
 </html> 

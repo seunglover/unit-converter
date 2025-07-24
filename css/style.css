@@ -335,6 +335,39 @@ body {
     line-height: var(--line-height-relaxed);
 }
 
+.hero-action {
+    margin-top: var(--spacing-8);
+}
+
+.education-guide-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--text-white);
+    padding: var(--spacing-3) var(--spacing-6);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(90, 212, 212, 0.3);
+}
+
+.education-guide-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(90, 212, 212, 0.4);
+    text-decoration: none;
+}
+
+.education-guide-btn .btn-icon {
+    font-size: 1.1rem;
+}
+
+.education-guide-btn .btn-text {
+    font-weight: 500;
+}
+
 /* Category Grid - 카테고리 그리드 */
 .category-grid {
     display: grid;
@@ -1873,4 +1906,343 @@ textarea:focus {
 }
 .policy-card li {
     margin-bottom: 0.5rem;
+} 
+
+/* Education Section - 교육 섹션 */
+.education-section {
+    padding: var(--spacing-12) 0;
+}
+
+.education-header {
+    text-align: center;
+    margin-bottom: var(--spacing-12);
+}
+
+.education-header h1 {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-4);
+}
+
+.education-header p {
+    color: var(--text-secondary);
+    font-size: var(--font-size-lg);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Table of Contents - 목차 */
+.edu-toc {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-6);
+    margin-bottom: var(--spacing-12);
+    box-shadow: var(--shadow-sm);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.edu-toc ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-3);
+}
+
+.edu-toc li {
+    margin-bottom: var(--spacing-2);
+}
+
+.edu-toc a {
+    display: block;
+    padding: var(--spacing-3) var(--spacing-4);
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: var(--font-weight-medium);
+    transition: all 0.3s ease;
+}
+
+.edu-toc a:hover {
+    background: var(--primary-color);
+    color: var(--text-white);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Education Section Content - 교육 내용 섹션 */
+.edu-section {
+    margin-bottom: var(--spacing-16);
+    padding-top: var(--spacing-8);
+    border-top: 1px solid var(--border-light);
+}
+
+.edu-section h2 {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-8);
+    text-align: center;
+    position: relative;
+    padding-bottom: var(--spacing-3);
+}
+
+.edu-section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: var(--radius-sm);
+}
+
+.edu-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-8);
+    margin-bottom: var(--spacing-8);
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.edu-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.edu-card h3 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-4);
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: var(--spacing-2);
+}
+
+.edu-card p {
+    color: var(--text-secondary);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-4);
+}
+
+.edu-card strong {
+    color: var(--primary-color);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Tables - 표 스타일 */
+.edu-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--spacing-6);
+    font-size: var(--font-size-base);
+}
+
+.edu-table th,
+.edu-table td {
+    border: 1px solid var(--border-light);
+    padding: var(--spacing-4);
+    text-align: left;
+}
+
+.edu-table th {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-weight: var(--font-weight-semibold);
+}
+
+.edu-table tr:nth-child(even) {
+    background: var(--bg-primary);
+}
+
+.edu-table tr:hover {
+    background: var(--accent-light);
+    color: var(--text-white);
+}
+
+.edu-table tr:hover th,
+.edu-table tr:hover td {
+    border-color: var(--primary-color);
+}
+
+/* Examples - 예시 스타일 */
+.edu-example {
+    background: var(--bg-secondary);
+    border-left: 4px solid var(--primary-color);
+    padding: var(--spacing-4);
+    border-radius: var(--radius-md);
+    margin-top: var(--spacing-6);
+}
+
+.edu-example strong {
+    color: var(--primary-color);
+}
+
+/* Formulas - 공식 스타일 */
+.edu-formula {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-4);
+    font-family: 'Courier New', monospace;
+    font-size: var(--font-size-base);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-6);
+}
+
+.edu-formula p {
+    margin-bottom: var(--spacing-2);
+}
+
+.edu-formula strong {
+    color: var(--primary-color);
+}
+
+/* Lists - 목록 스타일 */
+.edu-list {
+    list-style: none;
+    padding: 0;
+}
+
+.edu-list li {
+    background: var(--bg-secondary);
+    border-left: 4px solid var(--secondary-color);
+    padding: var(--spacing-3) var(--spacing-4);
+    margin-bottom: var(--spacing-2);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    line-height: var(--line-height-normal);
+}
+
+.edu-list li strong {
+    color: var(--primary-color);
+}
+
+/* Practice Problems - 실습 문제 스타일 */
+.practice-problem {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-6);
+    margin-bottom: var(--spacing-6);
+    box-shadow: var(--shadow-sm);
+}
+
+.practice-problem p {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-4);
+}
+
+.show-answer-btn {
+    background: var(--primary-color);
+    color: var(--text-white);
+    border: none;
+    padding: var(--spacing-3) var(--spacing-6);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: var(--font-weight-semibold);
+    transition: all 0.3s ease;
+}
+
+.show-answer-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.answer {
+    margin-top: var(--spacing-6);
+    padding-top: var(--spacing-4);
+    border-top: 1px dashed var(--border-medium);
+}
+
+.answer p {
+    font-size: var(--font-size-base);
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-2);
+}
+
+.answer strong {
+    color: var(--primary-color);
+}
+
+/* Responsive adjustments for education page */
+@media (max-width: 768px) {
+    .edu-toc ul {
+        grid-template-columns: 1fr;
+    }
+
+    .edu-section h2 {
+        font-size: var(--font-size-xl);
+    }
+
+    .edu-card {
+        padding: var(--spacing-6);
+    }
+
+    .edu-card h3 {
+        font-size: var(--font-size-lg);
+    }
+
+    .edu-table th,
+    .edu-table td {
+        padding: var(--spacing-3);
+    }
+}
+
+@media (max-width: 480px) {
+    .education-header h1 {
+        font-size: var(--font-size-2xl);
+    }
+
+    .education-header p {
+        font-size: var(--font-size-base);
+    }
+
+    .edu-toc {
+        padding: var(--spacing-4);
+    }
+
+    .edu-toc a {
+        padding: var(--spacing-2) var(--spacing-3);
+        font-size: var(--font-size-sm);
+    }
+
+    .edu-section h2 {
+        font-size: var(--font-size-xl);
+    }
+
+    .edu-card {
+        padding: var(--spacing-4);
+    }
+
+    .edu-card h3 {
+        font-size: var(--font-size-base);
+    }
+
+    .practice-problem {
+        padding: var(--spacing-4);
+    }
+
+    .practice-problem p {
+        font-size: var(--font-size-base);
+    }
+
+    .show-answer-btn {
+        padding: var(--spacing-2) var(--spacing-4);
+        font-size: var(--font-size-sm);
+    }
 } 

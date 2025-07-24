@@ -376,6 +376,15 @@ function updateUILanguage() {
     
     const lang = languages[currentLanguage];
     
+    // data-translate 속성이 있는 모든 요소 업데이트
+    const translatableElements = document.querySelectorAll('[data-translate]');
+    translatableElements.forEach(element => {
+        const key = element.dataset.translate;
+        if (lang[key]) {
+            element.textContent = lang[key];
+        }
+    });
+    
     // 标志文本
     const logoText = document.querySelector('.logo-text');
     if (logoText) logoText.textContent = lang.logoText;
