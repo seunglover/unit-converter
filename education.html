@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단위 변환 교육 - 단위 변환 도우미 | 학습 가이드</title>
+    <meta name="description" content="단위 변환의 원리와 방법을 배워보세요. 길이, 무게, 부피, 온도 등 다양한 단위의 변환 공식과 실생활 활용법을 상세히 설명합니다.">
+    <meta name="keywords" content="단위 변환 교육, 변환 공식, 수학 학습, 실생활 단위, 교육 가이드">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2347391460222140" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-icon">📏</span>
+                    <span class="logo-text" data-translate="logo">단위 변환 도우미</span>
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" data-translate="nav_home">홈</a></li>
+                    <li><a href="education.html" class="nav-link active" data-translate="nav_education">교육</a></li>
+                    <li><a href="tips.html" class="nav-link" data-translate="nav_tips">변환 팁</a></li>
+                    <li><a href="faq.html" class="nav-link" data-translate="nav_faq">FAQ</a></li>
+                    <li><a href="history.html" class="nav-link" data-translate="nav_history">단위 역사</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <select id="languageSelect" onchange="changeLanguage(this.value)">
+                    <option value="ko">한국어</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                </select>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <section class="education-section">
+                <div class="education-header">
+                    <h1 data-translate="edu_title">단위 변환 교육 가이드</h1>
+                    <p data-translate="edu_subtitle">단위 변환의 원리와 방법을 체계적으로 배워보세요.</p>
+                </div>
+                <nav class="edu-toc">
+                    <ul>
+                        <li><a href="#principle" data-translate="toc_principle">1. 단위 변환의 기본 원리</a></li>
+                        <li><a href="#length" data-translate="toc_length">2. 길이 단위 변환</a></li>
+                        <li><a href="#weight" data-translate="toc_weight">3. 무게 단위 변환</a></li>
+                        <li><a href="#volume" data-translate="toc_volume">4. 부피 단위 변환</a></li>
+                        <li><a href="#temperature" data-translate="toc_temperature">5. 온도 단위 변환</a></li>
+                        <li><a href="#area" data-translate="toc_area">6. 면적 단위 변환</a></li>
+                        <li><a href="#speed" data-translate="toc_speed">7. 속도 단위 변환</a></li>
+                        <li><a href="#practice" data-translate="toc_practice">8. 실습 문제</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- 교육 콘텐츠 섹션들 -->
+                <section id="principle" class="edu-section">
+                    <h2 data-translate="section_principle_title">1. 단위 변환의 기본 원리</h2>
+                    <div class="edu-card">
+                        <h3 data-translate="principle_what_title">단위 변환이란?</h3>
+                        <p data-translate="principle_what_content">단위 변환은 같은 물리량을 서로 다른 단위로 바꾸는 과정입니다. 예를 들어, 1미터는 100센티미터와 같습니다. 단위 변환을 통해 다양한 상황에서 필요한 값을 쉽게 계산할 수 있습니다.</p>
+                    </div>
+                    <div class="edu-card">
+                        <h3 data-translate="principle_formula_title">기본 공식</h3>
+                        <p><strong data-translate="principle_formula">변환 계수 × 원래 값 = 변환된 값</strong></p>
+                        <p data-translate="principle_example">예시: 1m = 100cm이므로, 5m = 5 × 100 = 500cm</p>
+                    </div>
+                    <div class="edu-card">
+                        <h3 data-translate="principle_ratio_title">비례식 활용법</h3>
+                        <p data-translate="principle_ratio_intro">단위 변환은 비례식을 사용하여 계산할 수 있습니다.</p>
+                        <div class="edu-formula">
+                            <p data-translate="principle_ratio_formula">원래 단위 : 변환 단위 = 원래 값 : 변환 값</p>
+                            <p data-translate="principle_ratio_example">예: 1m : 100cm = 3m : x cm</p>
+                            <p data-translate="principle_ratio_solution">x = (3 × 100) ÷ 1 = 300cm</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="length" class="edu-section">
+                    <h2 data-translate="section_length_title">2. 길이 단위 변환</h2>
+                    <div class="edu-card">
+                        <h3 data-translate="length_metric_title">미터법 길이 단위</h3>
+                        <table class="edu-table">
+                            <tr><th data-translate="table_unit">단위</th><th data-translate="table_conversion">환산값</th></tr>
+                            <tr><td data-translate="length_km">1 킬로미터 (km)</td><td data-translate="length_km_to_m">1,000 미터 (m)</td></tr>
+                            <tr><td data-translate="length_m">1 미터 (m)</td><td data-translate="length_m_to_cm">100 센티미터 (cm)</td></tr>
+                            <tr><td data-translate="length_cm">1 센티미터 (cm)</td><td data-translate="length_cm_to_mm">10 밀리미터 (mm)</td></tr>
+                        </table>
+                        <div class="edu-example">
+                            <strong data-translate="example">예제:</strong> <span data-translate="length_example_question">2.5km를 미터로 변환하세요.</span><br>
+                            <span class="edu-formula" data-translate="length_example_solution">2.5km × 1,000 = 2,500m</span>
+                        </div>
+                    </div>
+                    <div class="edu-card">
+                        <h3 data-translate="length_imperial_title">영국식/미국식 길이 단위</h3>
+                        <table class="edu-table">
+                            <tr><th data-translate="table_unit">단위</th><th data-translate="table_conversion">환산값</th></tr>
+                            <tr><td data-translate="length_mile">1 마일 (mile)</td><td data-translate="length_mile_to_km">1.609km</td></tr>
+                            <tr><td data-translate="length_yard">1 야드 (yard)</td><td data-translate="length_yard_to_m">0.914m</td></tr>
+                            <tr><td data-translate="length_foot">1 피트 (foot)</td><td data-translate="length_foot_to_m">0.305m</td></tr>
+                            <tr><td data-translate="length_inch">1 인치 (inch)</td><td data-translate="length_inch_to_cm">2.54cm</td></tr>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- 무게 단위 변환 섹션 -->
+                <section id="weight" class="edu-section">
+                    <h2 data-translate="section_weight_title">3. 무게 단위 변환</h2>
+                    <div class="edu-card">
+                        <h3 data-translate="weight_metric_title">미터법 무게 단위</h3>
+                        <table class="edu-table">
+                            <tr><th data-translate="table_unit">단위</th><th data-translate="table_conversion">환산값</th></tr>
+                            <tr><td data-translate="weight_ton">1 톤 (t)</td><td data-translate="weight_ton_to_kg">1,000 킬로그램 (kg)</td></tr>
+                            <tr><td data-translate="weight_kg">1 킬로그램 (kg)</td><td data-translate="weight_kg_to_g">1,000 그램 (g)</td></tr>
+                            <tr><td data-translate="weight_g">1 그램 (g)</td><td data-translate="weight_g_to_mg">1,000 밀리그램 (mg)</td></tr>
+                        </table>
+                    </div>
+                    <div class="edu-card">
+                        <h3 data-translate="weight_imperial_title">영국식/미국식 무게 단위</h3>
+                        <table class="edu-table">
+                            <tr><th data-translate="table_unit">단위</th><th data-translate="table_conversion">환산값</th></tr>
+                            <tr><td data-translate="weight_lb">1 파운드 (lb)</td><td data-translate="weight_lb_to_kg">0.454kg</td></tr>
+                            <tr><td data-translate="weight_oz">1 온스 (oz)</td><td data-translate="weight_oz_to_g">28.35g</td></tr>
+                        </table>
+                        <div class="edu-example">
+                            <strong data-translate="example">예제:</strong> <span data-translate="weight_example_question">5파운드를 킬로그램으로 변환하세요.</span><br>
+                            <span class="edu-formula" data-translate="weight_example_solution">5lb × 0.454 = 2.27kg</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 부피 단위 변환 섹션 -->
+                <section id="volume" class="edu-section">
+                    <h2 data-translate="section_volume_title">4. 부피 단위 변환</h2>
+                    <div class="edu-card">
+                        <h3 data-translate="volume_metric_title">미터법 부피 단위</h3>
+                        <table class="edu-table">
+                            <tr><th data-translate="table_unit">단위</th><th data-translate="table_conversion">환산값</th></tr>
+                            <tr><td data-translate="volume_kl">1 킬로리터 (kL)</td><td data-translate="volume_kl_to_l">1,000 리터 (L)</td></tr>
+                            <tr><td data-translate="volume_l">1 리터 (L)</td><td data-translate="volume_l_to_ml">1,000 밀리리터 (mL)</td></tr>
+                            <tr><td data-translate="volume_ml">1 밀리리터 (mL)</td><td data-translate="volume_ml_to_cm3">1 세제곱센티미터 (cm³)</td></tr>
+                        </table>
+                    </div>
+                    <div class="edu-card">
+                        <h3 data-translate="volume_cooking_title">요리 단위 변환</h3>
+                        <table class="edu-table">
+                            <tr><th data-translate="table_unit">단위</th><th data-translate="table_conversion">환산값</th></tr>
+                            <tr><td data-translate="volume_gal">1 갤런 (gal)</td><td data-translate="volume_gal_to_l">3.785L</td></tr>
+                            <tr><td data-translate="volume_cup">1 컵 (cup)</td><td data-translate="volume_cup_to_ml">240mL</td></tr>
+                            <tr><td data-translate="volume_tbsp">1 테이블스푼 (tbsp)</td><td data-translate="volume_tbsp_to_ml">15mL</td></tr>
+                            <tr><td data-translate="volume_tsp">1 티스푼 (tsp)</td><td data-translate="volume_tsp_to_ml">5mL</td></tr>
+                        </table>
+                        <div class="edu-example">
+                            <strong data-translate="example">예제:</strong> <span data-translate="volume_example_question">2컵을 밀리리터로 변환하세요.</span><br>
+                            <span class="edu-formula" data-translate="volume_example_solution">2cup × 240 = 480mL</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 온도 단위 변환 섹션 -->
+                <section id="temperature" class="edu-section">
+                    <h2 data-translate="section_temperature_title">5. 온도 단위 변환</h2>
+                    <div class="edu-card">
+                        <h3 data-translate="temperature_formula_title">온도 변환 공식</h3>
+                        <div class="edu-formula">
+                            <p data-translate="temp_c_to_f">섭씨 → 화씨: °F = (°C × 9/5) + 32</p>
+                            <p data-translate="temp_f_to_c">화씨 → 섭씨: °C = (°F - 32) × 5/9</p>
+                            <p data-translate="temp_c_to_k">섭씨 → 켈빈: K = °C + 273.15</p>
+                            <p data-translate="temp_f_to_k">화씨 → 켈빈: K = (°F - 32) × 5/9 + 273.15</p>
+                        </div>
+                        <div class="edu-example">
+                            <strong data-translate="example">예제:</strong> <span data-translate="temp_example_question">25°C를 화씨로 변환하세요.</span><br>
+                            <span class="edu-formula" data-translate="temp_example_solution">°F = (25 × 9/5) + 32 = 45 + 32 = 77°F</span>
+                        </div>
+                    </div>
+                    <div class="edu-card">
+                        <h3 data-translate="temperature_special_title">온도 변환의 특별한 점</h3>
+                        <ul class="edu-list">
+                            <li><strong data-translate="temp_absolute_zero">절대 영도:</strong> <span data-translate="temp_absolute_zero_value">-273.15°C = -459.67°F = 0K</span></li>
+                            <li><strong data-translate="temp_freezing">물의 어는점:</strong> <span data-translate="temp_freezing_value">0°C = 32°F = 273.15K</span></li>
+                            <li><strong data-translate="temp_boiling">물의 끓는점:</strong> <span data-translate="temp_boiling_value">100°C = 212°F = 373.15K</span></li>
+                            <li><strong data-translate="temp_body">체온:</strong> <span data-translate="temp_body_value">37°C = 98.6°F = 310.15K</span></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 면적 단위 변환 섹션 -->
+                <section id="area" class="edu-section">
+                    <h2 data-translate="section_area_title">6. 면적 단위 변환</h2>
+                    <div class="edu-card">
+                        <h3 data-translate="area_metric_title">미터법 면적 단위</h3>
+                        <table class="edu-table">
+                            <tr><th data-translate="table_unit">단위</th><th data-translate="table_conversion">환산값</th></tr>
+                            <tr><td data-translate="area_km2">1 제곱킬로미터 (km²)</td><td data-translate="area_km2_to_m2">1,000,000 제곱미터 (m²)</td></tr>
+                            <tr><td data-translate="area_m2">1 제곱미터 (m²)</td><td data-translate="area_m2_to_cm2">10,000 제곱센티미터 (cm²)</td></tr>
+                            <tr><td data-translate="area_ha">1 헥타르 (ha)</td><td data-translate="area_ha_to_m2">10,000m²</td></tr>
+                        </table>
+                    </div>
+                    <div class="edu-card">
+                        <h3 data-translate="area_korean_title">한국식 면적 단위</h3>
+                        <table class="edu-table">
+                            <tr><th data-translate="table_unit">단위</th><th data-translate="table_conversion">환산값</th></tr>
+                            <tr><td data-translate="area_pyung">1 평</td><td data-translate="area_pyung_to_m2">3.3m²</td></tr>
+                            <tr><td data-translate="area_acre">1 에이커 (acre)</td><td data-translate="area_acre_to_m2">4,047m²</td></tr>
+                        </table>
+                        <div class="edu-example">
+                            <strong data-translate="example">예제:</strong> <span data-translate="area_example_question">30평을 제곱미터로 변환하세요.</span><br>
+                            <span class="edu-formula" data-translate="area_example_solution">30평 × 3.3 = 99m²</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 속도 단위 변환 섹션 -->
+                <section id="speed" class="edu-section">
+                    <h2 data-translate="section_speed_title">7. 속도 단위 변환</h2>
+                    <div class="edu-card">
+                        <h3 data-translate="speed_formula_title">속도 변환 공식</h3>
+                        <div class="edu-formula">
+                            <p data-translate="speed_kmh_to_mph">km/h → mph: mph = km/h × 0.621</p>
+                            <p data-translate="speed_mph_to_kmh">mph → km/h: km/h = mph × 1.609</p>
+                            <p data-translate="speed_ms_to_kmh">m/s → km/h: km/h = m/s × 3.6</p>
+                        </div>
+                        <div class="edu-example">
+                            <strong data-translate="example">예제:</strong> <span data-translate="speed_example_question">100km/h를 mph로 변환하세요.</span><br>
+                            <span class="edu-formula" data-translate="speed_example_solution">mph = 100 × 0.621 = 62.1mph</span>
+                        </div>
+                    </div>
+                    <div class="edu-card">
+                        <h3 data-translate="speed_life_title">실생활 속도 비교</h3>
+                        <table class="edu-table">
+                            <tr><th data-translate="speed_activity">활동</th><th data-translate="speed_value">속도</th></tr>
+                            <tr><td data-translate="speed_walking">보행</td><td data-translate="speed_walking_value">5km/h</td></tr>
+                            <tr><td data-translate="speed_bicycle">자전거</td><td data-translate="speed_bicycle_value">20km/h</td></tr>
+                            <tr><td data-translate="speed_city">도시 속도</td><td data-translate="speed_city_value">50km/h</td></tr>
+                            <tr><td data-translate="speed_highway">고속도로</td><td data-translate="speed_highway_value">100km/h</td></tr>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- 실습 문제 섹션 -->
+                <section id="practice" class="edu-section">
+                    <h2 data-translate="section_practice_title">8. 실습 문제</h2>
+                    <div class="edu-card">
+                        <h3 data-translate="practice_basic_title">기본 문제</h3>
+                        <div class="practice-problem">
+                            <p><strong data-translate="practice_1">1.</strong> <span data-translate="practice_1_question">2.5km를 미터로 변환하세요.</span></p>
+                            <button class="show-answer-btn" onclick="showAnswer(1)" data-translate="show_answer">답 보기</button>
+                            <div class="answer" id="answer1" style="display: none;">
+                                <p><strong data-translate="answer">답:</strong> <span data-translate="practice_1_answer">2,500m</span></p>
+                                <p><strong data-translate="solution">풀이:</strong> <span data-translate="practice_1_solution">2.5km × 1,000 = 2,500m</span></p>
+                            </div>
+                        </div>
+                        <div class="practice-problem">
+                            <p><strong data-translate="practice_2">2.</strong> <span data-translate="practice_2_question">3파운드를 킬로그램으로 변환하세요.</span></p>
+                            <button class="show-answer-btn" onclick="showAnswer(2)" data-translate="show_answer">답 보기</button>
+                            <div class="answer" id="answer2" style="display: none;">
+                                <p><strong data-translate="answer">답:</strong> <span data-translate="practice_2_answer">1.36kg</span></p>
+                                <p><strong data-translate="solution">풀이:</strong> <span data-translate="practice_2_solution">3lb × 0.454 = 1.36kg</span></p>
+                            </div>
+                        </div>
+                        <div class="practice-problem">
+                            <p><strong data-translate="practice_3">3.</strong> <span data-translate="practice_3_question">25°C를 화씨로 변환하세요.</span></p>
+                            <button class="show-answer-btn" onclick="showAnswer(3)" data-translate="show_answer">답 보기</button>
+                            <div class="answer" id="answer3" style="display: none;">
+                                <p><strong data-translate="answer">답:</strong> <span data-translate="practice_3_answer">77°F</span></p>
+                                <p><strong data-translate="solution">풀이:</strong> <span data-translate="practice_3_solution">(25 × 9/5) + 32 = 45 + 32 = 77°F</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edu-card">
+                        <h3 data-translate="practice_intermediate_title">중급 문제</h3>
+                        <div class="practice-problem">
+                            <p><strong data-translate="practice_4">4.</strong> <span data-translate="practice_4_question">30평을 제곱미터로 변환하세요.</span></p>
+                            <button class="show-answer-btn" onclick="showAnswer(4)" data-translate="show_answer">답 보기</button>
+                            <div class="answer" id="answer4" style="display: none;">
+                                <p><strong data-translate="answer">답:</strong> <span data-translate="practice_4_answer">99m²</span></p>
+                                <p><strong data-translate="solution">풀이:</strong> <span data-translate="practice_4_solution">30평 × 3.3 = 99m²</span></p>
+                            </div>
+                        </div>
+                        <div class="practice-problem">
+                            <p><strong data-translate="practice_5">5.</strong> <span data-translate="practice_5_question">100km/h를 mph로 변환하세요.</span></p>
+                            <button class="show-answer-btn" onclick="showAnswer(5)" data-translate="show_answer">답 보기</button>
+                            <div class="answer" id="answer5" style="display: none;">
+                                <p><strong data-translate="answer">답:</strong> <span data-translate="practice_5_answer">62.1mph</span></p>
+                                <p><strong data-translate="solution">풀이:</strong> <span data-translate="practice_5_solution">100 × 0.621 = 62.1mph</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-translate="footer_title">단위 변환 도우미</h4>
+                    <p data-translate="footer_description">정확하고 빠른 단위 변환을 도와드립니다.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer_links_title">유용한 링크</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-translate="nav_home">홈</a></li>
+                        <li><a href="education.html" data-translate="nav_education">교육</a></li>
+                        <li><a href="tips.html" data-translate="nav_tips">변환 팁</a></li>
+                        <li><a href="faq.html" data-translate="nav_faq">FAQ</a></li>
+                        <li><a href="history.html" data-translate="nav_history">단위 역사</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p data-translate="footer_copyright">&copy; 2025 단위 변환 도우미. 모든 권리 보유.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/languages/ko.js?v=20250724"></script>
+    <script src="js/languages/en.js?v=20250724"></script>
+    <script src="js/languages/ja.js?v=20250724"></script>
+    <script src="js/languages.js?v=20250724"></script>
+</body>
+</html> 

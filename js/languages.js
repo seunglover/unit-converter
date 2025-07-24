@@ -26,11 +26,14 @@ function initializeLanguages() {
 // 当前语言设置 (默认值: 韩语)
 let currentLanguage = localStorage.getItem('selectedLanguage') || 'ko';
 
-// 语言切换函数
+// 语言切换함수
 function changeLanguage(lang) {
     currentLanguage = lang;
     // localStorage에 선택한 언어 저장
     localStorage.setItem('selectedLanguage', lang);
+    
+    // 언어 데이터 확인 및 폴백
+    ensureLanguageData(lang);
     
     // 현재 페이지에 따라 적절한 업데이트 함수 호출
     if (window.location.pathname.includes('tips.html')) {
@@ -48,6 +51,81 @@ function changeLanguage(lang) {
         if (window.unitConverterApp && !window.unitConverterApp.isMainPage) {
             window.unitConverterApp.updateCategoryInfo();
         }
+    }
+}
+
+// 언어 데이터 확인 및 폴백 함수
+function ensureLanguageData(lang) {
+    if (lang === 'ko' && (!window.ko || !window.ko.footerTitle)) {
+        // 한국어 데이터가 없거나 불완전한 경우 필수 데이터 추가
+        if (!window.ko) window.ko = {};
+        
+        // 기본 단위명들
+        if (!window.ko.length) window.ko.length = "길이";
+        if (!window.ko.weight) window.ko.weight = "무게";
+        if (!window.ko.volume) window.ko.volume = "부피";
+        if (!window.ko.temperature) window.ko.temperature = "온도";
+        if (!window.ko.area) window.ko.area = "면적";
+        if (!window.ko.speed) window.ko.speed = "속도";
+        
+        // 푸터 관련 텍스트
+        if (!window.ko.footerTitle) window.ko.footerTitle = "단위 변환 도우미";
+        if (!window.ko.footerDescription) window.ko.footerDescription = "정확하고 빠른 단위 변환을 도와드립니다.";
+        if (!window.ko.footerUsefulLinks) window.ko.footerUsefulLinks = "유용한 링크";
+        if (!window.ko.footerTipsLink) window.ko.footerTipsLink = "변환 팁";
+        if (!window.ko.footerPrivacyLink) window.ko.footerPrivacyLink = "개인정보 처리방침";
+        if (!window.ko.footerSupportedUnits) window.ko.footerSupportedUnits = "지원하는 단위";
+        if (!window.ko.footerCopyright) window.ko.footerCopyright = "© 2025 단위 변환 도우미. All rights reserved.";
+        
+        console.log('한국어 언어 데이터 폴백 적용 완료');
+    }
+    
+    if (lang === 'en' && (!window.en || !window.en.footerTitle)) {
+        // 영어 데이터가 없거나 불완전한 경우 필수 데이터 추가
+        if (!window.en) window.en = {};
+        
+        // 기본 단위명들
+        if (!window.en.length) window.en.length = "Length";
+        if (!window.en.weight) window.en.weight = "Weight";
+        if (!window.en.volume) window.en.volume = "Volume";
+        if (!window.en.temperature) window.en.temperature = "Temperature";
+        if (!window.en.area) window.en.area = "Area";
+        if (!window.en.speed) window.en.speed = "Speed";
+        
+        // 푸터 관련 텍스트
+        if (!window.en.footerTitle) window.en.footerTitle = "Unit Converter";
+        if (!window.en.footerDescription) window.en.footerDescription = "We help you with accurate and fast unit conversions.";
+        if (!window.en.footerUsefulLinks) window.en.footerUsefulLinks = "Useful Links";
+        if (!window.en.footerTipsLink) window.en.footerTipsLink = "Conversion Tips";
+        if (!window.en.footerPrivacyLink) window.en.footerPrivacyLink = "Privacy Policy";
+        if (!window.en.footerSupportedUnits) window.en.footerSupportedUnits = "Supported Units";
+        if (!window.en.footerCopyright) window.en.footerCopyright = "© 2025 Unit Converter. All rights reserved.";
+        
+        console.log('영어 언어 데이터 폴백 적용 완료');
+    }
+    
+    if (lang === 'ja' && (!window.ja || !window.ja.footerTitle)) {
+        // 일본어 데이터가 없거나 불완전한 경우 필수 데이터 추가
+        if (!window.ja) window.ja = {};
+        
+        // 기본 단위명들
+        if (!window.ja.length) window.ja.length = "長さ";
+        if (!window.ja.weight) window.ja.weight = "重さ";
+        if (!window.ja.volume) window.ja.volume = "体積";
+        if (!window.ja.temperature) window.ja.temperature = "温度";
+        if (!window.ja.area) window.ja.area = "面積";
+        if (!window.ja.speed) window.ja.speed = "速도";
+        
+        // 푸터 관련 텍스트
+        if (!window.ja.footerTitle) window.ja.footerTitle = "単位変換ツール";
+        if (!window.ja.footerDescription) window.ja.footerDescription = "正確で高速な単位変換をサポートします。";
+        if (!window.ja.footerUsefulLinks) window.ja.footerUsefulLinks = "便利なリンク";
+        if (!window.ja.footerTipsLink) window.ja.footerTipsLink = "変換のコツ";
+        if (!window.ja.footerPrivacyLink) window.ja.footerPrivacyLink = "プライバシーポリシー";
+        if (!window.ja.footerSupportedUnits) window.ja.footerSupportedUnits = "対応単位";
+        if (!window.ja.footerCopyright) window.ja.footerCopyright = "© 2025 単位変換ツール. All rights reserved.";
+        
+        console.log('일본어 언어 데이터 폴백 적용 완료');
     }
 }
 
@@ -453,4 +531,61 @@ function updateUILanguage() {
         const categoryName = categoryLang ? categoryLang.name : '';
         unitInfoTitle.textContent = `${categoryName} ${lang.information || '정보'}`;
     }
+    
+    // 푸터 업데이트
+    updateFooterLanguage(lang);
+}
+
+// 푸터 언어 업데이트 함수
+function updateFooterLanguage(lang) {
+    // 푸터 제목
+    const footerTitle = document.querySelector('[data-translate="footerTitle"]');
+    if (footerTitle && lang.footerTitle) {
+        footerTitle.textContent = lang.footerTitle;
+    }
+    
+    // 푸터 설명
+    const footerDescription = document.querySelector('[data-translate="footerDescription"]');
+    if (footerDescription && lang.footerDescription) {
+        footerDescription.textContent = lang.footerDescription;
+    }
+    
+    // 유용한 링크
+    const footerUsefulLinks = document.querySelector('[data-translate="footerUsefulLinks"]');
+    if (footerUsefulLinks && lang.footerUsefulLinks) {
+        footerUsefulLinks.textContent = lang.footerUsefulLinks;
+    }
+    
+    // 변환 팁 링크
+    const footerTipsLink = document.querySelector('[data-translate="footerTipsLink"]');
+    if (footerTipsLink && lang.footerTipsLink) {
+        footerTipsLink.textContent = lang.footerTipsLink;
+    }
+    
+    // 개인정보 처리방침 링크
+    const footerPrivacyLink = document.querySelector('[data-translate="footerPrivacyLink"]');
+    if (footerPrivacyLink && lang.footerPrivacyLink) {
+        footerPrivacyLink.textContent = lang.footerPrivacyLink;
+    }
+    
+    // 지원하는 단위
+    const footerSupportedUnits = document.querySelector('[data-translate="footerSupportedUnits"]');
+    if (footerSupportedUnits && lang.footerSupportedUnits) {
+        footerSupportedUnits.textContent = lang.footerSupportedUnits;
+    }
+    
+    // 저작권
+    const footerCopyright = document.querySelector('[data-translate="footerCopyright"]');
+    if (footerCopyright && lang.footerCopyright) {
+        footerCopyright.textContent = lang.footerCopyright;
+    }
+    
+    // 푸터의 단위 링크들 업데이트
+    const categories = ['length', 'weight', 'volume', 'temperature', 'area', 'speed'];
+    categories.forEach(category => {
+        const categoryLink = document.querySelector(`[data-translate="${category}"]`);
+        if (categoryLink && lang[category]) {
+            categoryLink.textContent = lang[category];
+        }
+    });
 }

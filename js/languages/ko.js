@@ -716,7 +716,16 @@ const ko = {
         justNow: "방금 전",
         minutesAgo: "분 전",
         hoursAgo: "시간 전",
-        locale: "ko-KR"
+        locale: "ko-KR",
+        
+        // 푸터 관련 텍스트
+        footerTitle: "단위 변환 도우미",
+        footerDescription: "정확하고 빠른 단위 변환을 도와드립니다.",
+        footerUsefulLinks: "유용한 링크",
+        footerTipsLink: "변환 팁",
+        footerPrivacyLink: "개인정보 처리방침",
+        footerSupportedUnits: "지원하는 단위",
+        footerCopyright: "© 2025 단위 변환 도우미. All rights reserved."
     }
 };
 

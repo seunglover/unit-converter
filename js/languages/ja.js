@@ -740,11 +740,19 @@ const ja = {
         category: "カテゴリ",
         unit: "単位",
         information: "情報",
-        information: "情報",
         justNow: "たった今",
         minutesAgo: "分前",
         hoursAgo: "時間前",
-        locale: "ja-JP"
+        locale: "ja-JP",
+        
+        // フッター関連テキスト
+        footerTitle: "単位変換ツール",
+        footerDescription: "正確で高速な単位変換をサポートします。",
+        footerUsefulLinks: "便利なリンク",
+        footerTipsLink: "変換のコツ",
+        footerPrivacyLink: "プライバシーポリシー",
+        footerSupportedUnits: "対応単位",
+        footerCopyright: "© 2025 単位変換ツール. All rights reserved."
     }
 };
 

@@ -700,7 +700,16 @@ const en = {
         justNow: "Just now",
         minutesAgo: " minutes ago",
         hoursAgo: " hours ago",
-        locale: "en-US"
+        locale: "en-US",
+        
+        // Footer related text
+        footerTitle: "Unit Converter",
+        footerDescription: "We help you with accurate and fast unit conversions.",
+        footerUsefulLinks: "Useful Links",
+        footerTipsLink: "Conversion Tips",
+        footerPrivacyLink: "Privacy Policy",
+        footerSupportedUnits: "Supported Units",
+        footerCopyright: "© 2025 Unit Converter. All rights reserved."
     }
 };
 
